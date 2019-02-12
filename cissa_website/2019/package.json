@@ -1,0 +1,21 @@
+{
+  "name": "cissa_experimental",
+  "version": "1.0.0",
+  "description": "Using Bootstrap to make a new site",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/drkleena13/cissa_experimental"
+  },
+  "author": "CISSA",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "googleapis": "^27.0.0",
+    "nodemailer": "^4.6.8"
+  }
+}

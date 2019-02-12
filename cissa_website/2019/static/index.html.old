@@ -1,0 +1,580 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>CISSA</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="Computing and Information Systems Students Association | University of Melbourne | Get involved! Become a member and stay up to date with us!"/>
+	<link rel="icon" type="image/png" href="/assets/images/favicon/favicon-32x32.png" sizes="32x32" />
+     <link rel="icon" type="image/png" href="/assets/images/favicon/favicon.ico" sizes="16x16" />
+	
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://unpkg.com/shards-ui@latest/dist/css/shards.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/shards-ui@latest/dist/css/shards-extras.min.css">
+	<link rel="stylesheet" href="./assets/css/main.css">
+
+</head>
+<body class="shards-landing-page--1">
+  <!-- Welcome Section -->
+  <div class="welcome d-flex justify-content-center flex-column">
+    <div class="container">
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg navbar-dark pt-4 px-0">
+        <a class="navbar-brand" href="#">
+          <!-- <img src="/assets/images/only_circle.svg" class="mr-2" alt="Shards - Agency Landing Page"> -->
+          CISSA
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="/committee.html">Committee <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#events">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+
+          </ul>
+
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="https://medium.com/cissa-unimelb"><i class="fa fa-medium"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/cissa.unimelb/"><i class="fa fa-facebook"></i></a>
+            </li>
+
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="https://github.com/designrevision"><i class="fa fa-github"></i></a>
+            </li> -->
+          </ul>
+        </div>
+      </nav>
+      <!-- / Navigation -->
+    </div> <!-- .container -->
+
+    <!-- Inner Wrapper -->
+    <div class="inner-wrapper mt-auto mb-auto container" id = "splash_text">
+      <div class="row">
+        <div class="col-md-7">
+            <!-- <h1 class="welcome-heading display-4 text-white">Heading</h1> -->
+            <!-- <p class="text-white">Computing and Information System Student Association
+            Get involved! Become a member and stay up to date with career opportunities,
+            events and news updates through UniMelb’s premier student run tech society.</p> -->
+
+            <!-- <a href="#our-services" class="btn btn-lg btn-outline-white btn-pill align-self-center">Sign Up</a> -->
+        </div>
+      </div>
+    </div>
+    <!-- / Inner Wrapper -->
+  </div>
+  <!-- / Welcome Section -->
+
+  <!-- Our Services Section -->
+<div id="our-services" class="our-services section py-4">
+    <h3 class="section-title text-center my-5">UniMelb’s Student Run Tech Society</h3>
+
+    <div class="features py-4 mb-4">
+      <div class="container">
+        <div class="row">
+          <div class="feature py-4 col-md-6 d-flex">
+            <div class="icon text-primary mr-3"><i class="fa fa-graduation-cap"></i></i></div>
+            <div class="px-4">
+                 <h5>Learn and Engage</h5>
+                <p>Unique events and talks that educate students from building companies, to interview tips.</p>
+            </div>
+          </div>
+          <div class="feature py-4 col-md-6 d-flex">
+            <div class="icon text-primary mr-3"><i class="fa fa-code"></i></div>
+            <div class="px-4">
+                 <h5>Hackathons</h5>
+                <p>Come and compete for the chance to win prize money, gain some technical experience and to put your ideas to the test.</p>
+            </div>
+          </div>
+
+          <div class="feature py-4 col-md-6 d-flex">
+            <div class="icon text-primary mr-3"><i class="fas fa-utensils"></i></div>
+            <div class="px-4">
+                 <h5>Barbeques and Events</h5>
+                <p>Who doesnt like free food? We host social barbeque events for our members to come along and get to know each other.</p>
+            </div>
+          </div>
+
+          <div class="feature py-4 col-md-6 d-flex">
+            <div class="icon text-primary mr-3"><i class="fas fa-briefcase"></i></div>
+            <div class="px-4">
+                 <h5>Employer Connections</h5>
+                <p>Get to know industry professionals, gain exposure to technical talks and the chance to build career connections.</p>
+            </div>
+          </div>
+
+
+
+
+        </div>
+
+        <!-- <div class="row">
+          <div class="feature py-4 col-md-6 d-flex">
+            <div class="icon text-primary mr-3"><i class="fa fa-font"></i></div>
+            <div class="px-4">
+                 <h5>Copywriting</h5>
+                <p>Quisque mollis mi ac aliquet accumsan. Sed sed dapibus libero. Nullam luctus purus duis sensibus signiferumque.</p>
+            </div>
+          </div>
+          <div class="feature py-4 col-md-6 d-flex">
+            <div class="icon text-primary mr-3"><i class="fa fa-support"></i></div>
+            <div class="px-4">
+                 <h5>Training & Support</h5>
+                <p>Quisque mollis mi ac aliquet accumsan. Sed sed dapibus libero. Nullam luctus purus duis sensibus signiferumque.</p>
+            </div>
+          </div>
+        </div> -->
+        <div class="row">
+
+        </div>
+      </div>
+    </div>
+    <!-- / Features -->
+  </div>
+  <!-- / Our Services Section -->
+
+  <!-- Our Blog Section -->
+  <!-- <div class="blog section section-invert py-4">
+    <h3 class="section-title text-center m-5">Latest Posts</h3>
+
+    <div class="container">
+      <div class="py-4">
+        <div class="row">
+          <div class="card-deck">
+          <div class="col-md-12 col-lg-4">
+            <div class="card mb-4">
+              <img class="card-img-top" src="images/common/card-1.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">Find Great Places to Work While Travelling</h4>
+                <p class="card-text">He seems sinking under the evidence could not only grieve and a visit. The father is to bless and placed in his length hid...</p>
+                <a class="btn btn-primary btn-pill" href="#">Read More &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12 col-lg-4">
+            <div class="card mb-4">
+              <img class="card-img-top" src="images/common/card-3.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">Quick Tips for Improving Your Website's Design</h4>
+                <p class="card-text">He seems sinking under the evidence could not only grieve and a visit. The father is to bless and placed in his length hid...</p>
+                <a class="btn btn-primary btn-pill" href="#">Read More &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12 col-lg-4">
+            <div class="card mb-4">
+              <img class="card-img-top" src="images/common/card-2.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">A Designer's Tips While Travelling and Working</h4>
+                <p class="card-text">He seems sinking under the evidence could not only grieve and a visit. The father is to bless and placed in his length hid...</p>
+                <a class="btn btn-primary btn-pill" href="#">Read More &rarr;</a>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <!-- / Our Blog Section -->
+
+
+
+
+
+
+
+ <div class="events section py-4" id = "events_container">
+      <h3 class="section-title text-center m-5" id = events>Events</h3>
+        <div class = "container py-5">
+            <div class="row">
+                <div class="col-md-4 section text-center">
+                    <div class="card my-5" style="width: 20rem;">
+                      <img class="card-img-top" src="/assets/images/cissa_banner.png" alt="Card image cap">
+                          <div class="card-body">
+                            <h4 class="card-title">CodeBrew 2019</h4>
+                                <p class="card-text">
+                                    Coming soon...
+                                </p>
+                                <a href="https://medium.com/cissa-unimelb/codebrew-2018-9e76dd6f9dd0" class="btn btn-primary">Checkout Codebrew 2018 &rarr;</a>
+                          </div>
+                    </div>
+                </div>
+                <div class="col-md-4 section text-center">
+                    <div class="card my-5" style="width: 20rem;">
+                      <img class="card-img-top" src="/assets/images/catalyst.jpg" alt="Card image cap">
+                          <div class="card-body">
+                            <h4 class="card-title">Catalyst 2018</h4>
+                                <p class="card-text">
+                                    Catalyst is CISSA's Free hackathon!
+                                    The only thing you need to do is APPLY by filling out the relevant form on our Catalyst website.
+                            Go and apply now!
+                                </p>
+                                <a href="https://catalyst.cissa.org.au/" class="btn btn-primary">Apply &rarr;</a>
+                          </div>
+                    </div>
+                </div>
+                <div class="col-md-4 section text-center">
+                    <div class="card my-5" style="width: 20rem;">
+                      <img class="card-img-top" src="/assets/images/cissa_INN.jpg" alt="Card image cap">
+                          <div class="card-body">
+                            <h4 class="card-title">Industry Networking Night 2018</h4>
+                                <p class="card-text">
+                                    They say it's not what you know,
+                                    but who you know, so put down those
+                                    books and put on your business attire for
+                                    CISSA's Semester 2 Industry Networking Night!
+                                    Mingle over canapés and drinks with recruiters
+                                    and representatives from some of the best companies around
+                                </p>
+                                <a href="https://www.facebook.com/events/714150738977102/" class="btn btn-primary">Checkout INN 2018 &rarr;</a>
+                          </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+</div>
+
+<div class="sponsors section py-4">
+     <h3 class="section-title text-center m-5">Our Sponsors</h3>
+   <div class = "container py-5">
+		<div class="row">
+			<div class="col-md-4 section text-center">
+				<img src="assets/images/sponsors/google.png" alt="Google"/>
+		</div>
+
+		<div class="col-md-4 section text-center">
+			<img src="assets/images/sponsors/ey.png" alt="EY"/>
+		</div>
+
+		<div class="col-md-4 section text-center">
+			<img src="assets/images/sponsors/atlassian.png" alt="Atlassian"/>
+		</div>
+
+		<div class="col-md-4 section text-center">
+			<img src="assets/images/sponsors/janestreet.png" alt="Jane Street"/>
+		</div>
+
+		<div class="col-md-4 section text-center">
+			<img src="assets/images/sponsors/accenture.png" alt="Accenture"/>
+		</div>
+
+		<div class="col-md-4 section text-center">
+			<img src="assets/images/sponsors/cisco.png" alt="Cisco"/>
+		</div>
+
+           <div class="col-md-4 section text-center">
+                <img src="assets/images/sponsors/microsoft.png" alt="Microsoft"/>
+           </div>
+
+           <div class="col-md-4 section text-center">
+                <img src="assets/images/sponsors/optiver.png" alt="Optiver"/>
+           </div>
+
+           <div class="col-md-4 section text-center">
+                <img src="assets/images/sponsors/rome2rio.png" alt="Rome2Rio"/>
+           </div>
+
+           <div class="col-md-4 section text-center">
+                <img src="assets/images/sponsors/sap.png" alt="SAP"/>
+           </div>
+
+           <div class="col-md-4 section text-center">
+                <img src="assets/images/sponsors/telstra.png" alt="Telstra"/>
+           </div>
+
+           <div class="col-md-4 section text-center">
+                <img src="assets/images/sponsors/unimelb.png" alt="University of Melbourne"/>
+           </div>
+       </div>
+   </div>
+</div>
+
+<div class="testimonials section py-4" id = "committee">
+    <h3 class="section-title text-center m-5">Committee</h3>
+    <div class="container py-5">
+      <div class="row">
+          <div class="col-md-4 testimonial text-center">
+              <div class="avatar rounded-circle with-shadows mb-3 ml-auto mr-auto">
+                  <img src="/assets/images/raisa.png" class="w-100" alt="Testimonial Avatar" />
+              </div>
+              <h5 class="mb-1">Raisa Litchfield</h5>
+              <span class="text-muted d-block mb-2">President</span>
+              <p>Runs the show</p>
+          </div>
+
+          <div class="col-md-4 testimonial text-center">
+              <div class="avatar rounded-circle with-shadows mb-3 ml-auto mr-auto">
+                  <img src="/assets/images/ilan.png" class="w-100" alt="Testimonial Avatar" />
+              </div>
+              <h5 class="mb-1">Ilan Rosen</h5>
+              <span class="text-muted d-block mb-2">Vice President</span>
+              <p>Also runs the show</p>
+          </div>
+
+          <div class="col-md-4 testimonial text-center">
+              <div class="avatar rounded-circle with-shadows mb-3 ml-auto mr-auto">
+                  <img src="/assets/images/only_circle.svg" class="w-100" alt="Testimonial Avatar" />
+              </div>
+              <h5 class="mb-1">My Nguyen</h5>
+              <span class="text-muted d-block mb-2">Treasurer</span>
+              <p>Manages the money</p>
+          </div>
+
+          <div class="col-md-4 testimonial text-center">
+              <div class="avatar rounded-circle with-shadows mb-3 ml-auto mr-auto">
+                  <img src="/assets/images/harrison.png" class="w-100" alt="Testimonial Avatar" />
+              </div>
+              <h5 class="mb-1">Harrison Liu</h5>
+              <span class="text-muted d-block mb-2">Secretary</span>
+              <p>Makes sure things go smoothly</p>
+          </div>
+
+          <div class="col-md-4 testimonial text-center">
+              <div class="avatar rounded-circle with-shadows mb-3 ml-auto mr-auto">
+                  <img src="/assets/images/jonas.png" class="w-100" alt="Testimonial Avatar" />
+              </div>
+              <h5 class="mb-1">Jonas Olausson</h5>
+              <span class="text-muted d-block mb-2">Web Developer</span>
+              <p>Makes websites for CISSA (like this one!). Usually can be found struggling to center a div on a page.</p>
+          </div>
+
+
+          <div class="col-md-4 testimonial text-center">
+              <div class="avatar rounded-circle with-shadows mb-3 ml-auto mr-auto">
+                  <img src="/assets/images/only_circle.svg" class="w-100" alt="Testimonial Avatar" />
+              </div>
+              <h5 class="mb-1">Sarina Moshfegh</h5>
+              <span class="text-muted d-block mb-2">Education Officer</span>
+              <p>Educates!</p>
+          </div>
+
+          <div class="col-md-4 testimonial text-center">
+
+              <h5 class="mb-1"><a href = "/committee.html">View All </a></h5>
+
+
+          </div>
+
+
+      </div>
+    </div>
+</div>
+
+
+<div class="join section py-4">
+    <h3 class="section-title text-center m-5">Get Involved</h3>
+     <div class = "container py-5" id = "join_container">
+         <div class="row">
+             <div class="col-md-5 section text-center">
+                 <div class="card">
+                     <!-- <h5 class="card-header">As a member</h5> -->
+                     <div class="card-body">
+                        <h5 class="card-title">Membership</h5>
+                           <p class="card-text">Exclusive events and barbeques all year round!</p>
+                           <a href="https://docs.google.com/forms/d/e/1FAIpQLSfZLV3snR591snjJMxsPicchz9Z90TCJ5drTDqoT7qP6yy1MA/viewform" class="btn btn-primary">Sign Up</a>
+                     </div>
+                 </div>
+            </div>
+            <div class="col-md-5 section text-center">
+                <div class="card">
+                    <!-- <h5 class="card-header">Apply For a position</h5> -->
+                    <div class="card-body">
+                          <h5 class="card-title">Apply For a Position</h5>
+                          <p class="card-text">Get a chance to work with fellow Uni students and contribute to a community!</p>
+                          <a href="https://goo.gl/forms/Y9h8vMrwPHjZjBHO2" class="btn btn-primary">Apply</a>
+                    </div>
+                </div>
+           </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+  <!-- / Testimonials Section
+
+
+  <div class="contact section-invert py-4">
+    <h3 class="section-title text-center m-5">Contact Us</h3>
+    <div class="container py-4">
+      <div class="row justify-content-md-center px-4">
+        <div class="contact-form col-sm-12 col-md-10 col-lg-7 p-4 mb-4 card">
+          <form>
+            <div class="row">
+              <div class="col-md-6 col-sm-12">
+                <div class="form-group">
+                  <label for="contactFormFullName">Full Name</label>
+                  <input type="email" class="form-control" id="contactFormFullName" placeholder="Enter your full name">
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12">
+                <div class="form-group">
+                  <label for="contactFormEmail">Email address</label>
+                  <input type="email" class="form-control" id="contactFormEmail" placeholder="Enter your email address">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                    <label for="exampleInputMessage1">Message</label>
+                    <textarea id="exampleInputMessage1" class="form-control mb-4" rows="10" placeholder="Enter your message..." name="message"></textarea>
+                </div>
+              </div>
+            </div>
+            <input class="btn btn-primary btn-pill d-flex ml-auto mr-auto" type="submit" value="Send Your Message">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <!-- / Contact Section
+
+   Footer Section -->
+ <!-- <footer>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">Shards Agency</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Our Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+  </footer> -->
+  <!-- / Footer Section -->
+
+  <!-- JavaScript Dependencies -->
+  <div class="contact section-invert py-4" id = "contact">
+    <h3 class="section-title text-center m-5">Contact Us</h3>
+    <div class="container py-4">
+      <div class="row justify-content-md-center px-4">
+        <div class="contact-form col-sm-12 col-md-10 col-lg-7 p-4 mb-4 card">
+          <form>
+            <div class="row">
+              <div class="col-md-6 col-sm-12">
+                <div class="form-group">
+                  <label for="contactFormFullName">Full Name</label>
+                  <input type="email" class="form-control" id="contactFormFullName" placeholder="Enter your full name">
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12">
+                <div class="form-group">
+                  <label for="contactFormEmail">Email address</label>
+                  <input type="email" class="form-control" id="contactFormEmail" placeholder="Enter your email address">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                    <label for="exampleInputMessage1">Message</label>
+                    <textarea id="exampleInputMessage1" class="form-control mb-4" rows="10" placeholder="Enter your message..." name="message"></textarea>
+                </div>
+              </div>
+            </div>
+            <input class="btn btn-primary btn-pill d-flex ml-auto mr-auto" type="submit" value="Send Your Message">
+          </form>
+        </div>
+        <div class="col-md-5 section text-center">
+            <div class="card">
+                <!-- <h5 class="card-header">As a member</h5> -->
+                <div class="card-body">
+                   <h5 class="card-title">Emails</h5>
+                      <p class="card-text"><a href="mailto:executives@cissa.org.au">executives@cissa.org.au</a></p>
+                      <p class="card-text"><a href="mailto:industry@cissa.org.au">industry@cissa.org.au</a></p>
+                      <p class="card-text"><a href="mailto:diversity@cissa.org.au">diversity@cissa.org.au</a></p>
+                      <p class="card-text"><a href="mailto:events@cissa.org.au">events@cissa.org.au</a></p>
+
+                </div>
+            </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <footer>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">CISSA</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <!-- <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li> -->
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#">Our Services</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="https://medium.com/cissa-unimelb">Blog</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#">Testimonials</a>
+            </li> -->
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#">Contact Us</a>
+            </li> -->
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/shards-ui@latest/dist/js/shards.min.js"></script>
+
+</body>
+</html>
