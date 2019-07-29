@@ -1,21 +1,32 @@
 {
-  "name": "cissa_experimental",
+  "name": "cissa_website",
   "version": "1.0.0",
   "description": "Using Bootstrap to make a new site",
   "main": "index.js",
   "scripts": {
+    "prestart": "gulp",
     "start": "node index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "github.com/drkleena13/cissa_experimental"
-  },
+  "browserslist": [
+    "last 2 versions"
+  ],
   "author": "CISSA",
   "license": "MIT",
   "dependencies": {
-    "body-parser": "^1.18.3",
-    "express": "^4.16.3",
-    "googleapis": "^27.0.0",
-    "nodemailer": "^4.6.8"
+    "express": "^4.17.1",
+    "favicons": "^5.4.1",
+    "googleapis": "^41.0.1",
+    "nodemailer": "^6.3.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.6.1",
+    "cssnano": "^4.1.10",
+    "del": "^5.0.0",
+    "gulp": "^4.0.2",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify-es": "^1.0.4",
+    "postcss-import": "^12.0.1"
   }
 }
