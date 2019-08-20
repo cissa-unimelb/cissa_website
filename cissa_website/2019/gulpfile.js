@@ -20,7 +20,7 @@ gulp.task("css", async () => {
   return gulp
     .src("./static/assets/css/*.css")
     .pipe(postcss(plugins))
-    .pipe(gulp.dest("./mini/assets/css"));
+    .pipe(gulp.dest("./public/assets/css"));
 });
 
 gulp.task("scripts", async () => {
@@ -29,7 +29,7 @@ gulp.task("scripts", async () => {
     .pipe(sourcemaps.init())
     .pipe(uglify())
     .pipe(sourcemaps.write("./maps"))
-    .pipe(gulp.dest("./mini/js"));
+    .pipe(gulp.dest("./public/js"));
 });
 
 gulp.task("pages", async () => {
@@ -41,10 +41,10 @@ gulp.task("pages", async () => {
         removeComments: true,
       })
     )
-    .pipe(gulp.dest("./mini"));
+    .pipe(gulp.dest("./public"));
 });
 
-gulp.task("clean", () => del(["mini"]));
+gulp.task("clean", () => del(["public"]));
 
 gulp.task(
   "default",

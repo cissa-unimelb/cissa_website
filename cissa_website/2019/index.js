@@ -6,11 +6,11 @@ var http = require('http').Server(app);
 var port = process.env.PORT || 4000;
 
 app.get('/', function(req, res){
-  res.sendFile(__dirname + '/mini/index.html');
+  res.sendFile(__dirname + '/public/index.html');
 });
 
 app.get('/committee', function(req, res){
-  res.sendFile(__dirname + '/mini/committee.html');
+  res.sendFile(__dirname + '/public/committee.html');
 });
 
 app.use('/', express.static('static/'));
