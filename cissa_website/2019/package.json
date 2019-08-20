@@ -15,7 +15,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "favicons": "^5.4.1",
-    "googleapis": "^41.0.1",
+    "googleapis": "^42.0.0",
     "nodemailer": "^6.3.0"
   },
   "devDependencies": {

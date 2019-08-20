@@ -6,6 +6,15 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Build directories
+public/
+
+# Dependency directories
+.cache
+yarn-error.log
+package-lock.json
+yarn.lock
+
 # Runtime data
 pids
 *.pid
