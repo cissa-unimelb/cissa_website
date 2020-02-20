@@ -9,6 +9,11 @@ body {
 
 }
 
+.page{
+  min-height: 100vh;
+}
+
+
 @media (max-width: 767px) {
   .navbar-fixed-top {
       position: relative;
@@ -402,13 +407,16 @@ hr{
     width:75%;
   }
   .cards{
-    width:60%;
+    width:75%;
   }
   .about-cissa{
     margin-right:50px;
   }
+  .img-about{
+    width:100%;
+  }
+  .event-img{
+    width:100%;
+  }
 }
 
-.page {
-    min-height: 100vh;
-}
