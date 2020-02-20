@@ -410,5 +410,5 @@ hr{
 }
 
 .page {
-    min-height: 100vh; /* minus the height of the footer */
+    min-height: 100vh;
 }
