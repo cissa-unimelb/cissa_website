@@ -72,17 +72,12 @@
 
 
 
-
   <body class="shards-landing-page--1">
-    ​
-    <picture class="bg">
-      <source srcset="assets/images/cissa_white.svg" type="image/svg+xml"/>
-      <img src="assets/images/cissasitebg.png" class="img-fluid bg" alt="CISSA"
-    /></picture>
-
-    <div class="welcome d-flex justify-content-center flex-column">
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v5.0"></script>
+    <div class="page">
       <nav class="navbar navbar-expand-lg fixed-top navbar-dark pt-4 px-5">
-        <a class="navbar-brand" href="#"
+        <a class="navbar-brand" href="index.html"
           ><img
             src="assets/images/cissa_white.svg"
             width="100px"
@@ -102,671 +97,180 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#events">Events</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#sponsors">Sponsors</a>
-            </li>
-          </ul>
           <ul class="navbar-nav ml-auto">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="https://medium.com/cissa-unimelb"
-                  ><i class="fab fa-medium-m"></i
-                ></a>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  href="https://www.facebook.com/cissa.unimelb/"
-                  ><i class="fab fa-facebook-f"></i
-                ></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://instagram.com/cissa_unimelb/"
-                  ><i class="fab fa-instagram"></i
-                ></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://twitter.com/cissa_unimelb/"
-                  ><i class="fab fa-twitter"></i
-                ></a>
-              </li>
-            </ul>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="events.html">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sponsors.html">Sponsors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Social
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="https://medium.com/cissa-unimelb"
+                ><i class="fab fa-medium-m"></i
+              ></a>
+              <a
+                class="dropdown-item"
+                href="https://www.facebook.com/cissa.unimelb/"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a class="dropdown-item" href="https://instagram.com/cissa_unimelb/"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a class="dropdown-item" href="https://twitter.com/cissa_unimelb/"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              </div>
+            </li>
           </ul>
         </div>
       </nav>
-      <div class="inner-wrapper mt-auto mb-auto text-center action">
-        <p class="splash_text">
-          Get involved! Become a member and stay up to date on opportunities and
-          events.
-        </p>
-        <div class="action-links d-flex justify-content-center">
-          <a href="https://forms.gle/nVX7Paog4m4nkFpeA" class="btn btn-dark">Sign Up</a>
+
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        </ol>
+
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="assets/images/fb_cover.jpg" alt="First slide">
+            <div class="carousel-caption d-none d-md-block">
+            </div>
+          </div>
         </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
       </div>
-    </div>
+
+
+
+
+
     <div class="our-services section px-2 py-4">
-      <h3 class="section-title text-center my-5">
-        UniMelb’s Student Run Tech Society
-      </h3>
-      <div class="features py-4 mb-4">
-        <div class="container">
-          <div class="row">
-            <div class="feature py-4 col-md-6 d-flex">
-              <div class="icon text-primary mr-3">
-                <i class="fa fa-graduation-cap"></i>
-              </div>
-              <div class="px-4">
-                <h5>Learn and Engage</h5>
-                <p>
-                  Unique events and talks that educate students from building
-                  companies, to interview tips.
-                </p>
-              </div>
-            </div>
-            <div class="feature py-4 col-md-6 d-flex">
-              <div class="icon text-primary mr-3">
-                <i class="fa fa-code"></i>
-              </div>
-              <div class="px-4">
-                <h5>Hackathons</h5>
-                <p>
-                  Come and compete for the chance to win prize money, gain some
-                  technical experience and to put your ideas to the test.
-                </p>
-              </div>
-            </div>
-            <div class="feature py-4 col-md-6 d-flex">
-              <div class="icon text-primary mr-3">
-                <i class="fas fa-utensils"></i>
-              </div>
-              <div class="px-4">
-                <h5>Barbeques and Events</h5>
-                <p>
-                  Who doesnt like free food? We host social barbeque events for
-                  our members to come along and get to know each other.
-                </p>
-              </div>
-            </div>
-            <div class="feature py-4 col-md-6 d-flex">
-              <div class="icon text-primary mr-3">
-                <i class="fas fa-briefcase"></i>
-              </div>
-              <div class="px-4">
-                <h5>Employer Connections</h5>
-                <p>
-                  Get to know industry professionals, gain exposure to technical
-                  talks and the chance to build career connections.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="row"></div>
+    <h3 class="section-title text-center mt-4 mb-2 py-4">
+      UniMelb’s Student Run Tech Society </h3>
+
+    <div class="row d-flex justify-content-center text-center py-5 mx-2">
+      <section class="col-md-3 my-3 cards">
+        <div class="with-shadows box highlight pb-2">
+          <i class="icon solid major fa-paper-plane"></i>
+          <h4 class="mx-2">Industry Connections</h4>
+          <p class="px-4">Get to know industry professionals, gain exposure to technical talks and the chance to build career connections!</p>
+
         </div>
+      </section>
+
+      <section class="col-md-3 my-3 cards">
+        <div class="with-shadows box highlight pb-2">
+          <i class="icon solid major fa-pencil-alt"></i>
+          <h4 class="mx-2">Workshops</h4>
+          <p class="px-4">Expand your skillset and get some hands-on experience related to both technical and non-technical topics
+             taught by industry/student experts! PIZZA will be provided!
+          </p>
+        </div>
+      </section>
+
+      <section class="col-md-3 my-3 cards">
+        <div class="with-shadows box highlight pb-1">
+          <i class="icon solid major fa-wrench"></i>
+          <h4 class="mx-2">Hackathons</h4>
+          <p class="px-4">
+            Come and compete for the chance to win prize money, gain some technical experience, and to put your ideas to the test!
+          </p>
       </div>
+      </section>
     </div>
-    <div class="events section-invert px-2 py-4">
-      <h3 class="section-title text-center m-5" id="events">
-        Events
-      </h3>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card my-5">
-              <picture>
-                <img
-                  class="card-img-top"
-                  src="assets/images/cissa_INN.jpg"
-                  alt="CISSA - Industry Connect"
-              /></picture>
 
-              <div class="card-body">
-                <h4 class="card-title">CISSA - Industry Connect</h4>
-                <p class="card-text">
-                  Confused about your future beyond uni? Uncertain of what's out
-                  there? Want to get to know prospective employers in the
-                  industry? Put down the books, put on the suit/dress/outfit and
-                  come join us at CISSA Industry Connect, a night of mingling
-                  and networking with industry professionals, company
-                  representatives, as well as fellow like-minded students!
-                </p>
-                <button disabled
-                  href="https://www.eventbrite.com.au/e/cissa-industry-connect-tickets-66826520923"
-                  class="btn btn-primary"
-                  style="white-space:normal"
-                >
-                  Coming Soon! &rarr;</a
-                >
+
+    <div class=" dark section px-2 py-4 d-flex justify-content-center row">
+      <h3 class="col-md-8 dark section-title text-center mb-5 py-4">Upcoming Events </h3>
+
+      <section class="event col-md-7 mx-5 my-3 white text-center">
+        <div class="events-inner with-shadows box highlight pb-1">
+          <div class="row pt-4">
+            <div class="col-md-6 px-3 pt-0">
+              <h3>Club Festival</h3>
+              <p>
+              Come talk to us at the Science Faculty Commencement Ceremony!
+              </p>
+              <div>
+              Time: 10am - 12am 25th Feb
               </div>
+              <div>
+              Location: @ Royal Exhibition Building
+              </div>
+              <a href="events.html#event1" type="button" class=" my-3 text-center sign-up-btn btn btn-dark btn-squared">Read more &rarr;</a>
+
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card my-5">
-              <picture>
-                <source type="image/webp" srcset="assets/images/catalyst.webp"/>
-                <img
-                  class="card-img-top"
-                  src="assets/images/catalyst.png"
-                  alt="Catalyst 2019"
-              /></picture>
-
-              <div class="card-body">
-                <h4 class="card-title">Catalyst 2020</h4>
-                <p class="card-text">
-                  Catalyst is CISSA's Free hackathon!<br /><br />More details
-                  coming soon...
-                </p>
-                <button
-                disabled
-                  href="#"
-                  class="btn btn-primary"
-                  onclick="return false;"
-                  style="white-space:normal"
-                  >Coming soon! &rarr;</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card my-5">
-              <picture>
-                <source
-                  type="image/webp"
-                  srcset="assets/images/cissa_banner.webp"/>
-                <img
-                  class="card-img-top"
-                  src="assets/images/cissa_banner.png"
-                  alt="CodeBrew 2019"
-              /></picture>
-
-              <div class="card-body">
-                <h4 class="card-title">Codebrew 2020</h4>
-                <p class="card-text">
-                  Codebrew 2019 was a blast! Join us again this year!
-                </p>
-                <a
-                  href="https://codebrew.com.au/"
-                  class="btn btn-primary"
-                  style="white-space:normal"
-                  >Checkout Codebrew 2019 &rarr;</a
-                >
-              </div>
+            <div class="col-md-6 pt-5">
+              <img class="img-about" src="assets/images/fb_cover.jpg" alt="Photo"/>
             </div>
           </div>
         </div>
+      </section>
+
+
+
+    </div>
+  </div>
+
+    <div class="row my-5 d-flex justify-content-center">
+      <div class="col-md-4 text-center">
+        <h3 class="my-3 section-title">Become A Member</h3>
+
+        <p class="signup-prompt mt-5">
+        We have an exciting year ahead of us and would love to share it with you. You will get weekly email notifications of what we're up to throughout the year, so
+        sign up now to be part of the CISSA FAMILY!
+        </p>
+        <a href="https://mailchi.mp/119b90523210/cissasignup2020" type="button" target="_blank" class="signup my-3 text-center sign-up-btn btn btn-dark btn-squared">Sign Up Now!</a>
+
       </div>
-    </div>
-    <div class="section py-4">
-      <h3 class="section-title text-center m-5" id="sponsors">Our Sponsors</h3>
-      <div class="container py-5">
-        <div class="row pb-4">
-          <div class="col-md-12 text-center">
-            <h3 class="pb-5 text-center">Diamond</h3>
-          </div>
-          <div class="col-md-12 text-center pt-0 pb-5 my-auto">
-            <picture>
-              <source
-                type="image/svg+xml"
-                srcset="assets/images/sponsors/deloitte.svg"/>
-              <img
-                src="assets/images/sponsors/sap.png"
-                class="sponsors"
-                alt="Deloitte"
-            /></picture>
-          </div>
-        </div>
-        <div class="row py-4">
-          <div class="col-md-12 text-center">
-            <h3 class="text-center">Platinum</h3>
-          </div>
-          <div class="col-md-4 text-center py-5 my-auto">
-            <picture>
-              <source
-                type="image/svg+xml"
-                srcset="assets/images/sponsors/coles.svg"
-              />
-              <source
-                type="image/webp"
-                srcset="assets/images/sponsors/coles.webp"
-              />
-              <img
-                src="assets/images/sponsors/coles.png"
-                class="sponsors"
-                alt="Coles"
-              />
-            </picture>
-          </div>
-          <div class="col-md-4 text-center py-5 my-auto">
-            <picture>
-              <source
-                type="image/svg+xml"
-                srcset="assets/images/sponsors/janestreet.svg"/>
-              <source
-                type="image/webp"
-                srcset="assets/images/sponsors/janestreet.webp"/>
-              <img
-                src="assets/images/sponsors/janestreet.png"
-                class="sponsors"
-                alt="Jane Street"
-            /></picture>
-          </div>
-          <div class="col-md-4 text-center py-5 my-auto">
-            <picture>
-              <source
-                type="image/svg+xml"
-                srcset="assets/images/sponsors/microsoft.svg"/>
-              <source
-                type="image/webp"
-                srcset="assets/images/sponsors/microsoft.webp"/>
-              <img
-                src="assets/images/sponsors/microsoft.png"
-                class="sponsors"
-                alt="Microsoft"
-            /></picture>
-          </div>
-        </div>
-        <div class="row py-4">
-          <div class="col-md-12 text-center">
-            <h3 class="text-center">Gold</h3>
-          </div>
-          <div class="col-md-4 text-center py-5 my-auto">
-            <picture>
-              <source
-                type="image/svg+xml"
-                srcset="assets/images/sponsors/atlassian.svg"/>
-              <source
-                type="image/webp"
-                srcset="assets/images/sponsors/atlassian.webp"/>
-              <img
-                src="assets/images/sponsors/atlassian.png"
-                class="sponsors"
-                alt="Atlassian"
-            /></picture>
-          </div>
-          <div class="col-md-4 text-center py-5 my-auto">
-            <picture>
-              <source
-                type="image/svg+xml"
-                srcset="assets/images/sponsors/ey.svg"/>
-              <source
-                type="image/webp"
-                srcset="assets/images/sponsors/ey.webp"/>
-              <img src="assets/images/sponsors/ey.png" class="sponsors" alt="EY"
-            /></picture>
-          </div>
-          <div class="col-md-4 text-center py-5 my-auto">
-            <picture>
-              <source
-                type="image/svg+xml"
-                srcset="assets/images/sponsors/optiver.svg"
-              />
-              <source
-                type="image/webp"
-                srcset="assets/images/sponsors/optiver.webp"
-              />
-              <img
-                src="assets/images/sponsors/optiver.png"
-                class="sponsors"
-                alt="Optiver"
-              />
-            </picture>
-          </div>
-          <div class="col-md-12 text-center py-5 my-auto">
-            <picture>
-              <source
-                type="image/svg+xml"
-                srcset="assets/images/sponsors/telstra.svg"
-              />
-              <source
-                type="image/webp"
-                srcset="assets/images/sponsors/telstra.webp"
-              />
-              <img
-                src="assets/images/sponsors/telstra.png"
-                class="sponsors"
-                alt="Telstra"
-              />
-            </picture>
-          </div>
-        </div>
-        <div class="row pt-4">
-          <div class="col-md-12 text-center">
-            <h3 class="text-center">Silver</h3>
-          </div>
-          <div class="col-md-4 text-center py-5 my-auto">
-            <picture>
-              <source
-                type="image/svg+xml"
-                srcset="assets/images/sponsors/accenture.svg"/>
-              <source
-                type="image/webp"
-                srcset="assets/images/sponsors/accenture.webp"/>
-              <img
-                src="assets/images/sponsors/accenture.png"
-                class="sponsors"
-                alt="Accenture"
-            /></picture>
-          </div>
-          <div class="col-md-4 text-center py-5 my-auto">
-            <picture>
-              <source
-                type="image/webp"
-                srcset="assets/images/sponsors/bain&company.webp"/>
-              <img
-                src="assets/images/sponsors/bain&company.png"
-                class="sponsors"
-                alt="Bain & Company"
-            /></picture>
-          </div>
-          <div class="col-md-4 text-center py-5 my-auto">
-            <picture>
-              <source
-                type="image/svg+xml"
-                srcset="assets/images/sponsors/bcg.svg"/>
-              <source
-                type="image/webp"
-                srcset="assets/images/sponsors/bcg.webp"/>
-              <img
-                src="assets/images/sponsors/bcg.png"
-                class="sponsors"
-                alt="The Boston Consulting Group"
-            /></picture>
-          </div>
-          <div class="col-md-4 text-center py-5 my-auto">
-            <picture>
-              <source
-                type="image/svg+xml"
-                srcset="assets/images/sponsors/cognizant.svg"/>
-              <source
-                type="image/webp"
-                srcset="assets/images/sponsors/cognizant.webp"/>
-              <img
-                src="assets/images/sponsors/cognizant.png"
-                class="sponsors"
-                alt="Cognizant"
-            /></picture>
-          </div>
-          <div class="col-md-4 text-center py-5 my-auto">
-            <picture>
-              <source
-                type="image/svg+xml"
-                srcset="assets/images/sponsors/commbank.svg"/>
-              <source
-                type="image/webp"
-                srcset="assets/images/sponsors/commbank.webp"/>
-              <img
-                src="assets/images/sponsors/commbank.png"
-                class="sponsors"
-                alt="Commonwealth Bank"
-            /></picture>
-          </div>
-          <div class="col-md-4 text-center py-5 my-auto">
-            <picture>
-              <source
-                type="image/svg+xml"
-                srcset="assets/images/sponsors/facebook.svg"
-              />
-              <source
-                type="image/webp"
-                srcset="assets/images/sponsors/facebook.webp"
-              />
-              <img
-                src="assets/images/sponsors/facebook.png"
-                class="sponsors"
-                alt="Facebook"
-              />
-            </picture>
-          </div>
-          <div class="col-md-4 text-center py-5 my-auto">
-            <picture>
-              <source
-                type="image/svg+xml"
-                srcset="assets/images/sponsors/google.svg"
-              />
-              <source
-                type="image/webp"
-                srcset="assets/images/sponsors/google.webp"
-              />
-              <img
-                src="assets/images/sponsors/google.png"
-                class="sponsors"
-                alt="Google"
-              />
-            </picture>
-          </div>
-          <div class="col-md-4 text-center py-5 my-auto">
-            <picture>
-              <source
-                type="image/webp"
-                srcset="assets/images/sponsors/mcgrathnicol.webp"/>
-              <img
-                src="assets/images/sponsors/mcgrathnicol.png"
-                class="sponsors"
-                alt="McGrathNicol"
-            /></picture>
-          </div>
-          <div class="col-md-4 text-center py-5 my-auto">
-            <picture>
-              <source
-                type="image/svg+xml"
-                srcset="assets/images/sponsors/palantir.svg"
-              />
-              <source
-                type="image/webp"
-                srcset="assets/images/sponsors/palantir.webp"
-              />
-              <img
-                src="assets/images/sponsors/palantir.png"
-                class="sponsors"
-                alt="Palantir"
-              />
-            </picture>
-          </div>
-          <div class="col-md-12 text-center py-5 my-auto">
-            <picture>
-              <source
-                type="image/svg+xml"
-                srcset="assets/images/sponsors/woodside.svg"
-              />
-              <source
-                type="image/webp"
-                srcset="assets/images/sponsors/woodside.webp"
-              />
-              <img
-                src="assets/images/sponsors/woodside.png"
-                class="sponsors"
-                alt="Woodside"
-              />
-            </picture>
-          </div>
-        </div>
+
+      <div class="col-md-6 text-center py-2">
+        <img class="img-about" src="assets/images/cute.jpg" alt="Photo"/>
       </div>
     </div>
 
 
-    <div class="testimonials section-invert py-4">
-      <h3 class="section-title text-center m-5">
-        Committee
-      </h3>
-      <div class="container py-5">
-        <div class="row">
-          <div class="col-md-4 testimonial text-center">
-            <div
-              class="avatar rounded-circle with-shadows mb-3 ml-auto mr-auto"
-            >
-            <picture>
-              <img src="assets/images/peter2020.jpg" class="w-100" alt="Peter"
-            /></picture>
-            </div>
-            <h5 class="mb-1">Peter Shi</h5>
-            <span class="text-muted d-block mb-2">President</span>
-            <p>Runs the show<br /></p>
-          </div>
-          <div class="col-md-4 testimonial text-center">
-            <div
-              class="avatar rounded-circle with-shadows mb-3 ml-auto mr-auto"
-            >
-              <picture
-                ><img
-                  src="assets/images/angela.jpg"
-                  class="w-100"
-                  alt="Angela"
-                />
-              </picture>
-            </div>
-            <h5 class="mb-1">Angela Chan</h5>
-            <span class="text-muted d-block mb-2">Vice President</span>
-            <p>Also runs the show<br /></p>
-          </div>
-          <div class="col-md-4 testimonial text-center">
-            <div
-              class="avatar rounded-circle with-shadows mb-3 ml-auto mr-auto"
-            >
-              <picture>
-                <img src="assets/images/uvin.jpg" class="w-100" alt="Uvin"
-              /></picture>
-            </div>
-            <h5 class="mb-1">Uvin Abeysinghe</h5>
-            <span class="text-muted d-block mb-2">Secretary</span>
-            <p>Makes sure things go smoothly<br /></p>
-          </div>
-          <div class="col-md-4 testimonial text-center">
-            <div
-              class="avatar rounded-circle with-shadows mb-3 ml-auto mr-auto "
-            >
-              <picture>
-                <source type="image/webp" srcset="assets/images/eyre.webp"/>
-                <img src="assets/images/eyre.png" class="w-100" alt="Eyre"
-              /></picture>
-            </div>
-            <h5 class="mb-1">Eyre Mamintada</h5>
-            <span class="text-muted d-block mb-2">Treasurer</span>
-            <p>
-              Manages the money
-            </p>
-          </div>
-          <div class="col-md-4 testimonial text-center">
-            <div
-              class="avatar rounded-circle with-shadows mb-3 ml-auto mr-auto"
-            >
-              <picture>
-                <source
-                  type="image/webp"
-                  srcset="assets/images/catherine.webp"
-                />
-                <img
-                  src="assets/images/catherine.jpg"
-                  class="w-100"
-                  alt="Catherine"
-                />
-              </picture>
-            </div>
-            <h5 class="mb-1">Catherine Song</h5>
-            <span class="text-muted d-block mb-2">Events Officer</span>
-            <p>
-              <br />
-            </p>
-          </div>
-          <div class="col-md-4 testimonial text-center">
-            <div
-              class="avatar rounded-circle with-shadows mb-3 ml-auto mr-auto"
-            >
-              <picture
-                ><img src="assets/images/xue.jpg" class="w-100" alt="Xue" />
-              </picture>
-            </div>
-            <h5 class="mb-1">Xue Qian</h5>
-            <span class="text-muted d-block mb-2">Education Officer</span>
-            <p>Educates!<br /></p>
-          </div>
 
 
-
-          <div class="col-md-4 testimonial text-center">
-            <div
-              class="avatar rounded-circle with-shadows mb-3 ml-auto mr-auto"
-            >
-              <picture>
-                <source
-                  type="image/webp"
-                  srcset="assets/images/betty.webp"/>
-                <img
-                  src="assets/images/betty.jpg"
-                  class="w-100"
-                  alt="Betty"/>
-              </picture>
-            </div>
-            <h5 class="mb-1">Betty Lin</h5>
-            <span class="text-muted d-block mb-2">Diversity Officer</span>
-            <p>
-              <br />
-            </p>
-          </div>
-          <div class="col-md-4 testimonial text-center">
-            <div
-              class="avatar rounded-circle with-shadows mb-3 ml-auto mr-auto"
-            >
-              <picture>
-                <img src="assets/images/kevin.jpg" class="w-100" alt="Kevin"
-              /></picture>
-            </div>
-            <h5 class="mb-1">Kevin Yang</h5>
-            <span class="text-muted d-block mb-2">Publicity</span>
-            <p>Maintains online presence of CISSA<br /></p>
-          </div>
-          <div class="col-md-4 testimonial text-center">
-            <div
-              class="avatar rounded-circle with-shadows mb-3 ml-auto mr-auto"
-            >
-            <picture>
-              <img src="assets/images/andy.jpg" class="w-100" alt="Andy"
-            /></picture>
-            </div>
-            <h5 class="mb-1">Andy Jiang</h5>
-            <span class="text-muted d-block mb-2">IT Officer</span>
-            <p>
-              <br />
-            </p>
-          </div>
-          <div class="col-md-4 testimonial text-center">
-            <div
-              class="avatar rounded-circle with-shadows mb-3 ml-auto mr-auto"
-            >
-              <picture>
-                <source type="image/webp" srcset="assets/images/andrew.webp"/>
-                <img src="assets/images/andrew.jpg" class="w-100" alt="Andrew"
-              /></picture>
-            </div>
-            <h5 class="mb-1">Andrew Shen</h5>
-            <span class="text-muted d-block mb-2"
-              >First Year Representative</span
-            >
-            <p>
-              <br />
-            </p>
-          </div>
-          <div class="col-md-4 testimonial text-center">
-            <div
-              class="avatar rounded-circle with-shadows mb-3 ml-auto mr-auto"
-            >
-            <picture>
-                <source type="image/webp" srcset="assets/images/divyam.webp"/>
-              <img src="assets/images/divyam.jpg" class="w-100" alt="Divyam" />
-            </picture>
-            </div>
-
-            <h5 class="mb-1">Divyam Garg</h5>
-            <span class="text-muted d-block mb-2">Indutry Liason</span>
-            <p>
-              <br />
-            </p>
-          </div>
-        </div>
-      </div>
+    <div class="white section px-2 pb-5 pt-2">
+      <h3 class="section-title text-center my-5 py-4">Keep Up to Date On </h3>
+      <div class="fb-page d-flex justify-content-center" data-href="https://www.facebook.com/cissa.unimelb/" data-tabs="timeline" data-width="400" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/cissa.unimelb/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/cissa.unimelb/">CISSA - Computing &amp; Information Systems Students Association</a></blockquote></div>
     </div>
+
+
+    <div class="row dark text-center d-flex justify-content-center section footer pt-5 pb-3">
+        <img src="assets/images/cissa_white.svg" class="col-md-4" alt="CISSA"/>
+        <div class="footer-img col-md-6">
+          <img src="assets/images/logos/codebrew.png"  alt="CISSA"/>
+          <img src="assets/images/logos/catalyst_w.png"  alt="CISSA"/>
+          <img src="assets/images/logos/diversity.png"  alt="CISSA"/>
+          <img src="assets/images/logos/hatchery.png" alt="CISSA"/>
+        </div>
+        <p class="col-md-12 mt-5">&copy; Copyright 2020 CISSA<p>
+    </div>
+
+
+
 
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.slim.min.js"
@@ -788,5 +292,4 @@
       integrity="sha256-PCFtnjaRohL1L6wEpWGaVacPmSQOoqYC4YDDRKC6RUc="
       crossorigin="anonymous"
     ></script>
-  </body>
-</html>
+</body>
