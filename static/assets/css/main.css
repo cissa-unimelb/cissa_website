@@ -2,11 +2,10 @@
   background: #020A23;
 }
 
-body {
-  overflow-x: hidden;
-  padding-top: 80px;
+html, body{
+  padding-top: 40px;
   font-family: poppins;
-
+  overflow-x: hidden;
 }
 
 .page{
@@ -93,10 +92,6 @@ i{
     margin-right:-4px;
 }
 
-.navbar-brand {
-  width: 100px;
-  height: 50px;
-}
 
 .jumbotron-fluid {
   /* color: white; */
@@ -314,6 +309,8 @@ hr{
 .sign-up-btn:hover{
   background: #020A23;
 }
+
+
 
 * {
   box-sizing: border-box;
