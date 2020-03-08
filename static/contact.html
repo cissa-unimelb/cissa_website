@@ -68,8 +68,8 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="assets/css/main.css" />
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
   </head>
 
 
@@ -149,7 +149,7 @@
           <input type="text" class=" form-control" name="subject" placeholder="Subject*" onchange="updatedata()" required >
           <textarea name="message" class=" form-control" placeholder="Message*" rows="10" onchange="updatedata()" cols="50"
           required></textarea>
-          <div class="g-recaptcha" data-callback="recaptcha_callback" data-expired-callback="expired_callback"  data-sitekey="6Lfrpt8UAAAAAFm2h3KobB_-uAsdejfRYlejODrl"></div>
+          <div class="g-recaptcha" data-callback="recaptcha_callback" data-expired-callback="expired_callback" data-sitekey="6Lfrpt8UAAAAAFm2h3KobB_-uAsdejfRYlejODrl"></div>
           <input type="submit" id="submit_button" disabled="disabled" class= "my-3 text-center sign-up-btn btn btn-dark btn-squared" name="submit" value="Send Message">
         </form>
       </div>
