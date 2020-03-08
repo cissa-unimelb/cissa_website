@@ -3,6 +3,7 @@
 }
 
 html, body{
+  font-size:16px;
   padding-top: 40px;
   font-family: poppins;
   overflow-x: hidden;
@@ -12,9 +13,6 @@ html, body{
   min-height: 100vh;
 }
 
-.navbar {
-  height:80px;
-}
 
 @media (max-width: 767px) {
   .navbar-fixed-top {
@@ -291,8 +289,6 @@ hr{
   line-height:1.8;
 }
 
-
-
 .sign-up {
   font-weight: 800;
   font-size:30px;
@@ -301,12 +297,10 @@ hr{
 
 
 .sign-up-btn {
-  transition: 0.4s;
+  transition: 0.3s;
   background:#ffffff;
   color:#000000;
   font-weight: 600;
-
-
 }
 
 .sign-up-btn:hover{
@@ -420,3 +414,14 @@ hr{
   }
 }
 
+#submit_button:disabled,
+#submit_button[disabled]{
+  border: 1px solid #d3d3d3;
+  background-color: #d3d3d3;
+  color: #666666;
+}
+
+#result{
+  font-weight: 400;
+  text-align: center;
+}
