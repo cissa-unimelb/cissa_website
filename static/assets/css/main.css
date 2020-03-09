@@ -125,18 +125,6 @@ i{
 }
 
 
-.contact-form {
-  max-width:50%;
-  margin: 2rem auto;
-}
-
-.contact-form input,textarea {
-  display:block;
-  width:100%;
-  margin:30px;
-  padding-left:5px;
-}
-
 
 .dark {
   background: #020A23;
@@ -386,6 +374,10 @@ hr{
   height:50px;
   margin:10px;
 }
+.g-recaptcha {
+  display: inline-block;
+  width:50%;
+}
 
 @media only screen and (max-width: 768px) {
   #vert-line {
@@ -410,6 +402,14 @@ hr{
     width:100%;
   }
   .event-img{
+    width:100%;
+  }
+  .contact_form{
+    width:50%;
+    text-align: center;
+    margin:0 auto;
+  }
+  .g-recaptcha {
     width:100%;
   }
 }
