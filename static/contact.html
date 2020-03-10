@@ -144,7 +144,7 @@
       <div class="pt-3 pb-0 text-center"></div>
       <div class="pt-3 pb-0 text-center" id="result"></div>
 
-      <div class="py-5">
+      <div class="pb-5 pt-3">
         <form class="contact_form text-center" method="post" action>
           <input type="text" name="name" class="inputs my-3 col-md-6" placeholder="Name*" onchange="updatedata()" required >
           <input type="email" class="inputs my-3 col-md-6" name="email" placeholder="Email*" onchange="updatedata()" required >
@@ -190,7 +190,7 @@
         else{
           await axios.post('https://api.cissa.org.au/contact', {
           ...formData,
-          recipient: 'andypeiyuan@hotmail.com'});
+          recipient: 'executives@cissa.org.au'});
           document.getElementById('result').innerHTML = '<font color="green">Message Sent. We will be in touch soon!</font>';
           window.scrollTo(0, 0);
         }
