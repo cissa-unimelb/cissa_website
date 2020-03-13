@@ -13,7 +13,6 @@ html, body{
   min-height: 100vh;
 }
 
-
 @media (max-width: 767px) {
   .navbar-fixed-top {
       position: relative;
@@ -390,10 +389,10 @@ hr{
     margin-bottom:50px;
   }
   .event{
-    width:75%;
+    width:60%;
   }
   .cards{
-    width:75%;
+    width:60%;
   }
   .about-cissa{
     margin-right:50px;
@@ -412,6 +411,14 @@ hr{
   .g-recaptcha {
     width:100%;
   }
+  .img-upevents{
+    width:75%;
+    margin:0 auto;
+  }
+  .sign-up-mainpage{
+    width:60%;
+    margin: 0 auto;
+  }
 }
 
 #submit_button:disabled,
@@ -425,3 +432,4 @@ hr{
   font-weight: 400;
   text-align: center;
 }
+
