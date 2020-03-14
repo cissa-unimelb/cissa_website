@@ -1,18 +1,74 @@
 .shards-landing-page--1 .welcome {
-  background-size: 100%;
   background: #020A23;
 }
+
+html, body{
+  font-size:16px;
+  padding-top: 40px;
+  font-family: poppins;
+  overflow-x: hidden;
+}
+
+.carousel-item{
+  height:500px;
+}
+
+.page{
+  min-height: 100vh;
+}
+
+
+@media (max-width: 767px) {
+  .navbar-fixed-top {
+      position: relative;
+      top: auto;
+  }
+  .navbar-collapse {
+      max-height: none;
+  }
+  body {
+      margin: 0;
+  }
+}
+
 
 .navbar-dark {
   background-color: #020A23;
 }
 
+
+#navbarNavDropdown{
+  transform: translateX(-3%)
+}
+
+#navbarNavDropdown li::after{
+  content:'';
+  width:0;
+  display:block;
+  height:2px;
+  background:#ffffff;
+  transition: width .5s;
+}
+
+
+#navbarNavDropdown li:hover::after{
+  width:100%;
+  transition: width .5s;
+}
+
+.dropdown-menu{
+  background-color: #020A23;
+}
 .sponsors {
   max-height: 115px;
   max-width: 250px;
   width: auto;
   height: auto;
   object-fit: contain;
+}
+
+i{
+  color:#ffffff
 }
 
 .bg {
@@ -33,9 +89,6 @@
   transform: translate(-50%, -50%);
 }
 
-body {
-  min-height: 100vh;
-}
 
 .img-center {
     float:none;
@@ -44,10 +97,6 @@ body {
     margin-right:-4px;
 }
 
-.navbar-brand {
-  width: 100px;
-  height: 50px;
-}
 
 .jumbotron-fluid {
   /* color: white; */
@@ -78,3 +127,325 @@ body {
 .shards-landing-page--1 .section {
   border-bottom: 1px solid transparent;
 }
+
+
+
+.dark {
+  background: #020A23;
+}
+
+.dark > h3{
+  color:#ffffff;
+}
+
+.white {
+  background:#ffffff;
+
+}
+
+
+.icon {
+  text-decoration: none;
+  position: relative;
+  text-decoration: none;
+}
+
+  .icon:before {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    text-transform: none !important;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 400;
+  }
+
+  .icon > .label {
+    display: none;
+  }
+
+  .icon:before {
+    line-height: inherit;
+  }
+
+  .icon.solid:before {
+    font-weight: 900;
+  }
+
+  .icon.brands:before {
+    font-family: 'Font Awesome 5 Brands';
+  }
+
+  .icon.major {
+    text-align: center;
+    cursor: default;
+    background-color: #7783F4;
+    color: #fff;
+    border-radius: 100%;
+    display: inline-block;
+    width: 5em;
+    height: 5em;
+    line-height: 5em;
+    box-shadow: 0 0 0 7px white, 0 0 0 8px #e0e0e0;
+    margin: 0 0 2em 0;
+  }
+
+    .icon.major:before {
+      font-size: 36px;
+    }
+
+
+
+
+
+#head > header {
+  padding: 12em 0 10em 0 ;
+  background-image: linear-gradient(#020A23, #020A23);
+  background-image: -webkit-linear-gradient(top,#020A23, #020A23);
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+
+  #head > header h1 {
+    font-size: 3em;
+    margin: 0 0 0.5em 0;
+    color:#ffffff;
+    letter-spacing: 0.2em;
+    text-align: center;
+    font-weight: 800;
+  }
+
+#main-sponsors h3 {
+    font-size: 2.5em;
+    margin: 0 0 0.5em 0;
+    text-align: center;
+    font-weight: 800;
+}
+
+
+hr{
+  border-width: 2px;
+  color:#000000;
+  margin-top: 2em;
+  margin-bottom: 2em;
+
+
+}
+.img-upevents{
+  width:100%;
+}
+
+
+
+.team-section {
+  text-align:center;
+}
+
+.team-section h1 {
+  font-size:30px;
+  display:inline-block;
+  border-bottom: 3px solid;
+  padding-bottom: 10px;
+  padding-top:40px;
+
+}
+.pe {
+  margin-bottom:80px;
+}
+.pe img {
+  width:120px;
+  height:120px;
+}
+
+.p-name {
+  margin:16px;
+}
+
+.p-role {
+  font-style:italic;
+  color:#3498db;
+
+}
+
+
+
+
+.cissa-intro {
+  line-height:1.8;
+}
+
+.sign-up {
+  font-weight: 800;
+  font-size:30px;
+  color:#000000;
+}
+
+
+.sign-up-btn {
+  transition: 0.3s;
+  background:#ffffff;
+  color:#000000;
+  font-weight: 600;
+}
+
+.sign-up-btn:hover{
+  background: #020A23;
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+.gallery-section a {
+  padding:5px;
+}
+
+.gallery-section img{
+  width:100%;
+  height: auto;
+}
+
+.img-about{
+  width:100%;
+}
+
+
+
+.gallery-image {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery-image img {
+  height: 250px;
+  width: 350px;
+  transform: scale(1.0);
+  transition: transform 0.4s ease;
+}
+
+.img-box {
+  margin: 10px;
+  height: 250px;
+  width: 350px;
+  display: inline-block;
+}
+
+.img-box:hover img {
+  transform: scale(1.01);
+  opacity: 0.9;
+  transition:0.8s;
+}
+
+.img-box:hover {
+  cursor: pointer;
+}
+
+
+.event-page .event-img img {
+  width:50%;
+}
+
+.event-page .event-descr {
+  width:75%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.signup-prompt {
+  font-size:16px;
+  line-height:1.8;
+}
+
+#vert-line {
+  border-left: 4px solid white;
+  height: 100px;
+}
+
+.footer img {
+  width:auto;
+  height:50px;
+  margin:10px;
+}
+.g-recaptcha {
+  display: inline-block;
+  width:50%;
+}
+
+
+@media only screen and (max-width: 992px){
+  .event{
+    width:60%;
+  }
+  .sign-up-mainpage{
+    width:60%;
+    margin: 0 auto;
+  }
+  .img-upevents{
+    width:75%;
+    margin:0 auto;
+  }
+  .events-inner{
+    margin-bottom:50px;
+  }
+  .about-cissa{
+    margin-right:50px;
+  }
+  .event-img{
+    width:100%;
+  }
+  .carousel-item{
+    height:300px;
+  }
+  
+}
+
+@media only screen and (max-width: 768px) {
+  #vert-line {
+    display: none;
+  }
+  .cards{
+    width:75%;
+  }
+  .contact_form{
+    width:50%;
+    text-align: center;
+    margin:0 auto;
+  }
+  .g-recaptcha {
+    width:100%;
+  }
+
+  .signup {
+    width:50%;
+  }
+  .carousel-item{
+    height:230px;
+  }
+}
+
+
+
+
+#submit_button:disabled,
+#submit_button[disabled]{
+  border: 1px solid #d3d3d3;
+  background-color: #d3d3d3;
+  color: #666666;
+}
+
+#result{
+  font-weight: 400;
+  text-align: center;
+}
+
