@@ -232,6 +232,9 @@ hr{
 
 
 }
+.img-upevents{
+  width:100%;
+}
 
 
 
@@ -266,10 +269,6 @@ hr{
 }
 
 
-.about-cissa {
-  margin-left: 50px;
-
-}
 
 
 .cissa-intro {
@@ -311,7 +310,7 @@ hr{
 }
 
 .img-about{
-  width:75%;
+  width:100%;
 }
 
 
@@ -382,26 +381,8 @@ hr{
   #vert-line {
     display: none;
   }
-  .signup {
-    width:50%;
-  }
-  .events-inner{
-    margin-bottom:50px;
-  }
-  .event{
-    width:60%;
-  }
   .cards{
     width:75%;
-  }
-  .about-cissa{
-    margin-right:50px;
-  }
-  .img-about{
-    width:100%;
-  }
-  .event-img{
-    width:100%;
   }
   .contact_form{
     width:50%;
@@ -411,13 +392,34 @@ hr{
   .g-recaptcha {
     width:100%;
   }
-  .img-upevents{
-    width:75%;
-    margin:0 auto;
+
+  .signup {
+    width:50%;
+  }
+
+}
+
+
+@media only screen and (max-width: 992px){
+  .event{
+    width:60%;
   }
   .sign-up-mainpage{
     width:60%;
     margin: 0 auto;
+  }
+  .img-upevents{
+    width:75%;
+    margin:0 auto;
+  }
+  .events-inner{
+    margin-bottom:50px;
+  }
+  .about-cissa{
+    margin-right:50px;
+  }
+  .event-img{
+    width:100%;
   }
 }
 
