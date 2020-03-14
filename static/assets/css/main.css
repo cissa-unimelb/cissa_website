@@ -9,9 +9,14 @@ html, body{
   overflow-x: hidden;
 }
 
+.carousel-item{
+  height:500px;
+}
+
 .page{
   min-height: 100vh;
 }
+
 
 @media (max-width: 767px) {
   .navbar-fixed-top {
@@ -377,28 +382,6 @@ hr{
   width:50%;
 }
 
-@media only screen and (max-width: 768px) {
-  #vert-line {
-    display: none;
-  }
-  .cards{
-    width:75%;
-  }
-  .contact_form{
-    width:50%;
-    text-align: center;
-    margin:0 auto;
-  }
-  .g-recaptcha {
-    width:100%;
-  }
-
-  .signup {
-    width:50%;
-  }
-
-}
-
 
 @media only screen and (max-width: 992px){
   .event{
@@ -421,7 +404,38 @@ hr{
   .event-img{
     width:100%;
   }
+  .carousel-item{
+    height:300px;
+  }
+  
 }
+
+@media only screen and (max-width: 768px) {
+  #vert-line {
+    display: none;
+  }
+  .cards{
+    width:75%;
+  }
+  .contact_form{
+    width:50%;
+    text-align: center;
+    margin:0 auto;
+  }
+  .g-recaptcha {
+    width:100%;
+  }
+
+  .signup {
+    width:50%;
+  }
+  .carousel-item{
+    height:230px;
+  }
+}
+
+
+
 
 #submit_button:disabled,
 #submit_button[disabled]{
