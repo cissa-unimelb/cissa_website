@@ -69,13 +69,16 @@
     />
     <link rel="stylesheet" href="assets/css/main.css" />
   </head>
-
-
-
   <body class="shards-landing-page--1">
-    <section class="page">
+    ​
+    <picture class="bg">
+      <source srcset="assets/images/cissa_white.svg" type="image/svg+xml"/>
+      <img src="assets/images/cissasitebg.png" class="img-fluid bg" alt="CISSA"
+    /></picture>
+
+    <div class="welcome d-flex justify-content-center flex-column">
       <nav class="navbar navbar-expand-lg fixed-top navbar-dark pt-4 px-5">
-        <a class="navbar-brand" href="index.html"
+        <a class="navbar-brand" href="#"
           ><img
             src="assets/images/cissa_white.svg"
             width="100px"
@@ -95,193 +98,603 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="committee.html"
+                >Committee <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#events">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#sponsors">Sponsors</a>
+            </li>
+          </ul>
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="events.html">Events</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="sponsors.html">Sponsors</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="gallery.html">Gallery</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact Us</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Social
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="https://medium.com/cissa-unimelb"
-                ><i class="fab fa-medium-m"></i
-              ></a>
-              <a
-                class="dropdown-item"
-                href="https://www.facebook.com/cissa.unimelb/"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a class="dropdown-item" href="https://instagram.com/cissa_unimelb/"
-                ><i class="fab fa-instagram"></i
-              ></a>
-              <a class="dropdown-item" href="https://twitter.com/cissa_unimelb/"
-                ><i class="fab fa-twitter"></i
-              ></a>
-              </div>
-            </li>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="https://medium.com/cissa-unimelb"
+                  ><i class="fab fa-medium-m"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="https://www.facebook.com/cissa.unimelb/"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://instagram.com/cissa_unimelb/"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://twitter.com/cissa_unimelb/"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+              </li>
+            </ul>
           </ul>
         </div>
       </nav>
-      <div class="row">
-      <div class="col">
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="d-block img-fluid w-100" src="assets/images/events/codebrew.jpg" alt="First slide">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block img-fluid w-100" src="assets/images/events/diversity_poster.png" alt="First slide">
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-      </div>
-      </div>
-
-
-    <div class="our-services section px-2 py-4">
-    <h3 class="section-title text-center mt-4 mb-2 py-4">
-      UniMelb’s Student Run Tech Society </h3>
-
-    <div class="row d-flex justify-content-center text-center py-5 mx-2">
-      <section class="col-md-3 my-3 cards">
-        <div class="with-shadows box highlight pb-2">
-          <i class="icon solid major fa-paper-plane"></i>
-          <h4 class="mx-2">Industry Connections</h4>
-          <p class="px-4">Get to know industry professionals, gain exposure to technical talks and the chance to build career connections!</p>
-        </div>
-      </section>
-
-      <section class="col-md-3 my-3 cards">
-        <div class="with-shadows box highlight pb-2">
-          <i class="icon solid major fa-pencil-alt"></i>
-          <h4 class="mx-2">Workshops</h4>
-          <p class="px-4">Expand your skillset and get some hands-on experience related to both technical and non-technical topics
-             taught by industry/student experts! PIZZA will be provided!
-          </p>
-        </div>
-      </section>
-
-      <section class="col-md-3 my-3 cards">
-        <div class="with-shadows box highlight pb-1">
-          <i class="icon solid major fa-wrench"></i>
-          <h4 class="mx-2">Hackathons</h4>
-          <p class="px-4">
-            Come and compete for the chance to win prize money, gain some technical experience, and to put your ideas to the test!
-          </p>
-      </div>
-      </section>
-    </div>
-
-
-    <div class="dark section px-2 py-4 d-flex justify-content-center row">
-      <h3 class="col-lg-8 dark section-title text-center mb-5 py-4">Upcoming Events </h3>
-      <section class="event col-lg-7 my-3 white text-center">
-      <div class="container">
-        <div class="events-inner ">
-          <div class="row">
-            <div class="col-lg-6 mt-3">
-              <h4>Codebrew Hackathon</h4>
-              <p>
-              Join us for our annual CISSA hackathon, Codebrew!
-              </p>
-              <div>
-              Time: 18th April - 19th April
-              </div>
-              <div>
-              Location: TBD
-              </div>
-              <a href="events.html#event1" class="my-3 text-center sign-up-btn btn btn-dark btn-squared">Read more &rarr;</a>
-
-            </div>
-            <div class="img-upevents col-lg-6 pt-5">
-              <img class="img-about" src="assets/images/events/codebrew.jpg" alt="Photo"/>
-            </div>
-          </div>
-        </div>
-        </div>
-      </section>
-
-      <section class="event col-lg-7 my-3 white text-center">
-      <div class="container">
-        <div class="events-inner">
-          <div class="row">
-            <div class="col-lg-6 mt-3">
-              <h4>DiversiTEA</h4>
-              <p>
-              Join us every week for free coffee!
-              </p>
-              <div>
-              Time: Every Tuesday 11am - 12am
-              </div>
-              <div>
-              Location: @ Home.Two (Outside Peter Hall Building)
-              </div>
-              <a href="events.html#event2" class="my-3 text-center sign-up-btn btn btn-dark btn-squared">Read more &rarr;</a>
-
-            </div>
-            <div class="img-upevents col-lg-6 pt-5">
-              <img class="img-about" src="assets/images/events/diversity_poster.png" alt="Photo"/>
-            </div>
-          </div>
-        </div>
-        </div>
-      </section>
-    </div>
-
-    <div class="row sign-up-mainpage row my-5 d-flex justify-content-center">
-      <div class="col-lg-4 text-center">
-        <h3 class="my-3 section-title">Become a Member</h3>
-        <p class="signup-prompt mt-5">
-        We have an exciting year ahead of us and would love to share it with you. You will get weekly email notifications of what we're up to throughout the year, so
-        sign up now to be part of the CISSA family. Membership is FREE!
+      <div class="inner-wrapper mt-auto mb-auto text-center action">
+        <p class="splash_text">
+          Get involved! Become a member and stay up to date on opportunities and
+          events.
         </p>
-        <a href="https://cissa.org.au/signup" target="_blank" class="signup my-3 text-center sign-up-btn btn btn-dark btn-squared">Sign Up Now!</a>
-      </div>
-      <div class="col-lg-4 py-2 justify-content-center">
-        <img class="img-about" src="assets/images/cute.jpg" alt="Photo"/>
-      </div>
-    </div>
-    </section>
-
-
-    <div class="row dark text-center d-flex justify-content-center section footer pt-5 pb-3">
-        <img src="assets/images/cissa_white.svg" class="col-md-4" alt="CISSA"/>
-        <div class="footer-img col-md-6">
-          <img src="assets/images/logos/codebrew.png"  alt="CISSA"/>
-          <img src="assets/images/logos/catalyst_w.png"  alt="CISSA"/>
-          <img src="assets/images/logos/diversity.png"  alt="CISSA"/>
-          <img src="assets/images/logos/hatchery.png" alt="CISSA"/>
+        <div class="action-links d-flex justify-content-center">
+          <a href="https://cissa.org.au/signup" class="btn btn-dark">Sign Up</a>
         </div>
-        <p class="col-md-12 mt-5">&copy; Copyright 2020 CISSA<p>
+      </div>
     </div>
+    <div class="our-services section px-2 py-4">
+      <h3 class="section-title text-center my-5">
+        UniMelb’s Student Run Tech Society
+      </h3>
+      <div class="features py-4 mb-4">
+        <div class="container">
+          <div class="row">
+            <div class="feature py-4 col-md-6 d-flex">
+              <div class="icon text-primary mr-3">
+                <i class="fa fa-graduation-cap"></i>
+              </div>
+              <div class="px-4">
+                <h5>Learn and Engage</h5>
+                <p>
+                  Unique events and talks that educate students from building
+                  companies, to interview tips.
+                </p>
+              </div>
+            </div>
+            <div class="feature py-4 col-md-6 d-flex">
+              <div class="icon text-primary mr-3">
+                <i class="fa fa-code"></i>
+              </div>
+              <div class="px-4">
+                <h5>Hackathons</h5>
+                <p>
+                  Come and compete for the chance to win prize money, gain some
+                  technical experience and to put your ideas to the test.
+                </p>
+              </div>
+            </div>
+            <div class="feature py-4 col-md-6 d-flex">
+              <div class="icon text-primary mr-3">
+                <i class="fas fa-utensils"></i>
+              </div>
+              <div class="px-4">
+                <h5>Barbeques and Events</h5>
+                <p>
+                  Who doesnt like free food? We host social barbeque events for
+                  our members to come along and get to know each other.
+                </p>
+              </div>
+            </div>
+            <div class="feature py-4 col-md-6 d-flex">
+              <div class="icon text-primary mr-3">
+                <i class="fas fa-briefcase"></i>
+              </div>
+              <div class="px-4">
+                <h5>Employer Connections</h5>
+                <p>
+                  Get to know industry professionals, gain exposure to technical
+                  talks and the chance to build career connections.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row"></div>
+        </div>
+      </div>
+    </div>
+    <div class="events section-invert px-2 py-4">
+      <h3 class="section-title text-center m-5" id="events">
+        Events
+      </h3>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card my-5">
+              <picture>
+                <img
+                  class="card-img-top"
+                  src="assets/images/cissa_INN.jpg"
+                  alt="CISSA - Industry Connect"
+              /></picture>
 
+              <div class="card-body">
+                <h4 class="card-title">CISSA - Industry Connect</h4>
+                <p class="card-text">
+                  Confused about your future beyond uni? Uncertain of what's out
+                  there? Want to get to know prospective employers in the
+                  industry? Put down the books, put on the suit/dress/outfit and
+                  come join us at CISSA Industry Connect, a night of mingling
+                  and networking with industry professionals, company
+                  representatives, as well as fellow like-minded students!
+                </p>
+                <a
+                  href="https://www.eventbrite.com.au/e/cissa-industry-connect-tickets-66826520923"
+                  class="btn btn-primary"
+                  style="white-space:normal"
+                >
+                  Get your tickets now! &rarr;</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card my-5">
+              <picture>
+                <source type="image/webp" srcset="assets/images/catalyst.webp"/>
+                <img
+                  class="card-img-top"
+                  src="assets/images/catalyst.png"
+                  alt="Catalyst 2019"
+              /></picture>
 
+              <div class="card-body">
+                <h4 class="card-title">Catalyst 2019</h4>
+                <p class="card-text">
+                  Catalyst is CISSA's Free hackathon!<br /><br />More details
+                  coming soon...
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-primary"
+                  onclick="return false;"
+                  style="white-space:normal"
+                  >Coming soon! &rarr;</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card my-5">
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="assets/images/cissa_banner.webp"/>
+                <img
+                  class="card-img-top"
+                  src="assets/images/cissa_banner.png"
+                  alt="CodeBrew 2019"
+              /></picture>
+
+              <div class="card-body">
+                <h4 class="card-title">Codebrew 2019</h4>
+                <p class="card-text">
+                  Codebrew 2019 was a blast! Join us again next year!
+                </p>
+                <a
+                  href="https://codebrew.com.au/"
+                  class="btn btn-primary"
+                  style="white-space:normal"
+                  >Checkout Codebrew 2019 &rarr;</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section py-4">
+      <h3 class="section-title text-center m-5" id="sponsors">Our Sponsors</h3>
+      <div class="container py-5">
+        <div class="row pb-4">
+          <div class="col-md-12 text-center">
+            <h3 class="pb-5 text-center">Diamond</h3>
+          </div>
+          <div class="col-md-12 text-center pt-0 pb-5 my-auto">
+            <picture>
+              <source
+                type="image/svg+xml"
+                srcset="assets/images/sponsors/deloitte.svg"/>
+              <img
+                src="assets/images/sponsors/sap.png"
+                class="sponsors"
+                alt="Deloitte"
+            /></picture>
+          </div>
+        </div>
+        <div class="row py-4">
+          <div class="col-md-12 text-center">
+            <h3 class="text-center">Platinum</h3>
+          </div>
+          <div class="col-md-4 text-center py-5 my-auto">
+            <picture>
+              <source
+                type="image/svg+xml"
+                srcset="assets/images/sponsors/coles.svg"
+              />
+              <source
+                type="image/webp"
+                srcset="assets/images/sponsors/coles.webp"
+              />
+              <img
+                src="assets/images/sponsors/coles.png"
+                class="sponsors"
+                alt="Coles"
+              />
+            </picture>
+          </div>
+          <div class="col-md-4 text-center py-5 my-auto">
+            <picture>
+              <source
+                type="image/svg+xml"
+                srcset="assets/images/sponsors/janestreet.svg"/>
+              <source
+                type="image/webp"
+                srcset="assets/images/sponsors/janestreet.webp"/>
+              <img
+                src="assets/images/sponsors/janestreet.png"
+                class="sponsors"
+                alt="Jane Street"
+            /></picture>
+          </div>
+          <div class="col-md-4 text-center py-5 my-auto">
+            <picture>
+              <source
+                type="image/svg+xml"
+                srcset="assets/images/sponsors/microsoft.svg"/>
+              <source
+                type="image/webp"
+                srcset="assets/images/sponsors/microsoft.webp"/>
+              <img
+                src="assets/images/sponsors/microsoft.png"
+                class="sponsors"
+                alt="Microsoft"
+            /></picture>
+          </div>
+        </div>
+        <div class="row py-4">
+          <div class="col-md-12 text-center">
+            <h3 class="text-center">Gold</h3>
+          </div>
+          <div class="col-md-4 text-center py-5 my-auto">
+            <picture>
+              <source
+                type="image/svg+xml"
+                srcset="assets/images/sponsors/atlassian.svg"/>
+              <source
+                type="image/webp"
+                srcset="assets/images/sponsors/atlassian.webp"/>
+              <img
+                src="assets/images/sponsors/atlassian.png"
+                class="sponsors"
+                alt="Atlassian"
+            /></picture>
+          </div>
+          <div class="col-md-4 text-center py-5 my-auto">
+            <picture>
+              <source
+                type="image/svg+xml"
+                srcset="assets/images/sponsors/ey.svg"/>
+              <source
+                type="image/webp"
+                srcset="assets/images/sponsors/ey.webp"/>
+              <img src="assets/images/sponsors/ey.png" class="sponsors" alt="EY"
+            /></picture>
+          </div>
+          <div class="col-md-4 text-center py-5 my-auto">
+            <picture>
+              <source
+                type="image/svg+xml"
+                srcset="assets/images/sponsors/optiver.svg"
+              />
+              <source
+                type="image/webp"
+                srcset="assets/images/sponsors/optiver.webp"
+              />
+              <img
+                src="assets/images/sponsors/optiver.png"
+                class="sponsors"
+                alt="Optiver"
+              />
+            </picture>
+          </div>
+          <div class="col-md-12 text-center py-5 my-auto">
+            <picture>
+              <source
+                type="image/svg+xml"
+                srcset="assets/images/sponsors/telstra.svg"
+              />
+              <source
+                type="image/webp"
+                srcset="assets/images/sponsors/telstra.webp"
+              />
+              <img
+                src="assets/images/sponsors/telstra.png"
+                class="sponsors"
+                alt="Telstra"
+              />
+            </picture>
+          </div>
+        </div>
+        <div class="row pt-4">
+          <div class="col-md-12 text-center">
+            <h3 class="text-center">Silver</h3>
+          </div>
+          <div class="col-md-4 text-center py-5 my-auto">
+            <picture>
+              <source
+                type="image/svg+xml"
+                srcset="assets/images/sponsors/accenture.svg"/>
+              <source
+                type="image/webp"
+                srcset="assets/images/sponsors/accenture.webp"/>
+              <img
+                src="assets/images/sponsors/accenture.png"
+                class="sponsors"
+                alt="Accenture"
+            /></picture>
+          </div>
+          <div class="col-md-4 text-center py-5 my-auto">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="assets/images/sponsors/bain&company.webp"/>
+              <img
+                src="assets/images/sponsors/bain&company.png"
+                class="sponsors"
+                alt="Bain & Company"
+            /></picture>
+          </div>
+          <div class="col-md-4 text-center py-5 my-auto">
+            <picture>
+              <source
+                type="image/svg+xml"
+                srcset="assets/images/sponsors/bcg.svg"/>
+              <source
+                type="image/webp"
+                srcset="assets/images/sponsors/bcg.webp"/>
+              <img
+                src="assets/images/sponsors/bcg.png"
+                class="sponsors"
+                alt="The Boston Consulting Group"
+            /></picture>
+          </div>
+          <div class="col-md-4 text-center py-5 my-auto">
+            <picture>
+              <source
+                type="image/svg+xml"
+                srcset="assets/images/sponsors/cognizant.svg"/>
+              <source
+                type="image/webp"
+                srcset="assets/images/sponsors/cognizant.webp"/>
+              <img
+                src="assets/images/sponsors/cognizant.png"
+                class="sponsors"
+                alt="Cognizant"
+            /></picture>
+          </div>
+          <div class="col-md-4 text-center py-5 my-auto">
+            <picture>
+              <source
+                type="image/svg+xml"
+                srcset="assets/images/sponsors/commbank.svg"/>
+              <source
+                type="image/webp"
+                srcset="assets/images/sponsors/commbank.webp"/>
+              <img
+                src="assets/images/sponsors/commbank.png"
+                class="sponsors"
+                alt="Commonwealth Bank"
+            /></picture>
+          </div>
+          <div class="col-md-4 text-center py-5 my-auto">
+            <picture>
+              <source
+                type="image/svg+xml"
+                srcset="assets/images/sponsors/facebook.svg"
+              />
+              <source
+                type="image/webp"
+                srcset="assets/images/sponsors/facebook.webp"
+              />
+              <img
+                src="assets/images/sponsors/facebook.png"
+                class="sponsors"
+                alt="Facebook"
+              />
+            </picture>
+          </div>
+          <div class="col-md-4 text-center py-5 my-auto">
+            <picture>
+              <source
+                type="image/svg+xml"
+                srcset="assets/images/sponsors/google.svg"
+              />
+              <source
+                type="image/webp"
+                srcset="assets/images/sponsors/google.webp"
+              />
+              <img
+                src="assets/images/sponsors/google.png"
+                class="sponsors"
+                alt="Google"
+              />
+            </picture>
+          </div>
+          <div class="col-md-4 text-center py-5 my-auto">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="assets/images/sponsors/mcgrathnicol.webp"/>
+              <img
+                src="assets/images/sponsors/mcgrathnicol.png"
+                class="sponsors"
+                alt="McGrathNicol"
+            /></picture>
+          </div>
+          <div class="col-md-4 text-center py-5 my-auto">
+            <picture>
+              <source
+                type="image/svg+xml"
+                srcset="assets/images/sponsors/palantir.svg"
+              />
+              <source
+                type="image/webp"
+                srcset="assets/images/sponsors/palantir.webp"
+              />
+              <img
+                src="assets/images/sponsors/palantir.png"
+                class="sponsors"
+                alt="Palantir"
+              />
+            </picture>
+          </div>
+          <div class="col-md-12 text-center py-5 my-auto">
+            <picture>
+              <source
+                type="image/svg+xml"
+                srcset="assets/images/sponsors/woodside.svg"
+              />
+              <source
+                type="image/webp"
+                srcset="assets/images/sponsors/woodside.webp"
+              />
+              <img
+                src="assets/images/sponsors/woodside.png"
+                class="sponsors"
+                alt="Woodside"
+              />
+            </picture>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonials section-invert py-4">
+      <h3 class="section-title text-center m-5">
+        Committee
+      </h3>
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-md-4 testimonial text-center">
+            <div
+              class="avatar rounded-circle with-shadows mb-3 ml-auto mr-auto"
+            >
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="assets/images/jonathan.webp"
+                />
+                <img
+                  src="assets/images/jonathan.png"
+                  class="w-100"
+                  alt="Jonathan"
+                />
+              </picture>
+            </div>
+            <h5 class="mb-1">Jonathan Tran</h5>
+            <span class="text-muted d-block mb-2">President</span>
+            <p>Runs the show<br /></p>
+          </div>
+          <div class="col-md-4 testimonial text-center">
+            <div
+              class="avatar rounded-circle with-shadows mb-3 ml-auto mr-auto"
+            >
+              <picture
+                ><img
+                  src="assets/images/michael.jpg"
+                  class="w-100"
+                  alt="Michael"
+                />
+              </picture>
+            </div>
+            <h5 class="mb-1">Michael Manoussakis</h5>
+            <span class="text-muted d-block mb-2">Vice President</span>
+            <p>Also runs the show<br /></p>
+          </div>
+          <div class="col-md-4 testimonial text-center">
+            <div
+              class="avatar rounded-circle with-shadows mb-3 ml-auto mr-auto"
+            >
+              <picture>
+                <source type="image/webp" srcset="assets/images/raj.webp"/>
+                <img src="assets/images/raj.jpg" class="w-100" alt="Raj"
+              /></picture>
+            </div>
+            <h5 class="mb-1">Raj Shee</h5>
+            <span class="text-muted d-block mb-2">Secretary</span>
+            <p>Makes sure things go smoothly<br /></p>
+          </div>
+          <div class="col-md-4 testimonial text-center">
+            <div
+              class="avatar rounded-circle with-shadows mb-3 ml-auto mr-auto"
+            >
+              <picture>
+                <source type="image/webp" srcset="assets/images/daniel.webp"/>
+                <img src="assets/images/daniel.jpg" class="w-100" alt="Daniel"
+              /></picture>
+            </div>
+            <h5 class="mb-1">Daniel Sutherland</h5>
+            <span class="text-muted d-block mb-2">Treasurer</span>
+            <p>
+              Manages the money
+            </p>
+          </div>
+          <div class="col-md-4 testimonial text-center">
+            <div
+              class="avatar rounded-circle with-shadows mb-3 ml-auto mr-auto"
+            >
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="assets/images/michelle.webp"
+                />
+                <img
+                  src="assets/images/michelle.png"
+                  class="w-100"
+                  alt="Michelle"
+                />
+              </picture>
+            </div>
+            <h5 class="mb-1">Michelle Anggana</h5>
+            <span class="text-muted d-block mb-2">Events Officer</span>
+            <p>
+              <br />
+            </p>
+          </div>
+          <div class="col-md-4 testimonial text-center">
+            <div
+              class="avatar rounded-circle with-shadows mb-3 ml-auto mr-auto"
+            >
+              <picture
+                ><img src="assets/images/karl.jpg" class="w-100" alt="Karl" />
+              </picture>
+            </div>
+            <h5 class="mb-1">Karl Flores</h5>
+            <span class="text-muted d-block mb-2">Education Officer</span>
+            <p>Educates!<br /></p>
+          </div>
+          <div class="col-md-12 testimonial text-center">
+            <h5 class="mb-1"><a href="committee.html">View All</a></h5>
+          </div>
+        </div>
+      </div>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
