@@ -9,6 +9,11 @@ html, body{
   overflow-x: hidden;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+
 .carousel-item{
   height:500px;
 }
@@ -16,7 +21,6 @@ html, body{
 .page{
   min-height: 100vh;
 }
-
 
 @media (max-width: 767px) {
   .navbar-fixed-top {
@@ -30,7 +34,6 @@ html, body{
       margin: 0;
   }
 }
-
 
 .navbar-dark {
   background-color: #020A23;
@@ -50,7 +53,6 @@ html, body{
   transition: width .5s;
 }
 
-
 #navbarNavDropdown li:hover::after{
   width:100%;
   transition: width .5s;
@@ -67,9 +69,6 @@ html, body{
   object-fit: contain;
 }
 
-i{
-  color:#ffffff
-}
 
 .bg {
   position: absolute;
@@ -96,7 +95,6 @@ i{
     vertical-align:middle;
     margin-right:-4px;
 }
-
 
 .jumbotron-fluid {
   /* color: white; */
@@ -128,8 +126,6 @@ i{
   border-bottom: 1px solid transparent;
 }
 
-
-
 .dark {
   background: #020A23;
 }
@@ -142,7 +138,6 @@ i{
   background:#ffffff;
 
 }
-
 
 .icon {
   text-decoration: none;
@@ -300,11 +295,6 @@ hr{
 
 
 
-* {
-  box-sizing: border-box;
-}
-
-
 .gallery-section a {
   padding:5px;
 }
@@ -433,8 +423,6 @@ hr{
     height:230px;
   }
 }
-
-
 
 
 #submit_button:disabled,

@@ -9,8 +9,23 @@ app.get('/', function(req, res){
   res.sendFile(__dirname + '/public/index.html');
 });
 
-app.get('/committee', function(req, res){
-  res.sendFile(__dirname + '/public/committee.html');
+app.get('/events', function(req, res){
+  res.sendFile(__dirname + '/public/events.html');
+});
+app.get('/about', function(req, res){
+  res.sendFile(__dirname + '/public/about.html');
+});
+app.get('/gallery', function(req, res){
+  res.sendFile(__dirname + '/public/gallery.html');
+});
+app.get('/past-events', function(req, res){
+  res.sendFile(__dirname + '/public/past_events.html');
+});
+app.get('/contact-us', function(req, res){
+  res.sendFile(__dirname + '/public/contact_us.html');
+});
+app.get('/sponsors', function(req, res){
+  res.sendFile(__dirname + '/public/sponsors.html');
 });
 
 app.use('/', express.static('static/'));
