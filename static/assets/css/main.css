@@ -397,6 +397,10 @@ hr{
   .carousel-item{
     height:300px;
   }
+  .about-cissa{
+    text-align: center;
+    margin:0 auto;
+  }
   
 }
 
@@ -417,10 +421,10 @@ hr{
   }
 
   .signup {
-    width:50%;
+    width:75%;
   }
   .carousel-item{
-    height:230px;
+    height:180px;
   }
 }
 
