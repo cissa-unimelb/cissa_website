@@ -58,9 +58,20 @@ html, body{
   transition: width .5s;
 }
 
-.dropdown-menu{
+.dropdown-menu {
   background-color: #020A23;
 }
+
+.dropdown-item {
+  color: white;
+}
+
+.dropdown-item .fab {
+  width: 1em;
+  text-align: center;
+  margin-right: 0.5em;
+}
+
 .sponsors {
   max-height: 115px;
   max-width: 250px;
@@ -401,7 +412,7 @@ hr{
     text-align: center;
     margin:0 auto;
   }
-  
+
 }
 
 @media only screen and (max-width: 768px) {

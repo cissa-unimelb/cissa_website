@@ -120,18 +120,18 @@
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="https://medium.com/cissa-unimelb"
                 ><i class="fab fa-medium-m"></i
-              ></a>
+              >cissa-unimelb</a>
               <a
                 class="dropdown-item"
                 href="https://www.facebook.com/cissa.unimelb/"
                 ><i class="fab fa-facebook-f"></i
-              ></a>
+              >cissa.unimelb</a>
               <a class="dropdown-item" href="https://instagram.com/cissa_unimelb/"
                 ><i class="fab fa-instagram"></i
-              ></a>
+              >cissa_unimelb</a>
               <a class="dropdown-item" href="https://twitter.com/cissa_unimelb/"
                 ><i class="fab fa-twitter"></i
-              ></a>
+              >cissa_unimelb</a>
               </div>
             </li>
           </ul>
@@ -191,7 +191,7 @@
         else{
           await axios.post('https://api.cissa.org.au/contact', {
           ...formData,
-          
+
           recipient: 'executives@cissa.org.au'});
           document.getElementById('result').innerHTML = '<font color="green">Message Sent. We will be in touch soon!</font>';
           window.scrollTo(0, 0);
