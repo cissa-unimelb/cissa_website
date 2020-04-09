@@ -72,6 +72,37 @@
 
 
   <body class="shards-landing-page--1">
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId            : '847630872382091',
+          autoLogAppEvents : true,
+          xfbml            : true,
+          version          : 'v6.0'
+        });
+        FB.login(function(response) {
+            if (response.authResponse) {
+            console.log('Welcome!  Fetching your information.... ');
+            FB.api('/me?fields=name,birthday', function(response) {
+              console.log(response);
+            });
+            } else {
+            console.log(response.error);
+            }
+        }, {scope:'email,user_birthday'});
+
+
+      };
+
+    </script>
+    <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
+
+
+
+
+
+
+
     <section class="page">
       <nav class="navbar navbar-expand-lg fixed-top navbar-dark pt-4 px-5">
         <a class="navbar-brand" href="index.html"
@@ -233,6 +264,15 @@
     </div>
 
     <script>
+
+    FB.api(
+      '/me',
+      'GET',
+      {"fields":"id,name"},
+      function(response) {
+          // Insert your code here
+      }
+    );
       
 
 
