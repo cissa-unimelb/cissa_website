@@ -20,7 +20,7 @@ app.get('/gallery', function(req, res){
 app.get('/past-events', function(req, res){
   res.sendFile(__dirname + '/static/past_events.html');
 });
-app.get('/contact', function(req, res){
+app.get('/contact-us', function(req, res){
   res.sendFile(__dirname + '/static/contact.html');
 });
 app.get('/sponsors', function(req, res){
