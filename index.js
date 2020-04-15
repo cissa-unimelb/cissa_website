@@ -22,7 +22,7 @@ app.get('/past-events', function(req, res){
   res.sendFile(__dirname + '/public/past_events.html');
 });
 app.get('/contact-us', function(req, res){
-  res.sendFile(__dirname + '/public/contact_us.html');
+  res.sendFile(__dirname + '/public/contact.html');
 });
 app.get('/sponsors', function(req, res){
   res.sendFile(__dirname + '/public/sponsors.html');
