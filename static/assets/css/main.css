@@ -17,10 +17,6 @@ i {
   color:#FFFFFF;
 }
 
-.carousel-item{
-  height:500px;
-}
-
 .page{
   min-height: 100vh;
 }
@@ -397,9 +393,6 @@ hr{
   .event-img{
     width:100%;
   }
-  .carousel-item{
-    height:300px;
-  }
   .about-cissa{
     text-align: center;
     margin:0 auto;
@@ -426,11 +419,7 @@ hr{
   .signup {
     width:75%;
   }
-  .carousel-item{
-    height:180px;
-  }
 }
-
 
 #submit_button:disabled,
 #submit_button[disabled]{
