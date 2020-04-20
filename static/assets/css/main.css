@@ -380,22 +380,28 @@ hr{
     width:60%;
     margin: 0 auto;
   }
-  .img-upevents{
-    width:75%;
-    margin:0 auto;
-  }
   .events-inner{
     margin-bottom:50px;
   }
   .about-cissa{
     margin-right:50px;
+    text-align: center;
+    margin:0 auto;
+    width:85%;
   }
   .event-img{
     width:100%;
   }
-  .about-cissa{
+  .sign-up-mainpage{
     text-align: center;
     margin:0 auto;
+    width:85%;
+  }
+  .img-upevents{
+    margin-bottom:1px;
+  }
+  .event-page .event-img img, .event-page .event-descr  {
+    width:85%;
   }
   
 }
