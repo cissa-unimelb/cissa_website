@@ -17,10 +17,6 @@ i {
   color:#FFFFFF;
 }
 
-.page{
-  min-height: 100vh;
-}
-
 @media (max-width: 767px) {
   .navbar-fixed-top {
       position: relative;
