@@ -17,6 +17,10 @@ i {
   color:#FFFFFF;
 }
 
+.fa-circle-notch{
+  color:gray;
+}
+
 @media (max-width: 767px) {
   .navbar-fixed-top {
       position: relative;
@@ -439,9 +443,10 @@ hr{
 
 .no-events-index{
   color:#FFFFFF;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 .no-events{
-  font-size: 15px;
+  font-size: 20px;
+
 }

@@ -73,9 +73,77 @@
 
 
 
- <body class="event-page shards-landing-page--1">
+  <body class="event-page shards-landing-page--1">
+    <script>
+      window.fbAsyncInit = async function() {
+      await FB.init({
+      appId            : '247175516655391',
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v6.0'
+      });
+      await FB.api(
+        '/1678235912453132/events',
+        'GET',
+        {access_token:'EAADgzgjeDx8BAAnKWmC0LxWZAZBjZA1SQJaltrq2hOmKlZABX6YZBzEy0owB6UAaPbrndZAUcZCly7uPzL0KdJZCvwSDZB7nU6pTkZAUPEVlYnsCtpiGpNrMrQXPd228Sv01YszN8oduBTmFHe4KdB0ZAQykyHW5m9gxpubfuIpP2IQZBwZDZD',
+        fields:'cover,description,start_time,name,place'},
+        function(response) { 
+        if (!response || response.error) {
+            $(".no-pastevents-msg" ).prepend("<p class='no-events'>There are no past events.\
+            Check out out <a target='_blank' href='https://www.facebook.com/cissa.unimelb/events/'>facebook page</a> for more!</p>");
+        }else{
+          var count = 0;
+          var today = new Date();
+          var day = today.getDate();
+          var month = today.getMonth() + 1
+          var year = today.getFullYear();
+          
+          for (var i=response.data.length-1;i>=0;i--){
+            var res = response.data[i];
+            var start = res.start_time;
+            if (start.substring(0,4) < year){
+                continue;
+            }
+            if (start.substring(0,4) > year){
+              break;
+            }
+            if (start.substring(0,4) == year && start.substring(5,7) > month){
+                break;
+            }
+            if (start.substring(0,4) == year && start.substring(5,7) == month && start.substring(8,10) >= day){
+                break;
+            }
+            count++;
+            var time = start.substring(8,10)+"/"+start.substring(5,7)+" at "+start.substring(11,16);
+            var cover_photo = res.cover.source;
+            var name = res.name;
+            var start = res.start_time;
+            var location = res.place.name;
+            var descr = res.description;
 
-    <div id="head" class=" d-flex justify-content-center flex-column">
+            $(".events-from-fb" ).prepend("<div class='col-md-6'>\
+            <div class='event-img text-center py-5'>\
+              <img src="+cover_photo+" alt='Photo'/></div>\
+            <div class='text-center event-descr pt-1 pb-5'>\
+            <h4>"+name+"</h4>\
+            <p>"+descr+"</p>\
+            <div>Time: "+ time + "</div>\
+            <div> Location: "+ location + " </div></div></div>");
+          }
+          if (count == 0){
+            $(".no-pastevents-msg" ).prepend("<p class='no-events'>There are no past events.\
+            Check out out <a target='_blank' href='https://www.facebook.com/cissa.unimelb/events/'>facebook page</a> for more!</p>");
+          }
+        }
+        $(".fa-3x").hide();
+      });
+    };
+    </script>
+    <script src="https://connect.facebook.net/en_US/sdk.js"></script>
+
+
+
+    <div id="head" class="d-flex justify-content-center flex-column">
       <nav class="navbar navbar-expand-lg fixed-top navbar-dark pt-4 px-5">
         <a class="navbar-brand" href="index.html"
           ><img
@@ -136,261 +204,29 @@
             </li>
           </ul>
         </div>
-    </nav>
+      </nav>
+      <header>
+        <h1 class="section-title text-center">EVENTS</h1>
+      </header>
     </div>
 
-    <h3 class="section-title text-center mt-4 mb-2 py-4">Past Events </h3>
-    <div class="row"> 
-    <div class="col-md-6">
-        <div class="event-img text-center py-5">
-          <img src="assets/images/codejam_react.jpg" alt="Photo"/>
-        </div>
-
-        <div class="text-center event-descr pt-1 pb-5">
-            <h4>CISSA CodeJam Series: Learn to Code in React</h4>
-            <p>
-              Interested in getting some hands-on front-end coding experience? We've got you covered!  
-              This year, we are launching a brand new education initiative CodeJam, where you will be 
-              learning practical industry knowledge through working on bite-sized coding task in a small 
-              workshop with your fellow com sci / software eng legends! 
-              We are incredibly lucky to have our very own Andrew Shen to kick off the first CodeJam session. 
-              Andrew has recently come back from his exchange at the University of Pennsylvania (UPenn), 
-              he will be showcasing some of the skills and knowledge he has learned in front-end development 
-              during his time at UPenn. 
-            </p>
-            <div>
-            Time: 23 April 5:15pm - 6:45pm
-            </div>
-            <div>
-            Location: Online via Zoom
-            </div>
-            <div>
-            <a href="https://www.facebook.com/events/539933693347525/">Facebook Page</a>
-            </div>
-        </div>
-      </div>
-    <div class="col-md-6">
-        <div id="event2" class="event-img text-center py-5">
-          <img src="assets/images/IC_anz.jpg" alt="Photo"/>
-        </div>
-
-        <div class="text-center event-descr pt-1 pb-5">
-            <h4>Industry Connect Series: ANZ</h4>
-            <p>
-              Prepare some questions and tune in for our online tech talk and networking event with ANZ.
-              As a bank, ANZ plays an important role in building a balanced and sustainable society, transforming 
-              our ideas and hard work into reality. In a technology team at ANZ, you'll be exposed to a range of 
-              complex problems. You can make your mark on their cloud services, critical banking systems or customer 
-              platforms on web and mobile. During the event, you'll have an opportunity to chat directly with 
-              technologists at ANZ to find out more.
-            </p>
-            <div>
-            Time: 6th April 4:30pm - 5:30pm
-            </div>
-            <div>
-            Location: Online via Zoom
-            </div>
-            <div>
-            <a href="https://www.facebook.com/events/660297618119181/">Facebook Page</a>
-            </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div id="event2" class="event-img text-center py-5">
-          <img src="assets/images/optiver_IC.png" alt="Photo"/>
-        </div>
-
-        <div class="text-center event-descr pt-1 pb-5">
-            <h4>Industry Connect Series: Optiver</h4>
-            <p>
-            As an engineer at Optiver, you'll work at the cutting edge on a high performance, low latency global network handling petabytes of data. 
-            With advanced trading technology and connections to markets, you'll be working with an innovative team on a leading infrastructure.
-            During our online talk, you'll hear a range of perspectives on software and hardware devolvement, production engineering and life at a trading firm.
-            As part of our Networking Week, you'll also have the opportunity to ask any questions - so come prepared!
-            </p>
-            <div>
-            Time: 31th March 1pm - 2pm
-            </div>
-            <div>
-            Location: Online via Zoom
-            </div>
-            <div>
-            <a href="https://www.facebook.com/events/915473475549952/">Facebook Page</a>
-            </div>
-        </div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="event-img text-center py-5">
-            <img src="assets/images/wise_bbq.jpg" alt="Photo"/>
-        </div>
-        <div class="text-center event-descr pt-1 pb-5">
-            <h4>WISE & CISSA BBQ</h4>
-            <p>
-            Let's chill on the Peter Hall Lawn and bond over some BBQ! 
-            Our friends at Women in Science and Engineering (WISE) will be there too. Get involved! 
-            <a href="https://www.wiseunimelb.com/">https://www.wiseunimelb.com/</a>
-            </p>
-            <div>
-            Time: 9th March 12pm - 1pm
-            </div>
-            <div>
-            Location: @ Peter Hall Lawn
-            </div>
-            <div>
-            <a href="https://www.facebook.com/events/1471670496329268/">Facebook Page</a>
-            </div>
-        </div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="event-img text-center py-5">
-            <img src="assets/images/protege.png" alt="Photo"/>
-        </div>
-        <div class="text-center event-descr pt-1 pb-5">
-            <h4>Microsoft Protégé Case Competition Workshop</h4>
-            <p>
-            Microsoft will be on campus to run a workshop on their ongoing technology 
-            case competition, Protégé 2020. Teams of 1-4 from any faculty have the chance to apply their analytical 
-            and tech skills to this year's bushfire relief case. Winning teams from around Australia will be invited to an exclusive three-day 
-            event at Microsoft's Sydney locations and take home Microsoft products. On the 6th of March, Microsoft will 
-            provide inspiration and mentorship to kick-start your team's success. They'll even treat you to food during lunch!
-            </p>
-            <div>
-            Time: 6th March 12pm - 1:30pm
-            </div>
-            <div>
-            Location: @ PAR-757 Swanston St-124 (Harold White Lecture Theatre)
-            </div>
-            <div>
-            <a href="https://www.facebook.com/events/3017876988331474/">Facebook Page</a>
-            </div>
-        </div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="event-img text-center py-5">
-            <img src="assets/images/jane_st_infosesh.jpg" alt="Photo"/>
-        </div>
-
-        <div class="text-center event-descr pt-1 pb-5">
-            <h4>Jane Street Estimathon & Info Session</h4>
-            <p>
-            Join Jane Street for an informative look into the world of trading and technology, and learn about our job opportunities! 
-            We will also play a mathematically driven game called Estimathon. Food and drinks will be served.
-            </p>
-            <div>
-            Time: 5th March 5pm
-            </div>
-            <div>
-            Location: @ Theatre 1 (B103), Level B1, Building 379, 207-221 Bouverie Street
-            </div>
-            <div>
-            <a href="https://www.facebook.com/events/526364538010038/">Facebook Page</a>
-            </div>
-        </div>
-      </div>
-
-      <div class="col-md-6">
-
-        <div class="event-img text-center py-5">
-            <img src="assets/images/optiver_techtalk.jpg" alt="Photo"/>
-        </div>
-
-        <div class="text-center event-descr pt-1 pb-5">
-            <h4>Improving the Market: Optiver’s Approach to Hard Problems</h4>
-            <p>
-            Software Engineers at Optiver will come to campus and share their passions in improve the market 
-            and their wisdoms in the difficult technical, architectural challenges involved, and the approaches 
-            that have proven to be particularly effective in dealing with them. You'll learn about Optiver's 
-            graduate and intern opportunities, their culture, and some recent projects. You'll also get a 
-            little insight into Ready Trader One, Optiver's algorithmic trading competition beginning on March 9.
-            </p>
-            <div>
-            Time: 4th March 4pm
-            </div>
-            <div>
-            Location: @ PAR-757 Swanston St-124 (Harold White Lecture Theatre)
-            </div>
-            <div>
-            <a href="https://www.facebook.com/events/665960127546269/">Facebook Page</a>
-            </div>
-        </div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="event-img text-center py-5">
-            <img src="assets/images/welcome_expo.jpg" alt="Photo"/>
-        </div>
-
-        <div class="text-center event-descr pt-1 pb-5">
-            <h4>Welcome Back Day Expo</h4>
-            <p>
-                We will be hosting a Welcome Back session on the South Lawn tomorrow at 12pm! 
-                It is a perfect opportunity to meet new friends and your future teammates for our upcoming hackathons. 
-                For goody-grabbers and job seekers, it's your time to shine! Our committees have great source recruitment 
-                information and packed amounts of brochures & goodies which we are excited to share. 
-                Be sure to check them out! 
-            </p>
-            <div>
-            Time: 2 March 2020 12:00-13:00 
-            </div>
-            <div>
-            Location: @ South Lawn
-            </div>
-            <div>
-            <a href="https://www.facebook.com/events/2588305171398382/">Facebook Page</a>
-            </div>
-        </div>
-      </div>
-
-      <div class="col-md-6">
-
-        <div class="event-img text-center py-5">
-            <img src="assets/images/club_fest.jpg" alt="Photo"/>
-        </div>
-        <div class="text-center event-descr pt-1 pb-5">
-            <h4>Club Festival</h4>
-            <p>
-            Hi Everyone! The wait is finally over! We are excited to introduce our first event of 2020. Come and chat to us
-            at the club festival hosted by the Science Faculty and familiarise yourself with learning opportunities and career
-            options in the tech industry. 
-
-            P.s you may also get a sneak-peak of our event roadmap!
-            </p>
-            <div>
-            Time: 25th Feb 10am - 12am
-            </div>
-            <div>
-            Location: @ Royal Exhibition Building
-            </div>
-            <div>
-            <a href="https://www.facebook.com/events/500960847484314/">Facebook Page</a>
-            </div>
-        </div>
-      </div>
-
-
-
-
-
-
-
-
+    <h3 class="section-title text-center mt-4 mb-2 py-4">Past Events</h3>
+    <div class="text-center no-pastevents-msg"></div>
+    <div class="row events-from-fb text-center py-5"> 
+      <div class="fa-3x text-center col-md-12"><i class="fas fa-circle-notch fa-spin"></i></div>
     </div>
-
 
     <div class="row dark text-center d-flex justify-content-center section footer pt-5 pb-3">
-        <img src="assets/images/cissa_white.svg" class="col-md-4" alt="CISSA"/>
-        <div class="footer-img col-md-6">
+      <img src="assets/images/cissa_white.svg" class="col-md-4" alt="CISSA"/>
+      <div class="footer-img col-md-6">
         <img src="assets/images/codebrew.png"  alt="CISSA"/>
         <img src="assets/images/catalyst_w.png"  alt="CISSA"/>
         <img src="assets/images/diversity.png"  alt="CISSA"/>
         <img src="assets/images/hatchery.png" alt="CISSA"/>
-        </div>
-        <p class="col-md-12 mt-5">&copy; Copyright 2020 CISSA<p>
+      </div>
+      <p class="col-md-12 mt-5">&copy; Copyright 2020 CISSA<p>
     </div>
-
+    
     <script
         src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

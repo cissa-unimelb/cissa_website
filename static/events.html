@@ -71,11 +71,73 @@
 
   </head>
 
-
-
  <body class="event-page shards-landing-page--1">
+    <script>
+      window.fbAsyncInit = async function() {
+      await FB.init({
+      appId            : '247175516655391',
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v6.0'
+      });
+      await FB.api(
+        '/1678235912453132/events',
+        'GET',
+        {access_token:'EAADgzgjeDx8BAAnKWmC0LxWZAZBjZA1SQJaltrq2hOmKlZABX6YZBzEy0owB6UAaPbrndZAUcZCly7uPzL0KdJZCvwSDZB7nU6pTkZAUPEVlYnsCtpiGpNrMrQXPd228Sv01YszN8oduBTmFHe4KdB0ZAQykyHW5m9gxpubfuIpP2IQZBwZDZD',
+        fields:'cover,description,start_time,name,place'},
+        function(response) { 
+        if (!response || response.error) {
+            $(".events-from-fb" ).prepend("<p class='no-events'>There are no upcoming events. Come back later!</p>")
+        }else{
+          var count = 0;
+          var today = new Date();
+          var day = today.getDate();
+          var month = today.getMonth() + 1
+          var year = today.getFullYear();
+          
+          for (var i=0;response.data.length;i++){
+            var res = response.data[i];
+            var start = res.start_time;
+            if (start.substring(0,4) < year){
+                break;
+            }
+            if (start.substring(0,4) == year && start.substring(5,7) < month){
+                break;
+            }
+            if (start.substring(0,4) == year && start.substring(5,7) == month && start.substring(8,10) < day){
+                break;
+            }
+            count++;
+            var time = start.substring(8,10)+"/"+start.substring(5,7)+" at "+start.substring(11,16);
+            var cover_photo = res.cover.source;
+            var name = res.name;
+            var start = res.start_time;
+            var location = res.place.name;
+            var descr = res.description;
 
-    <div id="head" class=" d-flex justify-content-center flex-column">
+            $(".events-from-fb" ).prepend("<div class='col-md-12'>\
+            <div class='event-img text-center py-5'>\
+              <img src="+cover_photo+" alt='Photo'/></div>\
+            <div class='text-center event-descr pt-1 pb-5'>\
+            <h4>"+name+"</h4>\
+            <p>"+descr+"</p>\
+            <div>Time: "+ time + "</div>\
+            <div> Location: "+ location + " </div>\
+            <div><a target='_blank' href='https://www.facebook.com/cissa.unimelb/events/'>Facebook Page</a></div>\
+            </div></div>");
+          }
+          if (count == 0){
+            $(".no-pastevents-msg" ).prepend("<p class='no-events'>There are no past events.\
+            Check out out <a target='_blank' href='https://www.facebook.com/cissa.unimelb/events/'>facebook page</a> for more!</p>");
+          }
+        }
+        $(".fa-3x").hide();
+      });
+    };
+    </script>
+    <script src="https://connect.facebook.net/en_US/sdk.js"></script>
+
+    <div id="head" class="d-flex justify-content-center flex-column">
       <nav class="navbar navbar-expand-lg fixed-top navbar-dark pt-4 px-5">
         <a class="navbar-brand" href="index.html"
           ><img
@@ -147,82 +209,8 @@
     Upcoming Events 
     </h3>
 
-    <div class="pt-3 text-center no-events">
-    <div class="col-md-12">
-        <div id="event1" class="event-img text-center py-5">
-          <img src="assets/images/IC_canva.jpg" alt="Photo"/>
-        </div>
-
-        <div class="text-center event-descr pt-1 pb-5">
-            <h4>Industry Connect Online Series: Canva</h4>
-            <p>
-              Hear from the developers behind Canva! https://www.canva.com/en_au/
-              Their front-end and back-end developers build scalable software that 
-              allows their millions of users to create incredible designs with ease.
-              At Industry Connect, you'll have an opportunity to hear about their graduate 
-              and intern roles, life at Canva and the tech behind the site.
-              We will have plenty of time for questions, so get thinking about what to ask!
-            </p>
-            <div>
-            Time: 29 April 4:30pm - 5:30pm
-            </div>
-            <div>
-            Location: Online via Zoom (check out fb page for link closer to date)
-            </div>
-            <div>
-            <a href="https://www.facebook.com/events/302830170706022/">Facebook Page</a>
-            </div>
-        </div>
-      </div>
-      <div class="col-md-12">
-        <div id="event2" class="event-img text-center py-5">
-          <img src="assets/images/interviews_umcpc.jpg" alt="Photo"/>
-        </div>
-
-        <div class="text-center event-descr pt-1 pb-5">
-            <h4>CISSA x UMCPC Software Engineering Interview Workshop</h4>
-            <p>
-              Join us for a two-hour session to expand your SWE interview knowledge and prepare you for technical coding questions. 
-              The workshop will feature algorithm question walkthroughs, guidance to coding resources, and directions to personal upskilling. 
-              The workshop will also include a Q&A with past high achieving interns. e skills and knowledge he has learned in front-end development 
-            </p>
-            <div>
-            Time: 5 May 12pm - 2pm
-            </div>
-            <div>
-            Location: Online via Zoom (check out fb page for link closer to date)
-            </div>
-            <div>
-            <a href="https://www.facebook.com/events/254720709042677/">Facebook Page</a>
-            </div>
-        </div>
-      </div>
-
-      <div class="col-md-12">
-        <div id="event3" class="event-img text-center py-5">
-          <img src="assets/images/leetcode_umcpc.jpg" alt="Photo"/>
-        </div>
-
-        <div class="text-center event-descr pt-1 pb-5">
-            <h4>CISSA x UMCPC Hitchhiker's Guide to LeetCode </h4>
-            <p>
-            Two of the biggest computing clubs have teamed up again providing you with ammunition to face 
-            technical coding interviews! Whether you want to become a technical analyst, a product manager, 
-            or a software engineer, solving these questions would be an essential component included in your interview stages. 
-            Join us for a two-hour intensive training session to help you navigate through question banks within Leetcode. 
-            This session will also showcase some of the challenging coding topics confronted by job-seekers in the tech industry. 
-            </p>
-            <div>
-            Time: 7 May 12pm - 2:15pm
-            </div>
-            <div>
-            Location: Online via Zoom (check out fb page for link closer to date)
-            </div>
-            <div>
-            <a href="https://www.facebook.com/events/527021781315905/">Facebook Page</a>
-            </div>
-        </div>
-      </div>
+    <div class="events-from-fb pt-5 text-center">
+      <div class="fa-3x text-center col-md-12"><i class="fas fa-circle-notch fa-spin"></i></div>
     </div>
 
 
