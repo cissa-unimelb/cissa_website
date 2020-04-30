@@ -84,11 +84,13 @@
         '/1678235912453132/events',
         'GET',
         {access_token:'EAADgzgjeDx8BAAnKWmC0LxWZAZBjZA1SQJaltrq2hOmKlZABX6YZBzEy0owB6UAaPbrndZAUcZCly7uPzL0KdJZCvwSDZB7nU6pTkZAUPEVlYnsCtpiGpNrMrQXPd228Sv01YszN8oduBTmFHe4KdB0ZAQykyHW5m9gxpubfuIpP2IQZBwZDZD',
-        fields:'cover,description,start_time,name,place'},
+        fields:'id,cover,description,start_time,name,place'},
         function(response) { 
         if (!response || response.error) {
-            $(".events-from-fb" ).prepend("<p class='no-events'>There are no upcoming events. Come back later!</p>")
+            $(".events-from-fb" ).prepend("<p class='no-events'>There are no upcoming events.Check out our\
+            <a target='_blank' href='https://www.facebook.com/cissa.unimelb/events/'>facebook page</a> for more!</p>");
         }else{
+          console.log(response);
           var count = 0;
           var today = new Date();
           var day = today.getDate();
@@ -114,6 +116,7 @@
             var start = res.start_time;
             var location = res.place.name;
             var descr = res.description;
+            var event_id = res.id;
 
             $(".events-from-fb" ).prepend("<div class='col-md-12'>\
             <div class='event-img text-center py-5'>\
@@ -123,12 +126,12 @@
             <p>"+descr+"</p>\
             <div>Time: "+ time + "</div>\
             <div> Location: "+ location + " </div>\
-            <div><a target='_blank' href='https://www.facebook.com/cissa.unimelb/events/'>Facebook Page</a></div>\
+            <div><a target='_blank' href='https://www.facebook.com/events/"+event_id+"'>Facebook Page</a></div>\
             </div></div>");
           }
           if (count == 0){
-            $(".no-pastevents-msg" ).prepend("<p class='no-events'>There are no past events.\
-            Check out out <a target='_blank' href='https://www.facebook.com/cissa.unimelb/events/'>facebook page</a> for more!</p>");
+            $(".events-from-fb" ).prepend("<p class='no-events'>There are no upcoming events.Check out our\
+            <a target='_blank' href='https://www.facebook.com/cissa.unimelb/events/'>facebook page</a> for more!</p>");
           }
         }
         $(".fa-3x").hide();

@@ -120,6 +120,7 @@
             var start = res.start_time;
             var location = res.place.name;
             var descr = res.description;
+            var event_id = res.id;
 
             $(".events-from-fb" ).prepend("<div class='col-md-6'>\
             <div class='event-img text-center py-5'>\
@@ -128,11 +129,13 @@
             <h4>"+name+"</h4>\
             <p>"+descr+"</p>\
             <div>Time: "+ time + "</div>\
-            <div> Location: "+ location + " </div></div></div>");
+            <div> Location: "+ location + " </div>\
+            <div><a target='_blank' href='https://www.facebook.com/events/"+event_id+"'>Facebook Page</a></div>\
+            </div></div>");
           }
           if (count == 0){
             $(".no-pastevents-msg" ).prepend("<p class='no-events'>There are no past events.\
-            Check out out <a target='_blank' href='https://www.facebook.com/cissa.unimelb/events/'>facebook page</a> for more!</p>");
+            Check out our <a target='_blank' href='https://www.facebook.com/cissa.unimelb/events/'>facebook page</a> for more!</p>");
           }
         }
         $(".fa-3x").hide();
