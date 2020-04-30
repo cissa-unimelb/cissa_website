@@ -73,71 +73,7 @@
   </head>
 
 
-  <body class="shards-landing-page--1">
-
-    <script>
-      window.fbAsyncInit = async function() {
-      await FB.init({
-      appId            : '247175516655391',
-      autoLogAppEvents : true,
-      xfbml            : true,
-      version          : 'v6.0'
-      });
-      await FB.api(
-        '/1678235912453132/events',
-        'GET',
-        {access_token:'EAADgzgjeDx8BAAnKWmC0LxWZAZBjZA1SQJaltrq2hOmKlZABX6YZBzEy0owB6UAaPbrndZAUcZCly7uPzL0KdJZCvwSDZB7nU6pTkZAUPEVlYnsCtpiGpNrMrQXPd228Sv01YszN8oduBTmFHe4KdB0ZAQykyHW5m9gxpubfuIpP2IQZBwZDZD',
-        fields:'cover,description,start_time,name,place'},
-        function(response) { 
-        if (!response || response.error) {
-            $(".events-from-fb" ).prepend("<p class='no-events-index'>There are no upcoming events. Come back later!</p>")
-        }else{
-          var count = 0;
-          var today = new Date();
-          var day = today.getDate();
-          var month = today.getMonth() + 1
-          var year = today.getFullYear();
-          
-          for (var i=0;i<response.data.length;i++){
-            var res = response.data[i];
-            var start = res.start_time;
-            if (start.substring(0,4) < year){
-                break;
-            }
-            if (start.substring(0,4) == year && start.substring(5,7) < month){
-                break;
-            }
-            if (start.substring(0,4) == year && start.substring(5,7) == month && start.substring(8,10) < day){
-                break;
-            }
-            count++;
-            var time = start.substring(8,10)+"/"+start.substring(5,7)+" at "+start.substring(11,16);
-            var cover_photo = res.cover.source;
-            var name = res.name;
-            var start = res.start_time;
-            var location = res.place.name;
-
-            $(".events-from-fb" ).prepend( "<section class='event col-lg-7 my-2 white text-center'>\
-            <div class='container'><div class='events-inner'><div class='row'><div class='col-lg-6 pt-3'>\
-            <h4>"+name+"</h4>\
-            <div>Time: "+ time + "</div>\
-            <div>Location: " + location + "</div>\
-            <a href='events.html' class='my-3 text-center sign-up-btn btn btn-dark btn-squared'>Read more &rarr;</a>\
-            </div>\
-            <div class='img-upevents col-lg-6 pt-3 pb-2'><img class='img-about' src=" + cover_photo +" alt='Photo'/>\</div>\
-            </div></div></div> </section>");
-          }
-          if (count == 0){
-            $(".no-pastevents-msg" ).prepend("<p class='no-events'>There are no past events.\
-            Check out out <a target='_blank' href='https://www.facebook.com/cissa.unimelb/events/'>facebook page</a> for more!</p>");
-          }
-        }
-        $(".fa-3x").hide();
-      });
-    };
-    </script>
-    <script src="https://connect.facebook.net/en_US/sdk.js"></script>
-
+  <body onload="call();" class="shards-landing-page--1">
 
 
     <section class="page">
@@ -272,6 +208,7 @@
       <div class="events-from-fb row d-flex justify-content-center">
         <div class="fa-3x text-center col-md-12"><i class="fas fa-circle-notch fa-spin"></i></div>
       </div>
+      <div class="text-center no-events-msg"></div>
     </div>
 
     <div class="row sign-up-mainpage row my-5 d-flex justify-content-center">
@@ -300,6 +237,63 @@
         <p class="col-md-12 mt-5">&copy; Copyright 2020 CISSA<p>
     </div>
 
+
+    <script>
+      async function call(){
+        await fetch('/api',{
+          method:'GET'
+        })
+        .then(response => response.json())
+        .then(data =>{
+          var count = 0;
+          var today = new Date();
+          var day = today.getDate();
+          var month = today.getMonth() + 1
+          var year = today.getFullYear();
+          
+          for (var i=0;i<data.length;i++){
+            var res = data[i];
+            var start = res.start_time;
+            if (start.substring(0,4) < year){
+                break;
+            }
+            if (start.substring(0,4) == year && start.substring(5,7) < month){
+                break;
+            }
+            if (start.substring(0,4) == year && start.substring(5,7) == month && start.substring(8,10) < day){
+                break;
+            }
+            count++;
+            var time = start.substring(8,10)+"/"+start.substring(5,7)+" at "+start.substring(11,16);
+            var cover_photo = res.cover.source;
+            var name = res.name;
+            var start = res.start_time;
+            var location = res.place.name;
+
+            $(".events-from-fb" ).prepend( "<section class='event col-lg-7 my-2 white text-center'>\
+            <div class='container'><div class='events-inner'><div class='row'><div class='col-lg-6 pt-3'>\
+            <h4>"+name+"</h4>\
+            <div>Time: "+ time + "</div>\
+            <div>Location: " + location + "</div>\
+            <a href='events.html' class='my-3 text-center sign-up-btn btn btn-dark btn-squared'>Read more &rarr;</a>\
+            </div>\
+            <div class='img-upevents col-lg-6 pt-3 pb-2'><img class='img-about' src=" + cover_photo +" alt='Photo'/>\</div>\
+            </div></div></div> </section>");
+          }
+          if (count == 0){
+            $(".no-events-msg" ).prepend("<p class='no-events-index'>There are no upcoming events.\
+            Check out out <a target='_blank' href='https://www.facebook.com/cissa.unimelb/events/'>facebook page</a> for more!</p>");
+          }
+        })
+        .catch((error) => {
+          $(".no-events-msg" ).prepend("<p class='no-events-index'>There are no upcoming events.\
+            Check out out <a target='_blank' href='https://www.facebook.com/cissa.unimelb/events/'>facebook page</a> for more!</p>");
+        });
+
+        $(".fa-3x").hide();
+      }
+    </script>
+    
 
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.slim.min.js"

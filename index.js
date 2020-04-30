@@ -1,9 +1,46 @@
 var express = require('express');
 const nodemailer = require('nodemailer');
 
+var FB = require('fb');
+FB.options({version: 'v6.0'});
+
 var app = express();
 var http = require('http').Server(app);
 var port = process.env.PORT || 4000;
+
+
+async function call(){
+  await FB.api(
+    '/1678235912453132/events',
+    'GET',
+    {access_token:'EAADgzgjeDx8BANPAnK9BxkYsw07bPbkEwFBSwPVg159IL846dVHyZAoZA0auSZBLhcMsm1behnWxkFPAssLjKOGaeu4GuAhrPtCmZCxO5GyiiRU2b0VO9D9ActCv5b9v72gY2mRZCJujZCd9stUQ2mQ2ZClhOZAnSgCFr5Bxo0FMcQZDZD',
+    fields:'cover,description,start_time,name,place'},
+    function(response) { 
+      if (!response || response.error) {
+        return {1:10};
+      }else{
+        return {1:2,2:3};
+      }
+    }
+  );
+}
+
+
+app.get('/api', function(req,res){
+  FB.api(
+    '/1678235912453132/events',
+    'GET',
+    {access_token:'EAADgzgjeDx8BANPAnK9BxkYsw07bPbkEwFBSwPVg159IL846dVHyZAoZA0auSZBLhcMsm1behnWxkFPAssLjKOGaeu4GuAhrPtCmZCxO5GyiiRU2b0VO9D9ActCv5b9v72gY2mRZCJujZCd9stUQ2mQ2ZClhOZAnSgCFr5Bxo0FMcQZDZD',
+    fields:'id,cover,description,start_time,name,place'},
+    function(response) { 
+      if (!response || response.error) {
+        res.status(404).send(response);
+      }else{
+        res.status(200).send(response.data)
+      }
+    }
+  );
+});
 
 app.get('/', function(req, res){
   res.sendFile(__dirname + '/static/index.html');
