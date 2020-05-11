@@ -9,11 +9,20 @@ html, body{
   overflow-x: hidden;
 }
 
+.h_iframe iframe {
+  width:50%;
+  height:100%;
+}
+
 * {
   box-sizing: border-box;
 }
 
 i {
+  color:#FFFFFF;
+}
+
+.dropdown a{
   color:#FFFFFF;
 }
 

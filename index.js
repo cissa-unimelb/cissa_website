@@ -9,21 +9,23 @@ var http = require('http').Server(app);
 var port = process.env.PORT || 4000;
 
 
-async function call(){
-  await FB.api(
-    '/1678235912453132/events',
+
+app.get('/api-cj', function(req,res){
+  FB.api(
+    '/243471740089969/videos',
     'GET',
     {access_token:'EAADgzgjeDx8BANPAnK9BxkYsw07bPbkEwFBSwPVg159IL846dVHyZAoZA0auSZBLhcMsm1behnWxkFPAssLjKOGaeu4GuAhrPtCmZCxO5GyiiRU2b0VO9D9ActCv5b9v72gY2mRZCJujZCd9stUQ2mQ2ZClhOZAnSgCFr5Bxo0FMcQZDZD',
-    fields:'cover,description,start_time,name,place'},
+    fields:'description,embed_html,title'},
     function(response) { 
       if (!response || response.error) {
-        return {1:10};
+        res.
+        status(404).send({error:'Unable to fetch data'});
       }else{
-        return {1:2,2:3};
+        res.status(200).send(response.data)
       }
     }
   );
-}
+});
 
 
 app.get('/api', function(req,res){
@@ -34,7 +36,7 @@ app.get('/api', function(req,res){
     fields:'id,cover,description,start_time,name,place'},
     function(response) { 
       if (!response || response.error) {
-        res.status(404).send(response);
+        res.status(404).send({error:'Unable to fetch data'});
       }else{
         res.status(200).send(response.data)
       }
@@ -63,6 +65,10 @@ app.get('/contact', function(req, res){
 app.get('/sponsors', function(req, res){
   res.sendFile(__dirname + '/static/sponsors.html');
 });
+app.get('/codejam', function(req, res){
+  res.sendFile(__dirname + '/static/codejam.html');
+});
+
 
 app.use('/', express.static('static/'));
 

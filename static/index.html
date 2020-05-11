@@ -75,8 +75,6 @@
 
   <body onload="call();" class="shards-landing-page--1">
 
-
-    <section class="page">
       <nav class="navbar navbar-expand-lg fixed-top navbar-dark pt-4 px-5">
         <a class="navbar-brand" href="index.html"
           ><img
@@ -102,8 +100,17 @@
             <li class="nav-item">
               <a class="nav-link" href="about.html">About</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="events.html">Events</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Events
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="events.html">Upcoming Events</a>
+              <a
+                class="dropdown-item"
+                href="past_events.html">Past Events</a>
+              <a class="dropdown-item" href="codejam.html">CodeJam 2020</a>
+              </div>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="sponsors.html">Sponsors</a>
@@ -185,8 +192,7 @@
         <div class="with-shadows box highlight pb-2">
           <i class="icon solid major fa-pencil-alt"></i>
           <h4 class="mx-2">Workshops</h4>
-          <p class="px-4">Expand your skillset and get some hands-on experience related to both technical and non-technical topics
-             taught by industry/student experts! PIZZA will be provided!
+          <p class="px-4">Expand your skillset and get some hands-on experience! Workshops are taught by industry/student experts! PIZZA will be provided!
           </p>
         </div>
       </section>
@@ -225,7 +231,6 @@
       </div>
     </div>
 
-
     <div class="row dark text-center d-flex justify-content-center section footer pt-5 pb-3">
         <img src="assets/images/cissa_white.svg" class="col-md-4" alt="CISSA"/>
         <div class="footer-img col-md-6">
@@ -245,6 +250,7 @@
         })
         .then(response => response.json())
         .then(data =>{
+          console.log(data);
           var count = 0;
           var today = new Date();
           var day = today.getDate();

@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>CISSA | Contact</title>
+    <title>CISSA | Events</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta
       name="description"
-      content="Computing and Information Systems Students Association | University of Melbourne | Get in Touch With Us!"
+      content="Computing and Information Systems Students Association | University of Melbourne | Events"
     />
     <meta property="og:title" content="CISSA" />
     <meta
       property="og:description"
-      content="Get in Touch"
+      content="Check out our upcoming events"
     />
     <meta property="og:image" content="/og-image.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:url" content="https://cissa.org.au/contact.html" />
+    <meta property="og:url" content="https://cissa.org.au/events.html" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="CISSA" />
     <meta
@@ -27,7 +27,6 @@
       name="twitter:image"
       content="https://cissa.org.au/twitter-card.png"
     />
-
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link
@@ -68,14 +67,12 @@
       integrity="sha256-8EIZIimb8h9VjDK6M/cgkJkW3aERTk6BFBTECXWMsI0="
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link rel="stylesheet" href="assets/css/main.css"/>
+
   </head>
 
-
-  <body class="shards-landing-page--1">
-    <section class="page">
+ <body onload="call();" class="event-page shards-landing-page--1">
+    <div id="head" class="d-flex justify-content-center flex-column">
       <nav class="navbar navbar-expand-lg fixed-top navbar-dark pt-4 px-5">
         <a class="navbar-brand" href="index.html"
           ><img
@@ -83,7 +80,7 @@
             width="100px"
             class="mb-2"
             alt="CISSA"
-          />
+          /> 
         </a>
         <button
           class="navbar-toggler"
@@ -98,7 +95,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
+           <li class="nav-item">
               <a class="nav-link" href="about.html">About</a>
             </li>
             <li class="nav-item dropdown">
@@ -147,27 +144,30 @@
         </div>
       </nav>
 
-      <h3 class="pt-5 section-title text-center">
-        Contact Us
-      </h3>
-      <div class="pt-3 pb-0 text-center"></div>
-      <div class="pt-3 pb-0 text-center" id="result"></div>
+      <header>
+        <h1 class="section-title text-center">EVENTS</h1>
+      </header>
+    </div>
 
-      <div class="pb-5 pt-3">
-        <form class="contact_form text-center" method="post" action>
-          <input type="text" name="name" class="inputs my-3 col-md-6" placeholder="Name*" onchange="updatedata()" required >
-          <input type="email" class="inputs my-3 col-md-6" name="email" placeholder="Email*" onchange="updatedata()" required >
-          <input type="text" class="inputs my-3 col-md-6" name="subject" placeholder="Subject*" onchange="updatedata()" required >
-          <textarea name="message" class="inputs my-3 col-md-6" placeholder="Message*" rows="10" onchange="updatedata()" cols="30"
-          required></textarea>
-          <div class="text-center">
-          <div class="g-recaptcha" data-callback="recaptcha_callback" data-expired-callback="expired_callback" data-sitekey="6Lfrpt8UAAAAAFm2h3KobB_-uAsdejfRYlejODrl"></div>
-          </div>
-          <input type="submit" id="submit_button" disabled="disabled" class= "my-3 text-center sign-up-btn btn btn-dark btn-squared" name="submit" value="Send Message">
-        </form>
-      </div>
 
-    </section>
+    <h3 class="section-title text-center mt-4 mb-2 py-4">CodeJam 2020</h3>
+
+
+
+    <div class="container pt-5">
+        <p class="text-center" style="font-size:20px;">CodeJams are introductory, student-led workshops. In each session, we cover a range of 
+        practical technologies provide an opportunity to get hands-on programming experience.
+        </p>
+        <div class="text-center no-events-msg"></div>
+
+        <div class="row events-from-fb text-center py-3"> 
+            <div class="fa-3x text-center col-md-12">
+                <i class="fas fa-circle-notch fa-spin"></i>
+            </div>
+        </div>
+    </div>
+
+
 
     <div class="row dark text-center d-flex justify-content-center section footer pt-5 pb-3">
       <img src="assets/images/cissa_white.svg" class="col-md-4" alt="CISSA"/>
@@ -180,59 +180,40 @@
       <p class="col-md-12 mt-5">&copy; Copyright 2020 CISSA<p>
     </div>
 
-
     <script>
-      const submit = document.getElementById('submit_button');
-      var formData = {
-        'name':'',
-        'email':'',
-        'subject':'',
-        'message':'',
-        'g-recaptcha-response':'',
-      }
+      async function call(){
+        await fetch('/api-cj',{
+          method:'GET'
+        })
+        .then(response => response.json())
+        .then(data =>{
+            var count = 0;
+            data.forEach(function (item,index) {
+                var title = item.title;
+                var iframe = item.embed_html;
+                var descr = item.description;
+                count++;
 
-      const handleSubmit = async e => {
-        e.preventDefault();
-        if (formData['name']==='' ||formData['email']==='' ||formData['subject']==='' ||formData['message']===''){
-          document.getElementById('result').innerHTML = '<font color="red">Please Enter All Fields</font>';
-          window.scrollTo(0, 0);
-        }
-        else{
-          await axios.post('https://api.cissa.org.au/contact', {
-          ...formData,
-          
-          recipient: 'executives@cissa.org.au'});
-          document.getElementById('result').innerHTML = '<font color="green">Message Sent. We will be in touch soon!</font>';
-          window.scrollTo(0, 0);
-        }
-      }
+                $(".events-from-fb" ).prepend("<div class='col-md-6 my-5'>\
+                    <div class='embed-responsive embed-responsive-16by9'>"+iframe+"</div>\
+                    <div class='text-center event-descr pt-4 pb-2'><h4>"+title+"</h4>\</div>\
+                    <p>"+descr+"</p>\
+                    </div>");
+            });
+            if (count == 0){
+                $(".no-events-msg" ).prepend("<p class='no-events'>There are no past events.\
+                Check out out <a target='_blank' href='https://www.facebook.com/cissa.unimelb/events/'>facebook page</a> for more!</p>");
+            }
+        })
+        .catch((error) => {
+          $(".no-events-msg" ).prepend("<p class='no-events'>There are no CodeJam videos.\
+            Check out out <a target='_blank' href='https://www.facebook.com/cissa.unimelb/events/'>facebook page</a> for more!</p>");
+        });
 
-      function recaptcha_callback(){
-        formData['g-recaptcha-response'] = grecaptcha.getResponse();
-        document.getElementById("submit_button").disabled = false;
+        $(".fa-3x").hide();
       }
-
-      function expired_callback(){
-        document.getElementById("submit_button").disabled = true;
-      }
-
-      const updatedata = () => {
-        if (event.target.name === 'name'){
-          formData['name'] = event.target.value;
-        }
-        else if (event.target.name === 'email'){
-          formData['email'] = event.target.value;
-        }
-        else if (event.target.name === 'subject'){
-          formData['subject'] = event.target.value;
-        }
-        else if (event.target.name === 'message'){
-          formData['message'] = event.target.value;
-        }
-      }
-
-      submit.addEventListener('click', handleSubmit);
     </script>
+
 
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.slim.min.js"
@@ -255,5 +236,4 @@
       crossorigin="anonymous"
     ></script>
   </body>
-
 </html>
