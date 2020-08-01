@@ -170,64 +170,74 @@
     
 
     <script>
-      async function call(){
-        await fetch('/api',{
-          method:'GET'
-        })
-        .then(response => response.json())
-        .then(data =>{
-          var count = 0;
-          var today = new Date();
-          var day = today.getDate();
-          var month = today.getMonth() + 1
-          var year = today.getFullYear();
-          
-          for (var i=data.length-1; i>=0 ;i--){
-            var res = data[i];
-            var start = res.start_time;
-            if (start.substring(0,4) < year){
-                continue;
-            }
-            if (start.substring(0,4) > year){
-              break;
-            }
-            if (start.substring(0,4) == year && start.substring(5,7) > month){
-                break;
-            }
-            if (start.substring(0,4) == year && start.substring(5,7) == month && start.substring(8,10) >= day){
-                break;
-            }
-            count++;
-            var time = start.substring(8,10)+"/"+start.substring(5,7)+" at "+start.substring(11,16);
-            var cover_photo = res.cover.source;
-            var name = res.name;
-            var start = res.start_time;
-            var location = res.place.name;
-            var event_id = res.id;
-            var descr = res.description;
+      async function getData(url){
+        const response = await fetch(url);
+        return response.json();
+      }
 
-            $(".events-from-fb" ).prepend("<div class='col-md-6'>\
-            <div class='event-img text-center py-5'>\
-              <img src="+cover_photo+" alt='Photo'/></div>\
-            <div class='text-center event-descr pt-1 pb-5'>\
-            <h4>"+name+"</h4>\
-            <p>"+descr+"</p>\
-            <div>Time: "+ time + "</div>\
-            <div> Location: "+ location + " </div>\
-            <div><a target='_blank' href='https://www.facebook.com/events/"+event_id+"'>Facebook Page</a></div>\
-            </div></div>");
+      function processData(data){
+        var count = 0;
+        var today = new Date();
+        var day = today.getDate();
+        var month = today.getMonth() + 1
+        var year = today.getFullYear();
+        
+        for (var i=data.length-1; i>=0 ;i--){
+          var res = data[i];
+          var start = res.start_time;
+          if (start.substring(0,4) < year){
+              continue;
           }
-          if (count == 0){
-            $(".no-pastevents-msg" ).prepend("<p class='no-events'>There are no past events.\
-            Check out out <a target='_blank' href='https://www.facebook.com/cissa.unimelb/events/'>facebook page</a> for more!</p>");
+          if (start.substring(0,4) > year){
+            break;
           }
+          if (start.substring(0,4) == year && start.substring(5,7) > month){
+              break;
+          }
+          if (start.substring(0,4) == year && start.substring(5,7) == month && start.substring(8,10) >= day){
+              break;
+          }
+          count++;
+          var time = start.substring(8,10)+"/"+start.substring(5,7)+" at "+start.substring(11,16);
+
+          if (res.hasOwnProperty('cover')){
+              var cover_photo = res.cover.source;
+            }else{
+              continue;
+          }
+          var name = res.hasOwnProperty('name') ? res.name :  "";
+          var location = res.hasOwnProperty('place') ? res.place.name : "";
+          var descr = res.hasOwnProperty('description') ? res.description : "";
+          var event_id = res.id;
+
+          $(".events-from-fb" ).prepend("<div class='col-md-6'>\
+          <div class='event-img text-center py-5'>\
+            <img src="+cover_photo+" alt='Photo'/></div>\
+          <div class='text-center event-descr pt-1 pb-5'>\
+          <h4>"+name+"</h4>\
+          <p>"+descr+"</p>\
+          <div>Time: "+ time + "</div>\
+          <div> Location: "+ location + " </div>\
+          <div><a target='_blank' href='https://www.facebook.com/events/"+event_id+"'>Facebook Page</a></div>\
+          </div></div>");
+        }
+        if (count == 0){
+          $(".no-pastevents-msg" ).prepend("<p class='no-events'>There are no past events.\
+          Check out out <a target='_blank' href='https://www.facebook.com/cissa.unimelb/events/'>facebook page</a> for more!</p>");
+        }
+      }
+
+      async function call(){
+        const data = getData("/api")
+        .then(data => {
+          processData(data);
+          $(".fa-3x").hide();
         })
         .catch((error) => {
-          $(".no-pastevents-msg" ).prepend("<p class='no-events'>There are no past events.\
+          $(".no-events-msg" ).prepend("<p class='no-events'>There are no past events.\
             Check out out <a target='_blank' href='https://www.facebook.com/cissa.unimelb/events/'>facebook page</a> for more!</p>");
+            $(".fa-3x").hide();
         });
-
-        $(".fa-3x").hide();
       }
     </script>
     <script

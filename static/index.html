@@ -244,18 +244,69 @@
 
 
     <script>
+      /*
       async function call(){
+        let obj;
         await fetch('/api',{
           method:'GET'
         })
         .then(response => response.json())
         .then(data =>{
+          obj = data;
           console.log(data);
           var count = 0;
-          var today = new Date();
-          var day = today.getDate();
-          var month = today.getMonth() + 1
-          var year = today.getFullYear();
+          var today = new Date(); var day = today.getDate(); var month = today.getMonth() + 1; var year = today.getFullYear();
+          
+          for (var i=0;i<data.length;i++){
+            var res = data[i];
+            var start = res.start_time;
+            if (start.substring(0,4) < year){
+                break;
+            }
+            if (start.substring(0,4) == year && start.substring(5,7) < month){
+                break;
+            }
+            if (start.substring(0,4) == year && start.substring(5,7) == month && start.substring(8,10) < day){
+                break;
+            }
+
+            var time = start.substring(8,10)+"/"+start.substring(5,7)+" at "+start.substring(11,16);
+            var cover_photo = res.cover.source;
+            var name = res.name;
+            var start = res.start_time;
+            var location = res.place.name;
+
+            $(".events-from-fb" ).prepend( "<section class='event col-lg-7 my-2 white text-center'>\
+            <div class='container'><div class='events-inner'><div class='row'><div class='col-lg-6 pt-3'>\
+            <h4>"+name+"</h4>\
+            <div>Time: "+ time + "</div>\
+            <div>Location: " + location + "</div>\
+            <a href='events.html' class='my-3 text-center sign-up-btn btn btn-dark btn-squared'>Read more &rarr;</a>\
+            </div>\
+            <div class='img-upevents col-lg-6 pt-3 pb-2'><img class='img-about' src=" + cover_photo +" alt='Photo'/>\</div>\
+            </div></div></div></section>");
+          }
+          if (count == 0){
+            $(".no-events-msg" ).prepend("<p class='no-events-index'>There are no upcoming events.\
+            Check out out <a target='_blank' href='https://www.facebook.com/cissa.unimelb/events/'>facebook page</a> for more!</p>");
+          }
+        })
+        .catch((error) => {
+          $(".no-events-msg" ).prepend("<p class='no-events-index'>There are no upcoming events.\
+            Check out out <a target='_blank' href='https://www.facebook.com/cissa.unimelb/events/'>facebook page</a> for more!</p>");
+        });
+
+      }
+      */
+      async function getData(url){
+        const response = await fetch(url);
+        return response.json();
+      }
+
+
+      function processData(data){
+          var count = 0;
+          var today = new Date(); var day = today.getDate(); var month = today.getMonth() + 1; var year = today.getFullYear();
           
           for (var i=0;i<data.length;i++){
             var res = data[i];
@@ -271,10 +322,14 @@
             }
             count++;
             var time = start.substring(8,10)+"/"+start.substring(5,7)+" at "+start.substring(11,16);
-            var cover_photo = res.cover.source;
-            var name = res.name;
-            var start = res.start_time;
-            var location = res.place.name;
+
+            if (res.hasOwnProperty('cover')){
+              var cover_photo = res.cover.source;
+            }else{
+              continue;
+            }
+            var name = res.hasOwnProperty('name') ? res.name :  "";
+            var location = res.hasOwnProperty('place') ? res.place.name : "";
 
             $(".events-from-fb" ).prepend( "<section class='event col-lg-7 my-2 white text-center'>\
             <div class='container'><div class='events-inner'><div class='row'><div class='col-lg-6 pt-3'>\
@@ -284,19 +339,25 @@
             <a href='events.html' class='my-3 text-center sign-up-btn btn btn-dark btn-squared'>Read more &rarr;</a>\
             </div>\
             <div class='img-upevents col-lg-6 pt-3 pb-2'><img class='img-about' src=" + cover_photo +" alt='Photo'/>\</div>\
-            </div></div></div> </section>");
+            </div></div></div></section>");
           }
           if (count == 0){
             $(".no-events-msg" ).prepend("<p class='no-events-index'>There are no upcoming events.\
             Check out out <a target='_blank' href='https://www.facebook.com/cissa.unimelb/events/'>facebook page</a> for more!</p>");
           }
+      }
+
+      async function call(){
+        const data = getData("/api")
+        .then(data => {
+          processData(data);
+          $(".fa-3x").hide();
         })
         .catch((error) => {
           $(".no-events-msg" ).prepend("<p class='no-events-index'>There are no upcoming events.\
             Check out out <a target='_blank' href='https://www.facebook.com/cissa.unimelb/events/'>facebook page</a> for more!</p>");
+            $(".fa-3x").hide();
         });
-
-        $(".fa-3x").hide();
       }
     </script>
     
