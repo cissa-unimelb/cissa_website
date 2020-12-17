@@ -248,6 +248,9 @@ hr{
 
 .team-section {
   text-align:center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 .team-section h1 {
@@ -262,6 +265,7 @@ hr{
   margin-bottom:80px;
 }
 .pe img {
+  border-radius: 100px;
   width:120px;
   height:120px;
 }
