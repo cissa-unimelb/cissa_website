@@ -245,6 +245,15 @@ hr{
 }
 
 
+.about-cissa {
+  width:80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cissa-intro {
+  padding-right: 5%;
+}
 
 .team-section {
   text-align:center;
