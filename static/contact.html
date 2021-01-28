@@ -75,7 +75,7 @@
 
 
   <body class="shards-landing-page--1">
-    <section class="page">
+    <div id="head" class=" d-flex justify-content-center flex-column">
       <nav class="navbar navbar-expand-lg fixed-top navbar-dark pt-4 px-5">
         <a class="navbar-brand" href="index.html"
           ><img
@@ -126,27 +126,31 @@
         </div>
       </nav>
 
-      <h3 class="pt-5 section-title text-center">
-        Contact Us
-      </h3>
-      <div class="pt-3 pb-0 text-center"></div>
-      <div class="pt-3 pb-0 text-center" id="result"></div>
+      <header>
+        <h1 class="section-title text-center">CONTACT US</h1>
+      </header>
+    </div>
 
-      <div class="pb-5 pt-3">
-        <form class="contact_form text-center" method="post" action>
-          <input type="text" name="name" class="inputs my-3 col-md-6" placeholder="Name*" onchange="updatedata()" required >
-          <input type="email" class="inputs my-3 col-md-6" name="email" placeholder="Email*" onchange="updatedata()" required >
-          <input type="text" class="inputs my-3 col-md-6" name="subject" placeholder="Subject*" onchange="updatedata()" required >
-          <textarea name="message" class="inputs my-3 col-md-6" placeholder="Message*" rows="10" onchange="updatedata()" cols="30"
-          required></textarea>
-          <div class="text-center">
-          <div class="g-recaptcha" data-callback="recaptcha_callback" data-expired-callback="expired_callback" data-sitekey="6Lfrpt8UAAAAAFm2h3KobB_-uAsdejfRYlejODrl"></div>
-          </div>
-          <input type="submit" id="submit_button" disabled="disabled" class= "my-3 text-center sign-up-btn btn btn-dark btn-squared" name="submit" value="Send Message">
-        </form>
-      </div>
+    <div class="mt-5 text-center contact-us-description">
+        Do you have any general inquiries or want to suggest awesome ideas?
+        Email us at <a href="mailto:executives@cissa.org.au">executives@cissa.org.au</a>
+        or fill out this form.
+    </div>
+    <div class="pt-3 pb-0 text-center" id="result"></div>
 
-    </section>
+    <div class="pb-5 pt-3">
+      <form class="contact_form text-center" method="post" action>
+        <input type="text" name="name" class="inputs my-3 col-md-6" placeholder="Name*" onchange="updatedata()" required >
+        <input type="email" class="inputs my-3 col-md-6" name="email" placeholder="Email*" onchange="updatedata()" required >
+        <input type="text" class="inputs my-3 col-md-6" name="subject" placeholder="Subject*" onchange="updatedata()" required >
+        <textarea name="message" class="inputs my-3 col-md-6" placeholder="Message*" rows="10" onchange="updatedata()" cols="30"
+        required></textarea>
+        <div class="text-center">
+        <div class="g-recaptcha" data-callback="recaptcha_callback" data-expired-callback="expired_callback" data-sitekey="6Lfrpt8UAAAAAFm2h3KobB_-uAsdejfRYlejODrl"></div>
+        </div>
+        <input type="submit" id="submit_button" disabled="disabled" class= "my-3 text-center sign-up-btn btn btn-dark btn-squared" name="submit" value="Send Message">
+      </form>
+    </div>
 
     <div class="row dark text-center d-flex justify-content-center footer pt-5 pb-3">
       <div class="footer-img col-md">
