@@ -176,20 +176,31 @@
         'message':'',
         'g-recaptcha-response':'',
       }
-
+      var result = document.getElementById('result');
       const handleSubmit = async e => {
         e.preventDefault();
         if (formData['name']==='' ||formData['email']==='' ||formData['subject']==='' ||formData['message']===''){
-          document.getElementById('result').innerHTML = '<font color="red">Please Enter All Fields</font>';
+          result.innerHTML = '<font color="red">Please Enter All Fields</font>';
           window.scrollTo(0, 0);
         }
         else{
-          await axios.post('https://api.cissa.org.au/contact', {
-          ...formData,
-          
-          recipient: 'executives@cissa.org.au'});
-          document.getElementById('result').innerHTML = '<font color="green">Message Sent. We will be in touch soon!</font>';
-          window.scrollTo(0, 0);
+          await axios.post(
+            'https://api.cissa.org.au/contact', {
+              ...formData,
+              recipient: 'executives@cissa.org.au'
+            })
+            .then(
+              (response) => {
+                console.log(response);
+                result.innerHTML = '<font color="green">Message Sent. We will be in touch soon!</font>';
+                window.scrollTo(0, 0);
+              },
+              (error) => {
+                console.log(error);
+                result.innerHTML = '<font color="red">An error occurred, please try again!</font>';
+                window.scrollTo(0, 0);
+              }
+            );
         }
       }
 
