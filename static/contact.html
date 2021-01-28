@@ -196,10 +196,11 @@
           await axios.post(
             'https://api.cissa.org.au/contact', {
               ...formData,
-              recipient: 'executives@cissa.org.au'
+              recipient: 'webmaster@cissa.org.au'
             })
             .then(
               (response) => {
+                console.log(response);
                 if(response.status == 200) {
                   result.innerHTML = '<font color="green">Message Sent. We will be in touch soon!</font>';
                   window.scrollTo(0, 0);
