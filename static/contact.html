@@ -148,7 +148,7 @@
         <div class="text-center">
         <div class="g-recaptcha" data-callback="recaptcha_callback" data-expired-callback="expired_callback" data-sitekey="6Lfrpt8UAAAAAFm2h3KobB_-uAsdejfRYlejODrl"></div>
         </div>
-        <input type="submit" id="submit_button" disabled="disabled" class= "my-3 text-center sign-up-btn btn btn-dark btn-squared" name="submit" value="Send Message">
+        <input type="submit" id="submit_button" class= "my-3 text-center sign-up-btn btn btn-dark btn-squared" name="submit" value="Send Message" disabled>
       </form>
     </div>
 
@@ -187,7 +187,7 @@
           await axios.post(
             'https://api.cissa.org.au/contact', {
               ...formData,
-              recipient: 'webmaster@cissa.org.au'
+              recipient: 'executives@cissa.org.au'
             })
             .then(
               (response) => {
