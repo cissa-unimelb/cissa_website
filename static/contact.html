@@ -175,6 +175,7 @@
         'subject':'',
         'message':'',
         'g-recaptcha-response':'',
+        'recipient': 'webmaster@cissa.org.au'
       }
       var result = document.getElementById('result');
 
@@ -194,15 +195,16 @@
         }
         else{
           await axios.post(
-            'https://api.cissa.org.au/contact', {
-              ...formData,
-              recipient: 'webmaster@cissa.org.au'
-            })
+            'https://api.cissa.org.au/contact', formData)
             .then(
               (response) => {
                 console.log(response);
-                if(response.status == 200) {
+                if(response.accepted != null && response.accepted[0] == formData.recipient) {
                   result.innerHTML = '<font color="green">Message Sent. We will be in touch soon!</font>';
+                  window.scrollTo(0, 0);
+                }
+                else{
+                  result.innerHTML = '<font color="red">Message unable to be sent! Please try again.</font>';
                   window.scrollTo(0, 0);
                 }
               },
