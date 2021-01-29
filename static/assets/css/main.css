@@ -83,35 +83,35 @@ html, body{
 }
 
 @keyframes crossfade-banner {
-  0% {  background-image: url('http://localhost:4000/assets/images/banner1.jpg'); }
-  25% {  background-image: url('http://localhost:4000/assets/images/banner2.png'); }
-  50% {  background-image: url('http://localhost:4000/assets/images/banner3.jpg'); }
-  75% {  background-image: url('http://localhost:4000/assets/images/banner4.jpg'); }
-  100% {  background-image: url('http://localhost:4000/assets/images/banner1.jpg'); }
+  0% {  background-image: url('https://cissa.org.au/assets/images/banner1.jpg'); }
+  25% {  background-image: url('https://cissa.org.au/assets/images/banner2.png'); }
+  50% {  background-image: url('https://cissa.org.au/assets/images/banner3.jpg'); }
+  75% {  background-image: url('https://cissa.org.au/assets/images/banner4.jpg'); }
+  100% {  background-image: url('https://cissa.org.au/assets/images/banner1.jpg'); }
 }
 
 @-webkit-keyframes crossfade-banner {
-  0% {  background-image: url('http://localhost:4000/assets/images/banner1.jpg'); }
-  25% {  background-image: url('http://localhost:4000/assets/images/banner2.png'); }
-  50% {  background-image: url('http://localhost:4000/assets/images/banner3.jpg'); }
-  75% {  background-image: url('http://localhost:4000/assets/images/banner4.jpg'); }
-  100% {  background-image: url('http://localhost:4000/assets/images/banner1.jpg'); }
+  0% {  background-image: url('https://cissa.org.au/assets/images/banner1.jpg'); }
+  25% {  background-image: url('https://cissa.org.au/assets/images/banner2.png'); }
+  50% {  background-image: url('https://cissa.org.au/assets/images/banner3.jpg'); }
+  75% {  background-image: url('https://cissa.org.au/assets/images/banner4.jpg'); }
+  100% {  background-image: url('https://cissa.org.au/assets/images/banner1.jpg'); }
 }
 
 @-moz-keyframes crossfade-banner {
-  0% {  background-image: url('http://localhost:4000/assets/images/banner1.jpg'); }
-  25% {  background-image: url('http://localhost:4000/assets/images/banner2.png'); }
-  50% {  background-image: url('http://localhost:4000/assets/images/banner3.jpg'); }
-  75% {  background-image: url('http://localhost:4000/assets/images/banner4.jpg'); }
-  100% {  background-image: url('http://localhost:4000/assets/images/banner1.jpg'); }
+  0% {  background-image: url('https://cissa.org.au/assets/images/banner1.jpg'); }
+  25% {  background-image: url('https://cissa.org.au/assets/images/banner2.png'); }
+  50% {  background-image: url('https://cissa.org.au/assets/images/banner3.jpg'); }
+  75% {  background-image: url('https://cissa.org.au/assets/images/banner4.jpg'); }
+  100% {  background-image: url('https://cissa.org.au/assets/images/banner1.jpg'); }
 }
 
 @-o-keyframes crossfade-banner {
-  0% {  background-image: url('http://localhost:4000/assets/images/banner1.jpg'); }
-  25% {  background-image: url('http://localhost:4000/assets/images/banner2.png'); }
-  50% {  background-image: url('http://localhost:4000/assets/images/banner3.jpg'); }
-  75% {  background-image: url('http://localhost:4000/assets/images/banner4.jpg'); }
-  100% {  background-image: url('http://localhost:4000/assets/images/banner1.jpg'); }
+  0% {  background-image: url('https://cissa.org.au/assets/images/banner1.jpg'); }
+  25% {  background-image: url('https://cissa.org.au/assets/images/banner2.png'); }
+  50% {  background-image: url('https://cissa.org.au/assets/images/banner3.jpg'); }
+  75% {  background-image: url('https://cissa.org.au/assets/images/banner4.jpg'); }
+  100% {  background-image: url('https://cissa.org.au/assets/images/banner1.jpg'); }
 }
 
 #banner-overlay {
