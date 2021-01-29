@@ -178,12 +178,14 @@
         'recipient': 'webmaster@cissa.org.au'
       }
       var result = document.getElementById('result');
+      var submit = document.getElementById("submit_button");
 
       function isValidEmail(email) {
         const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(String(email).toLowerCase());
       }
       const handleSubmit = async e => {
+        submit.disabled = true;
         e.preventDefault();
         if (formData['name']==='' ||formData['email']==='' ||formData['subject']==='' ||formData['message']===''){
           result.innerHTML = '<font color="red">Please enter all fields</font>';
@@ -198,6 +200,7 @@
             'https://api.cissa.org.au/contact', formData)
             .then(
               (response) => {
+                submit.disabled = false;
                 if(response.data.accepted != null && response.data.accepted[0] == formData.recipient) {
                   result.innerHTML = '<font color="green">Message Sent. We will be in touch soon!</font>';
                   window.scrollTo(0, 0);
@@ -209,6 +212,7 @@
                 }
               },
               (error) => {
+                submit.disabled = false;
                 console.log(error);
                 result.innerHTML = '<font color="red">An error occurred, please try again!</font>';
                 window.scrollTo(0, 0);
@@ -219,11 +223,11 @@
 
       function recaptcha_callback(){
         formData['g-recaptcha-response'] = grecaptcha.getResponse();
-        document.getElementById("submit_button").disabled = false;
+        submit.disabled = false;
       }
 
       function expired_callback(){
-        document.getElementById("submit_button").disabled = true;
+        submit.disabled = true;
       }
 
       const updatedata = () => {
