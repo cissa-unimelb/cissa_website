@@ -198,12 +198,12 @@
             'https://api.cissa.org.au/contact', formData)
             .then(
               (response) => {
-                console.log(response);
-                if(response.accepted != null && response.accepted[0] == formData.recipient) {
+                if(response.data.accepted != null && response.data.accepted[0] == formData.recipient) {
                   result.innerHTML = '<font color="green">Message Sent. We will be in touch soon!</font>';
                   window.scrollTo(0, 0);
                 }
                 else{
+                  console.log(response);
                   result.innerHTML = '<font color="red">Message unable to be sent! Please try again.</font>';
                   window.scrollTo(0, 0);
                 }
