@@ -128,14 +128,11 @@
       </header>
     </div>
 
-    <h3 class="section-title text-center mt-4 mb-2 py-4">
-    Upcoming Events 
-    </h3>
-
-    <div class="events-from-fb pt-5 text-center">
+    <h3 class="section-title text-center mt-4 mb-2 py-4">Upcoming Events</h3>
+    <div class="text-center no-pastevents-msg pt-5"></div>
+    <div class="row events-from-fb text-center py-5"> 
       <div class="fa-3x text-center col-md-12"><i class="fas fa-circle-notch fa-spin"></i></div>
     </div>
-    <div class="text-center px-2 no-events-msg"></div>
 
 
 
@@ -160,70 +157,67 @@
 
 
     <script>
-
       async function getData(url){
         const response = await fetch(url);
         return response.json();
       }
-      function processData(data){
-        var count = 0;
-        var today = new Date();
-        var day = today.getDate();
-        var month = today.getMonth() + 1
-        var year = today.getFullYear();
-        
-        for (var i=0;i<data.length;i++){
-          var res = data[i];
-          var start = res.start_time;
-          if (start.substring(0,4) < year){
-              break;
-          }
-          if (start.substring(0,4) == year && start.substring(5,7) < month){
-              break;
-          }
-          if (start.substring(0,4) == year && start.substring(5,7) == month && start.substring(8,10) < day){
-              break;
-          }
-          count++;
-          var time = start.substring(8,10)+"/"+start.substring(5,7)+" at "+start.substring(11,16);
-          
-          if (res.hasOwnProperty('cover')){
-              var cover_photo = res.cover.source;
-            }else{
-              continue;
-          }
-          var name = res.hasOwnProperty('name') ? res.name :  "";
-          var location = res.hasOwnProperty('place') ? res.place.name : "";
-          var descr = res.hasOwnProperty('description') ? res.description : "";
-          var event_id = res.id;
 
-          // TODO: CHANGE THIS
-          $(".events-from-fb" ).prepend("<div class='col-md-12'>\
-          <div class='event-img text-center py-5'>\
-            <img src="+cover_photo+" alt='Photo'/></div>\
-          <div class='text-center event-descr pt-1 pb-5'>\
-          <h4>"+name+"</h4>\
-          <p>"+descr+"</p>\
-          <div>Time: "+ time + "</div>\
-          <div> Location: "+ location + " </div>\
-          <div><a target='_blank' href='https://www.facebook.com/events/"+event_id+"'>Facebook Page</a></div>\
-          </div></div>");
+      function processData(data) {
+        var counter = 0;
+        var now = new Date();
+        var elems = {};
+        for (var event of data) {
+          var date = new Date(event.start_time);
+          if(date.getTime() < now.getTime()) {
+            continue;
+          }
+          var cover_photo = event.cover.source;
+          var time = date.toLocaleString('en-AU', {
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric',
+            hour: 'numeric',
+            minute: 'numeric'
+          });
+          var name = event.name != null ? event.name :  "";
+          var location = event.place != null ? event.place.name : "Online";
+          var descr = event.description != null ? event.description.replace(/(?:\r\n|\r|\n)/g, '<br>') : "";
+          var event_id = event.id;
+
+          elems[date.getTime()] = 
+            `<div class='col-md-6'>\
+              <div class='event-img text-center py-5'>\
+                <img src='${cover_photo}'' alt='Photo'/>\
+              </div>\
+              <div class='event-descr pt-1 pb-5'>\
+                <h4>
+                  <a style="color: black;" href='https://www.facebook.com/events/${event_id}'>${name}</a>
+                </h4>\
+                <div>${location}</div>\
+                <div>${time}</div>\
+              </div>\
+            </div>`;
+          counter++;
         }
-        if (count == 0){
-          $(".no-events-msg" ).prepend("<p class='no-events'>There are no upcoming events.\
-          Check out out <a target='_blank' href='https://www.facebook.com/cissa.unimelb/events/'>facebook page</a> for more!</p>");
+        var keys = Object.keys(elems).sort();
+        for(var key of keys) {
+          $(".events-from-fb" ).prepend(elems[key]);
+        }
+        if(counter == 0){
+          $(".no-pastevents-msg" ).prepend("<p class='no-events'>There are no upcoming events.\
+          Check out our <a target='_blank' href='https://www.facebook.com/cissa.unimelb/events/'>facebook page</a> for more!</p>");
         }
       }
 
       async function call(){
-        const data = getData("/api")
+        const data = getData("/fetch-events")
         .then(data => {
           processData(data);
           $(".fa-3x").hide();
         })
         .catch((error) => {
-          $(".no-events-msg" ).prepend("<p class='no-events'>There are no past events.\
-            Check out our <a target='_blank' href='https://www.facebook.com/cissa.unimelb/events/'>facebook page</a> for more!</p>");
+          $(".no-events-msg" ).prepend("<p class='no-events'>There are no upcoming events.\
+            Check out out <a target='_blank' href='https://www.facebook.com/cissa.unimelb/events/'>facebook page</a> for more!</p>");
             $(".fa-3x").hide();
         });
       }
