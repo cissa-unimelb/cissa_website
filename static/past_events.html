@@ -166,7 +166,13 @@
             continue;
           }
           var cover_photo = event.cover.source;
-          var time = date.toLocaleString('en-AU');
+          var time = date.toLocaleString('en-AU', {
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric',
+            hour: 'numeric',
+            minute: 'numeric'
+          });
           var name = event.name != null ? event.name :  "";
           var location = event.place != null ? event.place.name : "Online";
           var descr = event.description != null ? event.description.replace(/(?:\r\n|\r|\n)/g, '<br>') : "";
