@@ -8,45 +8,68 @@ var app = express();
 var http = require('http').Server(app);
 var port = process.env.PORT || 4000;
 
+const access_token = 'EAADgzgjeDx8BANPAnK9BxkYsw07bPbkEwFBSwPVg159IL846dVHyZAoZA0auSZBLhcMsm1behnWxkFPAssLjKOGaeu4GuAhrPtCmZCxO5GyiiRU2b0VO9D9ActCv5b9v72gY2mRZCJujZCd9stUQ2mQ2ZClhOZAnSgCFr5Bxo0FMcQZDZD';
 
-
-app.get('/api-cj', function(req,res){
+app.get('/api-cj', function(req, res){
   FB.api(
     '/243471740089969/videos',
     'GET',
     {
-      access_token:'EAAD64P72ZCaUBACVg6mRnmLtmqtJzsXsTmdYYZCBj70ZCnv4krnbtV6bZCWP948tZBg5KvNw4jZCNS9shSVluZAew1986dbYsHf3NSg3CQnncpR4xb8xDYvfvZBD0xjCpLVxROaz1lYCcN1UyhZB8LmfHH7k8T7ucBRgqZCdZBaR98pl2iYwPZCjPzzJc5Dtl0mTHjueZAcivCVZAjZBQZDZD',
+      access_token,
       fields:'description,embed_html,title'
     },
     function(response) { 
-      if (!response || response.error) {
+      if(!response || response.error) {
         res.status(404).send(response.error);
-      }else{
+      }
+      else {
         res.status(200).send(response.data)
       }
     }
   );
 });
 
-
-app.get('/api', function(req,res){
+// Get the list of data on all events
+app.get('/fetch-events', function(req, res){
   FB.api(
     '/1678235912453132/events',
     'GET',
     {
-      access_token:'EAAD64P72ZCaUBACVg6mRnmLtmqtJzsXsTmdYYZCBj70ZCnv4krnbtV6bZCWP948tZBg5KvNw4jZCNS9shSVluZAew1986dbYsHf3NSg3CQnncpR4xb8xDYvfvZBD0xjCpLVxROaz1lYCcN1UyhZB8LmfHH7k8T7ucBRgqZCdZBaR98pl2iYwPZCjPzzJc5Dtl0mTHjueZAcivCVZAjZBQZDZD',
+      access_token,
       fields:'id,cover,description,start_time,name,place'
     },
     function(response) { 
-      if (!response || response.error) {
+      if(!response || response.error) {
         res.status(404).send(response.error);
-      }else{
+      }
+      else {
         res.status(200).send(response.data)
       }
     }
   );
 });
 
+// Get data on a specific event
+app.get('/fetch-events/:event_id', function(req, res) {
+  FB.api(
+    `/${req.params.event_id}`,
+    'GET',
+    {
+      access_token,
+      fields:'id,cover,description,start_time,name,place'
+    },
+    function(response) { 
+      if(!response || response.error) {
+        res.status(404).send(response.error);
+      }
+      else {
+        res.status(200).send(response)
+      }
+    }
+  );
+});
+
+// Load static pages
 app.get('/', function(req, res){
   res.sendFile(__dirname + '/static/index.html');
 });
