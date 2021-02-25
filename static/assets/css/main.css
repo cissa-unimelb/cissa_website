@@ -224,6 +224,9 @@ html, body{
 
 .shards-landing-page--1 .section {
   border-bottom: 1px solid transparent;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
 }
 
 .dark {
@@ -288,9 +291,8 @@ hr{
   color:#000000;
   margin-top: 2em;
   margin-bottom: 2em;
-
-
 }
+
 .img-upevents{
   width:100%;
 }
