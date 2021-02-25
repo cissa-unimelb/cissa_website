@@ -231,7 +231,12 @@ html, body{
 
 .dark {
   background: #020A23;
-  color: white;
+  color: rgb(225, 225, 225);
+}
+
+.semi-dark {
+  background: #0a192f;
+  color: rgb(211, 211, 211);
 }
 
 .white {
@@ -243,6 +248,16 @@ html, body{
   color: white;
 }
 
+.dark-link {
+  color:rgb(100,255,218);
+  text-decoration: underline;
+}
+.dark-link:hover {
+  color:rgb(171, 248, 230);
+  text-decoration: underline;
+}
+
+
 .main-icon {
   text-align: center;
   display: inline-block;
@@ -253,7 +268,7 @@ html, body{
 }
 
 .cards {
-  border: 5px solid #2333c1;
+  border: 5px solid #0a192f;
   border-radius: 50px;
 }
 
