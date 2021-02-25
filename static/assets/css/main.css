@@ -47,6 +47,16 @@ html, body{
 .dropdown-menu{
   background-color: #020A23;
 }
+
+.nav-link.signup {
+  color: #cccccc !important;
+  font-weight: bold;
+}
+
+.nav-link.signup:hover {
+  color: #ffffff !important;
+}
+
 .sponsors {
   max-height: 115px;
   max-width: 250px;
@@ -54,7 +64,6 @@ html, body{
   height: auto;
   object-fit: contain;
 }
-
 
 .bg {
   position: absolute;
@@ -219,15 +228,16 @@ html, body{
 
 .dark {
   background: #020A23;
-}
-
-.dark > h3{
-  color:#ffffff;
+  color: white;
 }
 
 .white {
   background:#ffffff;
 
+}
+
+.white-text {
+  color: white;
 }
 
 .main-icon {
@@ -236,7 +246,12 @@ html, body{
   text-decoration: none;
   position: relative;
   font-size: 100px;
-  color: #7783F4;
+  color: #2333c1;
+}
+
+.cards {
+  border: 5px solid #2333c1;
+  border-radius: 50px;
 }
 
 
@@ -289,6 +304,7 @@ hr{
 
 .cissa-intro {
   padding-right: 5%;
+  line-height:2em;
 }
 
 .team-section {
@@ -409,11 +425,6 @@ hr{
   margin: 0 auto;
 }
 
-.signup-prompt {
-  font-size:16px;
-  line-height:1.8;
-}
-
 #vert-line {
   border-left: 4px solid white;
   height: 100px;
@@ -457,10 +468,6 @@ hr{
   .event{
     width:60%;
   }
-  .sign-up-mainpage{
-    width:60%;
-    margin: 0 auto;
-  }
   .events-inner{
     margin-bottom:50px;
   }
@@ -473,7 +480,7 @@ hr{
   .event-img{
     width:100%;
   }
-  .sign-up-mainpage{
+  .our-initiative {
     text-align: center;
     margin:0 auto;
     width:85%;
@@ -508,10 +515,6 @@ hr{
   }
   .g-recaptcha {
     width:100%;
-  }
-
-  .signup {
-    width:75%;
   }
   .contact-us-description {
     width: 80%;

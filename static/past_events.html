@@ -96,41 +96,40 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <div class="collapse navbar-collapse mb-2" id="navbarNavDropdown">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Events
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="events.html">Upcoming Events</a>
-              <a
-                class="dropdown-item"
-                href="past_events.html">Past Events</a>
-              <a class="dropdown-item" href="codejam.html">CodeJam 2020</a>
+                <a class="dropdown-item" href="gallery.html">Gallery</a>
               </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">Committee</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="sponsors.html">Sponsors</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="gallery.html">Gallery</a>
+              <a class="nav-link" href="https://medium.com/cissa-unimelb">Blog</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact Us</a>
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link signup" href="https://cissa.org.au/signup">Join Us</a>
             </li>
           </ul>
         </div>
       </nav>
       <header>
-        <h1 class="section-title text-center">EVENTS</h1>
+        <h1 class="section-title text-center">PAST EVENTS</h1>
       </header>
     </div>
 
-    <h3 class="section-title text-center mt-4 mb-2 py-4">Past Events</h3>
     <div class="text-center no-pastevents-msg pt-5"></div>
     <div class="row events-from-fb text-center py-5"> 
       <div class="fa-3x text-center col-md-12"><i class="fas fa-circle-notch fa-spin"></i></div>
@@ -145,6 +144,8 @@
         <a class="fab fa-instagram social" href="https://instagram.com/cissa_unimelb/">
         </a>
         <a class="fab fa-twitter social" href="https://twitter.com/cissa_unimelb/">
+        </a>
+        <a class="fab fa-discord social" href="https://discord.gg/JZXcbQf5">
         </a>
       </div>
       <p class="col-md-12 mt-5">Copyright &copy; 2021 CISSA<p>
@@ -178,19 +179,20 @@
           var descr = event.description != null ? event.description.replace(/(?:\r\n|\r|\n)/g, '<br>') : "";
           var event_id = event.id;
 
-          elems[date.getTime()] = 
-            `<div class='col-md-6'>\
-              <div class='event-img text-center py-5'>\
-                <img src='${cover_photo}'' alt='Photo'/>\
-              </div>\
-              <div class='event-descr pt-1 pb-5'>\
+          elems[date.getTime()] = `
+            <div class='col-md-6'>
+              <div class='event-img text-center py-5'>
+                <img src='${cover_photo}'' alt='Photo'/>
+              </div>
+              <div class='event-descr pt-1 pb-5'>
                 <h4>
                   <a style="color: black;" href='https://www.facebook.com/events/${event_id}'>${name}</a>
-                </h4>\
-                <div>${location}</div>\
-                <div>${time}</div>\
-              </div>\
-            </div>`;
+                </h4>
+                <div>${location}</div>
+                <div>${time}</div>
+              </div>
+            </div>
+          `;
           counter++;
         }
         var keys = Object.keys(elems).sort();
