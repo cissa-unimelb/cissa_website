@@ -212,12 +212,17 @@
 
 
     <script>
+      var texts = [
+        "UniMelb's Premier Tech Society", 
+        "Bridging University and Industry",
+        "Membership is FREE"
+      ];
+      var date = new Date();
+      if(date.getDate() == 14 && date.getMonth() == 2) {
+        texts.unshift("HAPPY 3.14159265359... DAY!");
+      }
       $('#tagline').typewriter({
-        text : [
-          "UniMelb's Premier Tech Society", 
-          "Bridging University and Industry",
-          "Membership is FREE"
-        ],
+        text : texts,
         breakline : false,
         loop : true,
         type_delay : 75,
