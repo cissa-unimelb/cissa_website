@@ -266,7 +266,7 @@
           <div class="col-md-12 text-center">
             <h3 class="section-title text-center text-center">Gold</h3>
           </div>
-          
+
           <div class="col-md text-center py-5 my-auto">
             <picture>
               <img
@@ -302,7 +302,7 @@
                 alt="Microsoft"
             /></picture>
           </div>
-  
+
           <div class="col-md text-center py-5 my-auto">
             <picture>
               <img
@@ -311,7 +311,7 @@
                 alt="VivCourt"
             /></picture>
           </div>
-  
+
           <div class="col-md text-center py-5 my-auto">
             <picture>
               <img
@@ -349,7 +349,7 @@
           </div>
         </div>
 
-        
+
 
         <hr>
 
@@ -390,7 +390,7 @@
         </div>
       </div>
     </div>
-    
+
     <hr>
 
     <div class="section text-center row my-5" style="display: flex; align-items: center; justify-content: center">
@@ -408,9 +408,9 @@
 
             var text = 'Company name: ' + company + '\nCompany email: ' + email + '\nSender name: ' + name + '\nMessage: ' + message;
 
-            axios.post('http://localhost:4000/send-mail', {receiver: 'industry@cissa.org.au',
+            axios.post('https://cissa.org.au/send-mail', {receiver: 'industry@cissa.org.au',
               subject: 'SPONSORSHIP CONTACT FROM ' + company, text: text}).then((res) => {
-                axios.post('http://localhost:4000/send-mail', {receiver: 'executives@cissa.org.au',
+                axios.post('https://cissa.org.au/send-mail', {receiver: 'executives@cissa.org.au',
                   subject: 'SPONSORSHIP CONTACT FROM ' + company, text: text}).then((res) => {
                     bs4pop.notice('Thank you for submitting! CISSA\'s sponsorship team will be in contact soon!', {type: 'success', position: 'topcenter'})
                 }).catch((err) => {
