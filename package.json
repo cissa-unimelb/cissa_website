@@ -27,7 +27,7 @@
     "gulp-htmlmin": "^5.0.1",
     "gulp-postcss": "^8.0.0",
     "gulp-sourcemaps": "^2.6.5",
-    "gulp-uglify-es": "^1.0.4",
+    "gulp-uglify-es": "^3.0.0",
     "postcss-import": "^12.0.1"
   }
 }
