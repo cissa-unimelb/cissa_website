@@ -130,8 +130,38 @@
       </header>
     </div>
 
+    <div class="section text-center row my-5" style="display: flex; align-items: center; justify-content: center">
+      <div style="display: flex; flex-direction: column; width: 50vw; align-items: center; justify-content: center; row-gap: 3vh">
+        <h3>Become a sponsor today!</h3>
+        <input type="email" class="form-control" placeholder="Your company*" id="company" required/>
+        <input type="email" class="form-control" placeholder="Your email*" id="email" required/>
+        <input type="email" class="form-control" placeholder="Name*" id="name" required/>
+        <textarea class="form-control" rows="4" placeholder="Write your message here..." id="message" required></textarea>
+        <button type="submit" class="btn btn-primary" onclick="
+            var company = document.getElementById('company').value;
+            var email = document.getElementById('email').value;
+            var name = document.getElementById('name').value;
+            var message = document.getElementById('message').value;
 
-    <div id="main-sponsors" class="section pt-5">
+            var text = 'Company name: ' + company + '\nCompany email: ' + email + '\nSender name: ' + name + '\nMessage: ' + message;
+
+            axios.post('http://localhost:4000/send-mail', {receiver: 'industry@cissa.org.au',
+              subject: 'SPONSORSHIP CONTACT FROM ' + company, text: text}).then((res) => {
+                axios.post('http://localhost:4000/send-mail', {receiver: 'executives@cissa.org.au',
+                  subject: 'SPONSORSHIP CONTACT FROM ' + company, text: text}).then((res) => {
+                    bs4pop.notice('Thank you for submitting! CISSA\'s sponsorship team will be in contact soon!', {type: 'success', position: 'topcenter'})
+                }).catch((err) => {
+                  bs4pop.notice('Something went wrong! Please try again.', {type: 'danger', position: 'topcenter'});
+                });
+            }).catch((err) => {
+              bs4pop.notice('Something went wrong! Please try again.', {type: 'danger', position: 'topcenter'});
+            });
+        ">Submit</button>
+      </div>
+    </div>
+
+
+    <div id="main-sponsors" class="section pt-5" style="margin-top: -7vh">
       <div class="container py-5">
         <div class="row py-4">
           <div class="col-md-12 text-center">
@@ -392,36 +422,6 @@
     </div>
     
     <hr>
-
-    <div class="section text-center row my-5" style="display: flex; align-items: center; justify-content: center">
-      <div style="display: flex; flex-direction: column; width: 50vw; align-items: center; justify-content: center; row-gap: 3vh">
-        <h3>Become a sponsor today!</h3>
-        <input type="email" class="form-control" placeholder="Your company*" id="company" required/>
-        <input type="email" class="form-control" placeholder="Your email*" id="email" required/>
-        <input type="email" class="form-control" placeholder="Name*" id="name" required/>
-        <textarea class="form-control" rows="4" placeholder="Write your message here..." id="message" required></textarea>
-        <button type="submit" class="btn btn-primary" onclick="
-            var company = document.getElementById('company').value;
-            var email = document.getElementById('email').value;
-            var name = document.getElementById('name').value;
-            var message = document.getElementById('message').value;
-
-            var text = 'Company name: ' + company + '\nCompany email: ' + email + '\nSender name: ' + name + '\nMessage: ' + message;
-
-            axios.post('http://localhost:4000/send-mail', {receiver: 'industry@cissa.org.au',
-              subject: 'SPONSORSHIP CONTACT FROM ' + company, text: text}).then((res) => {
-                axios.post('http://localhost:4000/send-mail', {receiver: 'executives@cissa.org.au',
-                  subject: 'SPONSORSHIP CONTACT FROM ' + company, text: text}).then((res) => {
-                    bs4pop.notice('Thank you for submitting! CISSA\'s sponsorship team will be in contact soon!', {type: 'success', position: 'topcenter'})
-                }).catch((err) => {
-                  bs4pop.notice('Something went wrong! Please try again.', {type: 'danger', position: 'topcenter'});
-                });
-            }).catch((err) => {
-              bs4pop.notice('Something went wrong! Please try again.', {type: 'danger', position: 'topcenter'});
-            });
-        ">Submit</button>
-      </div>
-    </div>
 
     <div class="row dark text-center d-flex justify-content-center footer pt-5 pb-3">
       <div class="footer-img col-md">
