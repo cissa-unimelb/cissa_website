@@ -147,7 +147,7 @@
 
             axios.post('https://cissa.org.au/send-mail', {receiver: 'industry@cissa.org.au',
               subject: 'SPONSORSHIP CONTACT FROM ' + company, text: text}).then((res) => {
-                axios.post('http://cissa.org.au/send-mail', {receiver: 'executives@cissa.org.au',
+                axios.post('https://cissa.org.au/send-mail', {receiver: 'executives@cissa.org.au',
                   subject: 'SPONSORSHIP CONTACT FROM ' + company, text: text}).then((res) => {
                     bs4pop.notice('Thank you for submitting! CISSA\'s sponsorship team will be in contact soon!', {type: 'success', position: 'topcenter'})
                 }).catch((err) => {
