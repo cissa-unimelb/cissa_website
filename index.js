@@ -145,6 +145,9 @@ app.get('/codejam', function(req, res){
 app.get('/signup', function(req, res){
   res.sendFile(__dirname + '/static/signup.html');
 });
+app.get('/careers', function(req, res){
+  res.sendFile(__dirname + '/static/careers.html')
+})
 
 
 app.use('/', express.static('static/'));
