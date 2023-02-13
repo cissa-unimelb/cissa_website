@@ -5,7 +5,8 @@ for the Computing and Information Systems Students Association (CISSA)
 
 ## Usage
 
-``` sh
-yarn install
-yarn run start
-```
+Open index.html
+
+## Deployment
+
+The website is set to deploy on github pages.
