@@ -129,100 +129,371 @@
       </header>
     </div>
 
-    <main class="page-container">
-        <div class="page-content-container">
-            <div class="opportunities-list">
-                <div class="sponsor-card">
-                    <img src="/img/sponsors/glyphs/ecoPortal.svg" alt="ecoPortal Icon" class="icon" />
-                    <h2 class="title">ecoPortal</h2>
-                    <p class="description">Gold sponsor</p>
-                    <a href="https://www.linkedin.com/company/ecoportal/" class="link" target="_blank" rel="noopener noreferrer"><button>Careers</button></a
+    <main style="background-color: #F6F6F6; padding: 10vh">
+        <div style="display: flex; flex-direction: row; column-gap: 5vw; justify-content: center">
+            <!-- Column #1 -->
+            <div style="display: flex; flex-direction: column; row-gap: 3vh">
+                <!-- Example of a card-->
+                <div style="display: flex; flex-direction: column; row-gap: 10px; align-items: center; width: 23vw; background-color: #FFFFFF; border-radius: 20px; padding: 50px">
+                    <h4>IMC Trading</h4>
+                    <img src="assets/images/imc-logo.png" style="max-height: 80%; max-width: 80%; margin-top: 10px"/>
+                    <button style="background-color: #FFFFFF; padding: 10px 30px; border-radius: 100px;
+                                    margin-top: 30px"
+                                    onmouseover="this.style.backgroundColor='#b6b6b6'; this.style.transition='0.5s ease'; this.style.cursor='pointer'"
+                                    onmouseleave="this.style.backgroundColor='#FFFFFF'"
+                                    onclick="window.location.href='https://careers.imc.com/ap/en'"
                     >
+                        View Careers
+                    </button>
+                    <div style="display:flex; flex-direction: row; width: 23vw; height: 50px;
+                                padding-left: 3vw; border-bottom: 1px #b6b6b6 solid; margin-top: 20px"
+                                onmouseover="this.style.cursor='pointer'"
+                                onclick="
+                                            let elem = document.getElementById('imc-dropdown');
+                                            let toggle = document.getElementById('imc-toggle')
+                                            if(elem.style.display === 'none'){
+                                                elem.style.display = 'flex';
+                                                this.style.borderBottom = '1px #b6b6b6 solid';
+                                                toggle.innerText = '\\/'
+                                            }else{
+                                                elem.style.display = 'none';
+                                                this.style.borderBottom = '';
+                                                toggle.innerText = '/\\'
+                                            }
+                                        ">
+                        <p style="margin-top: 10px">9 Opportunities available</p>
+                        <p id="imc-toggle" style="margin-top: 10px; margin-left: 5vw">/\</p>
+                    </div>
+                    <div id="imc-dropdown" style="display: none; flex-direction: column; padding-top: 20px;
+                                                    width: 100%; align-items: flex-start; justify-content: start">
+                        <div>
+                            <h5 style="text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                                onclick="window.location.href='https://careers.imc.com/ap/en/job/REQ-02772/Ladies-In-Tech'">
+                                Ladies in Tech</h5>
+                            <p>Program - Sydney</p>
+                        </div>
+                        <div>
+                            <h5 style="text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                                onclick="window.location.href='https://careers.imc.com/ap/en/job/REQ-02853/Ladies-In-Trading'">
+                                Ladies in Trading</h5>
+                            <p>Program - Sydney</p>
+                        </div>
+                        <div>
+                            <h5 style="text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                                onclick="window.location.href='https://careers.imc.com/ap/en/job/REQ-02573/Software-Engineer-Intern-2023-2024'">
+                                Software Engineer Intern 2023/2024</h5>
+                            <p>Program - Sydney</p>
+                        </div>
+                        <div>
+                            <h5 style="text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                                onclick="window.location.href='https://careers.imc.com/ap/en/job/REQ-02570/Graduate-Software-Engineer-2023-2024'">
+                                Graduate Software Engineer 2023/2024</h5>
+                            <p>Program - Sydney</p>
+                        </div>
+                        <div>
+                            <h5 style="text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                                onclick="window.location.href='https://careers.imc.com/ap/en/job/REQ-02503/Trader-Intern-2023-2024'">
+                                Trader Intern 2023/2024</h5>
+                            <p>Program - Sydney</p>
+                        </div>
+                        <div>
+                            <h5 style="text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                                onclick="window.location.href='https://careers.imc.com/ap/en/job/REQ-02569/Graduate-Trader-2023-2024'">
+                                Graduate Trader 2023/2024</h5>
+                            <p>Program - Sydney</p>
+                        </div>
+                        <div>
+                            <h5 style="text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                                onclick="window.location.href='https://careers.imc.com/ap/en/job/REQ-02781/Graduate-Quantitative-Researcher-2023-2024'">
+                                Graduate Quantitative Researcher 2023/2024</h5>
+                            <p>Program - Sydney</p>
+                        </div>
+                        <div>
+                            <h5 style="text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                                onclick="window.location.href='https://careers.imc.com/ap/en/job/REQ-02574/Hardware-Engineer-Intern-2023-2024'">
+                                Hardware Engineer Intern 2023/2024</h5>
+                            <p>Program - Sydney</p>
+                        </div>
+                        <div>
+                            <h5 style="text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                                onclick="window.location.href='https://careers.imc.com/ap/en/job/REQ-02571/Graduate-Hardware-Engineer-2023-2024'">
+                                Graduate Hardware Engineer 2023/2024</h5>
+                            <p>Program - Sydney</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="sponsor-card">
-                    <img src="/img/sponsors/glyphs/IMC Trading.svg" alt="IMC Trading Icon" class="icon" />
-                    <h2 class="title">IMC Trading</h2>
-                    <p class="description">Gold sponsor</p>
-                    <a href="https://careers.imc.com/us/en" class="link" target="_blank" rel="noopener noreferrer"><button>Careers</button></a
+            </div>
+            <!-- Column #2 -->
+            <div style="display: flex; flex-direction: column; row-gap: 3vh">
+                <div style="display: flex; flex-direction: column; row-gap: 10px; align-items: center; width: 23vw; background-color: #FFFFFF; border-radius: 20px; padding: 50px">
+                    <h4>IMC Trading</h4>
+                    <img src="assets/images/imc-logo.png" style="max-height: 80%; max-width: 80%; margin-top: 10px"/>
+                    <button style="background-color: #FFFFFF; padding: 10px 30px; border-radius: 100px;
+                                    margin-top: 30px"
+                            onmouseover="this.style.backgroundColor='#b6b6b6'; this.style.transition='0.5s ease'; this.style.cursor='pointer'"
+                            onmouseleave="this.style.backgroundColor='#FFFFFF'"
+                            onclick="window.location.href='https://careers.imc.com/ap/en'"
                     >
+                        View Careers
+                    </button>
+                    <div style="display:flex; flex-direction: row; width: 23vw; height: 50px;
+                                padding-left: 3vw; border-bottom: 1px #b6b6b6 solid; margin-top: 20px"
+                         onmouseover="this.style.cursor='pointer'"
+                         onclick="
+                                            let elem = document.getElementById('imc-dropdown');
+                                            let toggle = document.getElementById('imc-toggle')
+                                            if(elem.style.display === 'none'){
+                                                elem.style.display = 'flex';
+                                                this.style.borderBottom = '1px #b6b6b6 solid';
+                                                toggle.innerText = '\\/'
+                                            }else{
+                                                elem.style.display = 'none';
+                                                this.style.borderBottom = '';
+                                                toggle.innerText = '/\\'
+                                            }
+                                        ">
+                        <p style="margin-top: 10px">9 Opportunities available</p>
+                        <p id="imc-toggle" style="margin-top: 10px; margin-left: 5vw">/\</p>
+                    </div>
+                    <div id="imc-dropdown" style="display: none; flex-direction: column; padding-top: 20px;
+                                                    width: 100%; align-items: flex-start; justify-content: start">
+                        <div>
+                            <h5 style="text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                                onclick="window.location.href='https://careers.imc.com/ap/en/job/REQ-02772/Ladies-In-Tech'">
+                                Ladies in Tech</h5>
+                            <p>Program - Sydney</p>
+                        </div>
+                        <div>
+                            <h5 style="text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                                onclick="window.location.href='https://careers.imc.com/ap/en/job/REQ-02853/Ladies-In-Trading'">
+                                Ladies in Trading</h5>
+                            <p>Program - Sydney</p>
+                        </div>
+                        <div>
+                            <h5 style="text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                                onclick="window.location.href='https://careers.imc.com/ap/en/job/REQ-02573/Software-Engineer-Intern-2023-2024'">
+                                Software Engineer Intern 2023/2024</h5>
+                            <p>Program - Sydney</p>
+                        </div>
+                        <div>
+                            <h5 style="text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                                onclick="window.location.href='https://careers.imc.com/ap/en/job/REQ-02570/Graduate-Software-Engineer-2023-2024'">
+                                Graduate Software Engineer 2023/2024</h5>
+                            <p>Program - Sydney</p>
+                        </div>
+                        <div>
+                            <h5 style="text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                                onclick="window.location.href='https://careers.imc.com/ap/en/job/REQ-02503/Trader-Intern-2023-2024'">
+                                Trader Intern 2023/2024</h5>
+                            <p>Program - Sydney</p>
+                        </div>
+                        <div>
+                            <h5 style="text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                                onclick="window.location.href='https://careers.imc.com/ap/en/job/REQ-02569/Graduate-Trader-2023-2024'">
+                                Graduate Trader 2023/2024</h5>
+                            <p>Program - Sydney</p>
+                        </div>
+                        <div>
+                            <h5 style="text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                                onclick="window.location.href='https://careers.imc.com/ap/en/job/REQ-02781/Graduate-Quantitative-Researcher-2023-2024'">
+                                Graduate Quantitative Researcher 2023/2024</h5>
+                            <p>Program - Sydney</p>
+                        </div>
+                        <div>
+                            <h5 style="text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                                onclick="window.location.href='https://careers.imc.com/ap/en/job/REQ-02574/Hardware-Engineer-Intern-2023-2024'">
+                                Hardware Engineer Intern 2023/2024</h5>
+                            <p>Program - Sydney</p>
+                        </div>
+                        <div>
+                            <h5 style="text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                                onclick="window.location.href='https://careers.imc.com/ap/en/job/REQ-02571/Graduate-Hardware-Engineer-2023-2024'">
+                                Graduate Hardware Engineer 2023/2024</h5>
+                            <p>Program - Sydney</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="sponsor-card">
-                    <img src="/img/sponsors/glyphs/Jane Street.svg" alt="Jane Street Icon" class="icon" />
-                    <h2 class="title">Jane Street</h2>
-                    <p class="description">Gold sponsor</p>
-                    <a href="https://www.janestreet.com/join-jane-street/" class="link" target="_blank" rel="noopener noreferrer"><button>Careers</button></a
+                <div style="display: flex; flex-direction: column; row-gap: 10px; align-items: center; width: 23vw; background-color: #FFFFFF; border-radius: 20px; padding: 50px">
+                    <h4>IMC Trading</h4>
+                    <img src="assets/images/imc-logo.png" style="max-height: 80%; max-width: 80%; margin-top: 10px"/>
+                    <button style="background-color: #FFFFFF; padding: 10px 30px; border-radius: 100px;
+                                    margin-top: 30px"
+                            onmouseover="this.style.backgroundColor='#b6b6b6'; this.style.transition='0.5s ease'; this.style.cursor='pointer'"
+                            onmouseleave="this.style.backgroundColor='#FFFFFF'"
+                            onclick="window.location.href='https://careers.imc.com/ap/en'"
                     >
+                        View Careers
+                    </button>
+                    <div style="display:flex; flex-direction: row; width: 23vw; height: 50px;
+                                padding-left: 3vw; border-bottom: 1px #b6b6b6 solid; margin-top: 20px"
+                         onmouseover="this.style.cursor='pointer'"
+                         onclick="
+                                            let elem = document.getElementById('imc-dropdown');
+                                            let toggle = document.getElementById('imc-toggle')
+                                            if(elem.style.display === 'none'){
+                                                elem.style.display = 'flex';
+                                                this.style.borderBottom = '1px #b6b6b6 solid';
+                                                toggle.innerText = '\\/'
+                                            }else{
+                                                elem.style.display = 'none';
+                                                this.style.borderBottom = '';
+                                                toggle.innerText = '/\\'
+                                            }
+                                        ">
+                        <p style="margin-top: 10px">9 Opportunities available</p>
+                        <p id="imc-toggle" style="margin-top: 10px; margin-left: 5vw">/\</p>
+                    </div>
+                    <div id="imc-dropdown" style="display: none; flex-direction: column; padding-top: 20px;
+                                                    width: 100%; align-items: flex-start; justify-content: start">
+                        <div>
+                            <h5 style="text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                                onclick="window.location.href='https://careers.imc.com/ap/en/job/REQ-02772/Ladies-In-Tech'">
+                                Ladies in Tech</h5>
+                            <p>Program - Sydney</p>
+                        </div>
+                        <div>
+                            <h5 style="text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                                onclick="window.location.href='https://careers.imc.com/ap/en/job/REQ-02853/Ladies-In-Trading'">
+                                Ladies in Trading</h5>
+                            <p>Program - Sydney</p>
+                        </div>
+                        <div>
+                            <h5 style="text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                                onclick="window.location.href='https://careers.imc.com/ap/en/job/REQ-02573/Software-Engineer-Intern-2023-2024'">
+                                Software Engineer Intern 2023/2024</h5>
+                            <p>Program - Sydney</p>
+                        </div>
+                        <div>
+                            <h5 style="text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                                onclick="window.location.href='https://careers.imc.com/ap/en/job/REQ-02570/Graduate-Software-Engineer-2023-2024'">
+                                Graduate Software Engineer 2023/2024</h5>
+                            <p>Program - Sydney</p>
+                        </div>
+                        <div>
+                            <h5 style="text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                                onclick="window.location.href='https://careers.imc.com/ap/en/job/REQ-02503/Trader-Intern-2023-2024'">
+                                Trader Intern 2023/2024</h5>
+                            <p>Program - Sydney</p>
+                        </div>
+                        <div>
+                            <h5 style="text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                                onclick="window.location.href='https://careers.imc.com/ap/en/job/REQ-02569/Graduate-Trader-2023-2024'">
+                                Graduate Trader 2023/2024</h5>
+                            <p>Program - Sydney</p>
+                        </div>
+                        <div>
+                            <h5 style="text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                                onclick="window.location.href='https://careers.imc.com/ap/en/job/REQ-02781/Graduate-Quantitative-Researcher-2023-2024'">
+                                Graduate Quantitative Researcher 2023/2024</h5>
+                            <p>Program - Sydney</p>
+                        </div>
+                        <div>
+                            <h5 style="text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                                onclick="window.location.href='https://careers.imc.com/ap/en/job/REQ-02574/Hardware-Engineer-Intern-2023-2024'">
+                                Hardware Engineer Intern 2023/2024</h5>
+                            <p>Program - Sydney</p>
+                        </div>
+                        <div>
+                            <h5 style="text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                                onclick="window.location.href='https://careers.imc.com/ap/en/job/REQ-02571/Graduate-Hardware-Engineer-2023-2024'">
+                                Graduate Hardware Engineer 2023/2024</h5>
+                            <p>Program - Sydney</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="sponsor-card">
-                    <img src="/img/sponsors/glyphs/Atlassian.svg" alt="Atlassian Icon" class="icon" />
-                    <h2 class="title">Atlassian</h2>
-                    <p class="description">Silver sponsor</p>
-                    <a href="https://www.atlassian.com/company/careers" class="link" target="_blank" rel="noopener noreferrer"><button>Careers</button></a
+
+            </div>
+            <!-- Column #3 -->
+            <div style="display: flex; flex-direction: column; row-gap: 3vh">
+                <div style="display: flex; flex-direction: column; row-gap: 10px; align-items: center; width: 23vw; background-color: #FFFFFF; border-radius: 20px; padding: 50px">
+                    <h4>IMC Trading</h4>
+                    <img src="assets/images/imc-logo.png" style="max-height: 80%; max-width: 80%; margin-top: 10px"/>
+                    <button style="background-color: #FFFFFF; padding: 10px 30px; border-radius: 100px;
+                                    margin-top: 30px"
+                            onmouseover="this.style.backgroundColor='#b6b6b6'; this.style.transition='0.5s ease'; this.style.cursor='pointer'"
+                            onmouseleave="this.style.backgroundColor='#FFFFFF'"
+                            onclick="window.location.href='https://careers.imc.com/ap/en'"
                     >
+                        View Careers
+                    </button>
+                    <div style="display:flex; flex-direction: row; width: 23vw; height: 50px;
+                                padding-left: 3vw; border-bottom: 1px #b6b6b6 solid; margin-top: 20px"
+                         onmouseover="this.style.cursor='pointer'"
+                         onclick="
+                                            let elem = document.getElementById('imc-dropdown');
+                                            let toggle = document.getElementById('imc-toggle')
+                                            if(elem.style.display === 'none'){
+                                                elem.style.display = 'flex';
+                                                this.style.borderBottom = '1px #b6b6b6 solid';
+                                                toggle.innerText = '\\/'
+                                            }else{
+                                                elem.style.display = 'none';
+                                                this.style.borderBottom = '';
+                                                toggle.innerText = '/\\'
+                                            }
+                                        ">
+                        <p style="margin-top: 10px">9 Opportunities available</p>
+                        <p id="imc-toggle" style="margin-top: 10px; margin-left: 5vw">/\</p>
+                    </div>
+                    <div id="imc-dropdown" style="display: none; flex-direction: column; padding-top: 20px;
+                                                    width: 100%; align-items: flex-start; justify-content: start">
+                        <div>
+                            <h5 style="text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                                onclick="window.location.href='https://careers.imc.com/ap/en/job/REQ-02772/Ladies-In-Tech'">
+                                Ladies in Tech</h5>
+                            <p>Program - Sydney</p>
+                        </div>
+                        <div>
+                            <h5 style="text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                                onclick="window.location.href='https://careers.imc.com/ap/en/job/REQ-02853/Ladies-In-Trading'">
+                                Ladies in Trading</h5>
+                            <p>Program - Sydney</p>
+                        </div>
+                        <div>
+                            <h5 style="text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                                onclick="window.location.href='https://careers.imc.com/ap/en/job/REQ-02573/Software-Engineer-Intern-2023-2024'">
+                                Software Engineer Intern 2023/2024</h5>
+                            <p>Program - Sydney</p>
+                        </div>
+                        <div>
+                            <h5 style="text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                                onclick="window.location.href='https://careers.imc.com/ap/en/job/REQ-02570/Graduate-Software-Engineer-2023-2024'">
+                                Graduate Software Engineer 2023/2024</h5>
+                            <p>Program - Sydney</p>
+                        </div>
+                        <div>
+                            <h5 style="text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                                onclick="window.location.href='https://careers.imc.com/ap/en/job/REQ-02503/Trader-Intern-2023-2024'">
+                                Trader Intern 2023/2024</h5>
+                            <p>Program - Sydney</p>
+                        </div>
+                        <div>
+                            <h5 style="text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                                onclick="window.location.href='https://careers.imc.com/ap/en/job/REQ-02569/Graduate-Trader-2023-2024'">
+                                Graduate Trader 2023/2024</h5>
+                            <p>Program - Sydney</p>
+                        </div>
+                        <div>
+                            <h5 style="text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                                onclick="window.location.href='https://careers.imc.com/ap/en/job/REQ-02781/Graduate-Quantitative-Researcher-2023-2024'">
+                                Graduate Quantitative Researcher 2023/2024</h5>
+                            <p>Program - Sydney</p>
+                        </div>
+                        <div>
+                            <h5 style="text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                                onclick="window.location.href='https://careers.imc.com/ap/en/job/REQ-02574/Hardware-Engineer-Intern-2023-2024'">
+                                Hardware Engineer Intern 2023/2024</h5>
+                            <p>Program - Sydney</p>
+                        </div>
+                        <div>
+                            <h5 style="text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                                onclick="window.location.href='https://careers.imc.com/ap/en/job/REQ-02571/Graduate-Hardware-Engineer-2023-2024'">
+                                Graduate Hardware Engineer 2023/2024</h5>
+                            <p>Program - Sydney</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="sponsor-card">
-                    <img src="/img/sponsors/glyphs/Canva.svg" alt="Canva Icon" class="icon" />
-                    <h2 class="title">Canva</h2>
-                    <p class="description">Silver sponsor</p>
-                    <a href="https://www.canva.com/careers/careers.html" class="link" target="_blank" rel="noopener noreferrer"><button>Careers</button></a
-                    >
-                </div>
-                <div class="sponsor-card">
-                    <img src="/img/sponsors/glyphs/Datacom.svg" alt="Datacom Icon" class="icon" />
-                    <h2 class="title">Datacom</h2>
-                    <p class="description">Silver sponsor</p>
-                    <a href="https://datacom.com/nz/en/careers" class="link" target="_blank" rel="noopener noreferrer"><button>Careers</button></a
-                    >
-                </div>
-                <div class="sponsor-card">
-                    <img src="/img/sponsors/glyphs/LawVu.png" alt="LawVu Icon" class="icon" />
-                    <h2 class="title">LawVu</h2>
-                    <p class="description">Silver sponsor</p>
-                    <a href="https://lawvu.com/careers/careers.html" class="link" target="_blank" rel="noopener noreferrer"><button>Careers</button></a
-                    >
-                </div>
-                <div class="sponsor-card">
-                    <img src="/img/sponsors/glyphs/Salesforce.png" alt="Segna Icon" class="icon" />
-                    <h2 class="title">Salesforce Talent Alliance</h2>
-                    <p class="description">Silver sponsor</p>
-                    <a href="https://1.salesforce-partners.com/talent-alliance" class="link" target="_blank" rel="noopener noreferrer"><button>Careers</button></a
-                    >
-                </div>
-                <div class="sponsor-card">
-                    <img src="/img/sponsors/glyphs/Segna.svg" alt="Segna Icon" class="icon" />
-                    <h2 class="title">Segna</h2>
-                    <p class="description">Silver sponsor</p>
-                    <a href="https://www.segna.io/" class="link" target="_blank" rel="noopener noreferrer"><button>Careers</button></a
-                    >
-                </div>
-                <div class="sponsor-card">
-                    <img src="/img/sponsors/glyphs/Serato.svg" alt="Serato Icon" class="icon" />
-                    <h2 class="title">Serato</h2>
-                    <p class="description">Silver sponsor</p>
-                    <a href="https://serato.com/careers" class="link" target="_blank" rel="noopener noreferrer"><button>Careers</button></a
-                    >
-                </div>
-                <div class="sponsor-card">
-                    <img src="/img/sponsors/glyphs/Sylo.svg" alt="Sylo Icon" class="icon" />
-                    <h2 class="title">Sylo</h2>
-                    <p class="description">Silver sponsor</p>
-                    <a href="https://sylo.io/careers/careers.html" class="link" target="_blank" rel="noopener noreferrer"><button>Careers</button></a
-                    >
-                </div>
-                <div class="sponsor-card">
-                    <img src="/img/sponsors/glyphs/Vista.png" alt="Vista Icon" class="icon" />
-                    <h2 class="title">Vista</h2>
-                    <p class="description">Silver sponsor</p>
-                    <a href="https://www.vista.co/careers/careers.html" class="link" target="_blank" rel="noopener noreferrer"><button>Careers</button></a
-                    >
-                </div>
-                <div class="sponsor-card">
-                    <img src="/img/sponsors/glyphs/Vivcourt.png" alt="VivCourt Icon" class="icon" />
-                    <h2 class="title">VivCourt</h2>
-                    <p class="description">Silver sponsor</p>
-                    <a href="https://www.vivcourt.com.au/job-listings/" class="link" target="_blank" rel="noopener noreferrer"><button>Careers</button></a
-                    >
-                </div>
+
             </div>
         </div>
     </main>
