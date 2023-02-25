@@ -250,6 +250,506 @@
                     </div>
                 </div>
             </div>
+            <div style="display: flex; flex-direction: column; row-gap: 10px; align-items: center; width: 367px; background-color: #FFFFFF; border-radius: 20px; padding: 50px">
+              <h4 style="font-family: Poppins; font-weight: bold">Optiver</h4>
+              <img src="assets/images/sponsors/optiver.png" style="max-height: 33px; max-width: 178px; margin-top: 10px"/>
+
+              <button style="background-color: #FFFFFF; padding: 10px 30px; border-radius: 100px;
+                                  margin-top: 30px"
+                      onmouseover="this.style.backgroundColor='#b6b6b6'; this.style.transition='0.5s ease'; this.style.cursor='pointer'"
+                      onmouseleave="this.style.backgroundColor='#FFFFFF'"
+                      onclick="window.open('https://optiver.com/working-at-optiver/career-opportunities/', '__blank').focus()"
+              >
+                  View Careers
+              </button>
+              <div style="display:flex; flex-direction: row; width: 367px; height: 50px;
+                              padding-left: 33px; border-bottom: 1px #b6b6b6 solid; margin-top: 20px"
+                   onmouseover="this.style.cursor='pointer'"
+                   onclick="
+                                          let elem = document.getElementById('optiver-dropdown');
+                                          let toggle = document.getElementById('optiver-toggle');
+
+                                          if(elem.style.display === 'none'){
+                                              elem.style.display = 'flex';
+                                              this.style.borderBottom = '1px #b6b6b6 solid';
+                                              toggle.style.transform = 'rotate(45deg)';
+                                              toggle.style.marginTop = '15px';
+
+                                              let incr = elem.clientHeight / (1000 / 10);
+                                              elem.style.height = '0px';
+                                              let interval = setInterval(() => {
+                                                  let str = elem.style.height;
+                                                  elem.style.height = `${parseFloat(str.substring(0, str.length - 2)) + incr}px`
+                                                  console.log(elem.style.height);
+                                              }, 10);
+                                              setTimeout(() => {
+                                                  clearInterval(interval);
+                                              }, 1000);
+                                          }else{
+                                              elem.style.display = 'none';
+                                              this.style.borderBottom = '';
+
+                                              toggle.style.transform = 'rotate(225deg)';
+                                              toggle.style.marginTop = '10px';
+                                          }
+                                      ">
+                  <p style="margin-top: 10px">8 Opportunities available</p>
+                  <div id="optiver-toggle" style="border-top: 1px solid #b6b6b6; border-left: 1px solid #b6b6b6; height: 13px; width: 13px; transform: rotate(225deg); margin-left: 90px; margin-top: 10px"></div>
+              </div>
+              <div id="optiver-dropdown" style="display: none; flex-direction: column; opacity: 1; padding-top: 20px; width: 100%; align-items: flex-start; justify-content: start; overflow: hidden">
+                  <div>
+                      <h5 style="font-family: Poppins; font-size: 1.1em; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                          onclick="window.open('https://optiver.com/working-at-optiver/career-opportunities/6597747002/', '__blank').focus()">
+                          Software Developer Internship 2023/2024</h5>
+                      <p>Program - Sydney</p>
+                  </div>
+                  <div>
+                    <h5 style="font-family: Poppins; font-size: 1.1em; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                        onclick="window.open('https://optiver.com/working-at-optiver/career-opportunities/6602287002/', '__blank').focus()">
+                        Quantitative Trading Internship 2023/2024</h5>
+                    <p>Program - Sydney</p>
+                  </div>
+                  <div>
+                    <h5 style="font-family: Poppins; font-size: 1.1em; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                        onclick="window.open('https://optiver.com/working-at-optiver/career-opportunities/6602288002/', '__blank').focus()">
+                        Quantitative Researcher Internship 2023/2024</h5>
+                    <p>Program - Sydney</p>
+                  </div>
+                  <div>
+                    <h5 style="font-family: Poppins; font-size: 1.1em; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                        onclick="window.open('https://optiver.com/working-at-optiver/career-opportunities/6599787002/', '__blank').focus()">
+                        FPGA Developer Internship 2023/2024</h5>
+                    <p>Program - Sydney</p>
+                  </div>
+                  <div>
+                    <h5 style="font-family: Poppins; font-size: 1.1em; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                        onclick="window.open('https://optiver.com/working-at-optiver/career-opportunities/6597743002/', '__blank').focus()">
+                        Graduate Software Developer 2023 or 2024</h5>
+                    <p>Program - Sydney</p>
+                  </div>
+                  <div>
+                    <h5 style="font-family: Poppins; font-size: 1.1em; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                        onclick="window.open('https://optiver.com/working-at-optiver/career-opportunities/6597706002/', '__blank').focus()">
+                        Graduate Quantitative Trader 2023 or 2024</h5>
+                    <p>Program - Sydney</p>
+                  </div>
+                  <div>
+                    <h5 style="font-family: Poppins; font-size: 1.1em; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                        onclick="window.open('https://optiver.com/working-at-optiver/career-opportunities/6597683002/', '__blank').focus()">
+                        Graduate Quantitative Researcher 2023 or 2024</h5>
+                    <p>Program - Sydney</p>
+                  </div>
+                  <div>
+                    <h5 style="font-family: Poppins; font-size: 1.1em; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                        onclick="window.open('https://optiver.com/working-at-optiver/career-opportunities/6599786002/', '__blank').focus()">
+                        Graduate FPGA Developer 2023 or 2024</h5>
+                    <p>Program - Sydney</p>
+                  </div>
+              </div>
+            </div>
+            <div style="display: flex; flex-direction: column; row-gap: 10px; align-items: center; width: 367px; background-color: #FFFFFF; border-radius: 20px; padding: 50px">
+              <h4 style="font-family: Poppins; font-weight: bold">Atlassian</h4>
+              <img src="assets/images/sponsors/atlassian-2022.png" style="max-height: 33px; max-width: 178px; margin-top: 10px"/>
+
+              <button style="background-color: #FFFFFF; padding: 10px 30px; border-radius: 100px;
+                                  margin-top: 30px"
+                      onmouseover="this.style.backgroundColor='#b6b6b6'; this.style.transition='0.5s ease'; this.style.cursor='pointer'"
+                      onmouseleave="this.style.backgroundColor='#FFFFFF'"
+                      onclick="window.open('https://www.atlassian.com/company/careers', '__blank').focus()"
+              >
+                  View Careers
+              </button>
+              <div style="display:flex; flex-direction: row; width: 367px; height: 50px;
+                              padding-left: 33px; border-bottom: 1px #b6b6b6 solid; margin-top: 20px"
+                   onmouseover="this.style.cursor='pointer'"
+                   onclick="
+                                          let elem = document.getElementById('atlassian-dropdown');it
+                                          let toggle = document.getElementById('atlassian-toggle');
+
+                                          if(elem.style.display === 'none'){
+                                              elem.style.display = 'flex';
+                                              this.style.borderBottom = '1px #b6b6b6 solid';
+                                              toggle.style.transform = 'rotate(45deg)';
+                                              toggle.style.marginTop = '15px';
+
+                                              let incr = elem.clientHeight / (1000 / 10);
+                                              elem.style.height = '0px';
+                                              let interval = setInterval(() => {
+                                                  let str = elem.style.height;
+                                                  elem.style.height = `${parseFloat(str.substring(0, str.length - 2)) + incr}px`
+                                                  console.log(elem.style.height);
+                                              }, 10);
+                                              setTimeout(() => {
+                                                  clearInterval(interval);
+                                              }, 1000);
+                                          }else{
+                                              elem.style.display = 'none';
+                                              this.style.borderBottom = '';
+
+                                              toggle.style.transform = 'rotate(225deg)';
+                                              toggle.style.marginTop = '10px';
+                                          }
+                                      ">
+                  <p style="margin-top: 10px">13 Opportunities available</p>
+                  <div id="atlassian-toggle" style="border-top: 1px solid #b6b6b6; border-left: 1px solid #b6b6b6; height: 13px; width: 13px; transform: rotate(225deg); margin-left: 90px; margin-top: 10px"></div>
+              </div>
+              <div id="atlassian-dropdown" style="display: none; flex-direction: column; opacity: 1; padding-top: 20px; width: 100%; align-items: flex-start; justify-content: start; overflow: hidden">
+                  <div>
+                      <h5 style="font-family: Poppins; font-size: 1.1em; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                          onclick="window.open('https://www.atlassian.com/company/careers/detail/c1d49778-c70d-4a7d-afc0-f21498a3758c', '__blank').focus()">
+                          Software Engineer Intern</h5>
+                      <p>Program - Sydney or Remote</p>
+                  </div>
+                  <div>
+                    <h5 style="font-family: Poppins; font-size: 1.1em; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                        onclick="window.open('https://www.atlassian.com/company/careers/detail/be1ba776-b4c1-4b7e-b7bd-f2b408c8e9ea', '__blank').focus()">
+                        Data Science Intern</h5>
+                    <p>Program - Sydney or Remote</p>
+                  </div>
+                  <div>
+                    <h5 style="font-family: Poppins; font-size: 1.1em; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                        onclick="window.open('https://www.atlassian.com/company/careers/detail/d0f1651f-c311-4a47-aa42-f47d1c2585bd', '__blank').focus()">
+                        Security Engineering / Intelligence Intern</h5>
+                    <p>Program - Sydney or Remote</p>
+                  </div>
+                  <div>
+                    <h5 style="font-family: Poppins; font-size: 1.1em; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                        onclick="window.open('https://www.atlassian.com/company/careers/detail/55d79e5f-00f1-4c1b-afa6-8c4484187c54', '__blank').focus()">
+                        Machine Learning Intern</h5>
+                    <p>Program - Sydney or Remote</p>
+                  </div>
+                  <div>
+                    <h5 style="font-family: Poppins; font-size: 1.1em; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                        onclick="window.open('https://www.atlassian.com/company/careers/detail/354f1c40-c89d-4491-a626-f617521c14aa', '__blank').focus()">
+                        Product Design Intern</h5>
+                    <p>Program - Sydney or Remote</p>
+                  </div>
+                  <div>
+                    <h5 style="font-family: Poppins; font-size: 1.1em; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                        onclick="window.open('https://www.atlassian.com/company/careers/detail/65fa8f19-2301-40cf-a20c-f82e32c33cc7', '__blank').focus()">
+                        Content Design Intern</h5>
+                    <p>Program - Sydney or Remote</p>
+                  </div>
+                  <div>
+                    <h5 style="font-family: Poppins; font-size: 1.1em; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                        onclick="window.open('https://www.atlassian.com/company/careers/detail/59ecd539-8fe1-4870-b7c8-bda2443b46fb', '__blank').focus()">
+                        Associate Product Management Intern</h5>
+                    <p>Program - Sydney or Remote</p>
+                  </div>
+                  <div>
+                    <h5 style="font-family: Poppins; font-size: 1.1em; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                        onclick="window.open('https://www.atlassian.com/company/careers/detail/e2e28339-6ee3-4565-b43e-a2c5ea3ab110', '__blank').focus()">
+                        Research Intern</h5>
+                    <p>Program - Sydney or Remote</p>
+                  </div>
+                  <div>
+                    <h5 style="font-family: Poppins; font-size: 1.1em; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                        onclick="window.open('https://www.atlassian.com/company/careers/detail/26f43ad3-9a8e-4433-87eb-bb24a39207b7', '__blank').focus()">
+                        Finance Data Analytics Intern</h5>
+                    <p>Program - Sydney or Remote</p>
+                  </div>
+                  <div>
+                    <h5 style="font-family: Poppins; font-size: 1.1em; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                        onclick="window.open('https://www.atlassian.com/company/careers/detail/6b96ac8c-e03d-4851-85e2-251642ce31cf', '__blank').focus()">
+                        Site Reliability Engineer Intern</h5>
+                    <p>Program - Sydney or Remote</p>
+                  </div>
+                  <div>
+                    <h5 style="font-family: Poppins; font-size: 1.1em; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                        onclick="window.open('https://www.atlassian.com/company/careers/detail/bd1a9c99-3184-485b-8de6-c44e356036a0', '__blank').focus()">
+                        Workplace Productivity Intern</h5>
+                    <p>Program - Sydney or Remote</p>
+                  </div>
+                  <div>
+                    <h5 style="font-family: Poppins; font-size: 1.1em; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                        onclick="window.open('https://www.atlassian.com/company/careers/detail/f3f391e2-2795-42f3-887a-b71828fcaefc', '__blank').focus()">
+                        Procurement Intern</h5>
+                    <p>Program - Sydney or Remote</p>
+                  </div>
+                  <div>
+                    <h5 style="font-family: Poppins; font-size: 1.1em; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                        onclick="window.open('https://www.atlassian.com/company/careers/detail/c57325b7-f04b-4685-8bb2-7b4c02137d92', '__blank').focus()">
+                        Accounting Intern</h5>
+                    <p>Program - Sydney or Remote</p>
+                  </div>
+              </div>
+            </div>
+            <div style="display: flex; flex-direction: column; row-gap: 10px; align-items: center; width: 367px; background-color: #FFFFFF; border-radius: 20px; padding: 50px">
+              <h4 style="font-family: Poppins; font-weight: bold">Coles</h4>
+              <img src="assets/images/sponsors/coles.png" style="max-height: 33px; max-width: 178px; margin-top: 10px"/>
+
+              <button style="background-color: #FFFFFF; padding: 10px 30px; border-radius: 100px;
+                                  margin-top: 30px"
+                      onmouseover="this.style.backgroundColor='#b6b6b6'; this.style.transition='0.5s ease'; this.style.cursor='pointer'"
+                      onmouseleave="this.style.backgroundColor='#FFFFFF'"
+                      onclick="window.open('https://colescareers.com.au/au/en/search-results', '__blank').focus()"
+              >
+                  View Careers
+              </button>
+              <div style="display:flex; flex-direction: row; width: 367px; height: 50px;
+                              padding-left: 33px; border-bottom: 1px #b6b6b6 solid; margin-top: 20px"
+                   onmouseover="this.style.cursor='pointer'"
+                   onclick="
+                                          let elem = document.getElementById('coles-dropdown');
+                                          let toggle = document.getElementById('coles-toggle');
+
+                                          if(elem.style.display === 'none'){
+                                              elem.style.display = 'flex';
+                                              this.style.borderBottom = '1px #b6b6b6 solid';
+                                              toggle.style.transform = 'rotate(45deg)';
+                                              toggle.style.marginTop = '15px';
+
+                                              let incr = elem.clientHeight / (1000 / 10);
+                                              elem.style.height = '0px';
+                                              let interval = setInterval(() => {
+                                                  let str = elem.style.height;
+                                                  elem.style.height = `${parseFloat(str.substring(0, str.length - 2)) + incr}px`
+                                                  console.log(elem.style.height);
+                                              }, 10);
+                                              setTimeout(() => {
+                                                  clearInterval(interval);
+                                              }, 1000);
+                                          }else{
+                                              elem.style.display = 'none';
+                                              this.style.borderBottom = '';
+
+                                              toggle.style.transform = 'rotate(225deg)';
+                                              toggle.style.marginTop = '10px';
+                                          }
+                                      ">
+                  <p style="margin-top: 10px">1 Opportunity available</p>
+                  <div id="coles-toggle" style="border-top: 1px solid #b6b6b6; border-left: 1px solid #b6b6b6; height: 13px; width: 13px; transform: rotate(225deg); margin-left: 90px; margin-top: 10px"></div>
+              </div>
+              <div id="coles-dropdown" style="display: none; flex-direction: column; opacity: 1; padding-top: 20px; width: 100%; align-items: flex-start; justify-content: start; overflow: hidden">
+                  <div>
+                      <h5 style="font-family: Poppins; font-size: 1.1em; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                          onclick="window.open('https://colescareers.com.au/au/en/grad-program-store-support-centre', '__blank').focus()">
+                          Coles Store Support Centre (SSC) Technology Graduate Program 2024</h5>
+                      <p>Program - Australia</p>
+                  </div>
+              </div>
+            </div>
+            <div style="display: flex; flex-direction: column; row-gap: 10px; align-items: center; width: 367px; background-color: #FFFFFF; border-radius: 20px; padding: 50px">
+              <h4 style="font-family: Poppins; font-weight: bold">Commbank</h4>
+              <img src="assets/images/sponsors/commbank.png" style="max-height: 33px; max-width: 178px; margin-top: 10px"/>
+
+              <button style="background-color: #FFFFFF; padding: 10px 30px; border-radius: 100px;
+                                  margin-top: 30px"
+                      onmouseover="this.style.backgroundColor='#b6b6b6'; this.style.transition='0.5s ease'; this.style.cursor='pointer'"
+                      onmouseleave="this.style.backgroundColor='#FFFFFF'"
+                      onclick="window.open('https://www.commbank.com.au/about-us/careers/graduate-intern-programs.html', '__blank').focus()"
+              >
+                  View Careers
+              </button>
+              <div style="display:flex; flex-direction: row; width: 367px; height: 50px;
+                              padding-left: 33px; border-bottom: 1px #b6b6b6 solid; margin-top: 20px"
+                   onmouseover="this.style.cursor='pointer'"
+                   onclick="
+                                          let elem = document.getElementById('commbank-dropdown');
+                                          let toggle = document.getElementById('commbank-toggle');
+
+                                          if(elem.style.display === 'none'){
+                                              elem.style.display = 'flex';
+                                              this.style.borderBottom = '1px #b6b6b6 solid';
+                                              toggle.style.transform = 'rotate(45deg)';
+                                              toggle.style.marginTop = '15px';
+
+                                              let incr = elem.clientHeight / (1000 / 10);
+                                              elem.style.height = '0px';
+                                              let interval = setInterval(() => {
+                                                  let str = elem.style.height;
+                                                  elem.style.height = `${parseFloat(str.substring(0, str.length - 2)) + incr}px`
+                                                  console.log(elem.style.height);
+                                              }, 10);
+                                              setTimeout(() => {
+                                                  clearInterval(interval);
+                                              }, 1000);
+                                          }else{
+                                              elem.style.display = 'none';
+                                              this.style.borderBottom = '';
+
+                                              toggle.style.transform = 'rotate(225deg)';
+                                              toggle.style.marginTop = '10px';
+                                          }
+                                      ">
+                  <p style="margin-top: 10px">1 Opportunities available</p>
+                  <div id="commbank-toggle" style="border-top: 1px solid #b6b6b6; border-left: 1px solid #b6b6b6; height: 13px; width: 13px; transform: rotate(225deg); margin-left: 90px; margin-top: 10px"></div>
+              </div>
+              <div id="commbank-dropdown" style="display: none; flex-direction: column; opacity: 1; padding-top: 20px; width: 100%; align-items: flex-start; justify-content: start; overflow: hidden">
+                  <div>
+                      <h5 style="font-family: Poppins; font-size: 1.1em; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                          onclick="window.open('https://cba.avature.net/eventslisting/FolderDetail?folderId=114080', '__blank').focus()">
+                          Women in Data & Analytics Career Development & Networking Session</h5>
+                      <p>Program - Melbourne</p>
+                  </div>
+                  
+              </div>
+            </div>
+            <div style="display: flex; flex-direction: column; row-gap: 10px; align-items: center; width: 367px; background-color: #FFFFFF; border-radius: 20px; padding: 50px">
+              <h4 style="font-family: Poppins; font-weight: bold">Churchill Asset Management</h4>
+              <img src="assets/images/sponsors/churchill-AM.png" style="max-height: 33px; max-width: 178px; margin-top: 10px"/>
+
+              <button style="background-color: #FFFFFF; padding: 10px 30px; border-radius: 100px;
+                                  margin-top: 30px"
+                      onmouseover="this.style.backgroundColor='#b6b6b6'; this.style.transition='0.5s ease'; this.style.cursor='pointer'"
+                      onmouseleave="this.style.backgroundColor='#FFFFFF'"
+                      onclick="window.open('https://www.churchillassetmanagement.com.au/', '__blank').focus()"
+              >
+                  View Careers
+              </button>
+              <div style="display:flex; flex-direction: row; width: 367px; height: 50px;
+                              padding-left: 33px; border-bottom: 1px #b6b6b6 solid; margin-top: 20px"
+                   onmouseover="this.style.cursor='pointer'"
+                   onclick="
+                                          let elem = document.getElementById('churchill-dropdown');
+                                          let toggle = document.getElementById('churchill-toggle');
+
+                                          if(elem.style.display === 'none'){
+                                              elem.style.display = 'flex';
+                                              this.style.borderBottom = '1px #b6b6b6 solid';
+                                              toggle.style.transform = 'rotate(45deg)';
+                                              toggle.style.marginTop = '15px';
+
+                                              let incr = elem.clientHeight / (1000 / 10);
+                                              elem.style.height = '0px';
+                                              let interval = setInterval(() => {
+                                                  let str = elem.style.height;
+                                                  elem.style.height = `${parseFloat(str.substring(0, str.length - 2)) + incr}px`
+                                                  console.log(elem.style.height);
+                                              }, 10);
+                                              setTimeout(() => {
+                                                  clearInterval(interval);
+                                              }, 1000);
+                                          }else{
+                                              elem.style.display = 'none';
+                                              this.style.borderBottom = '';
+
+                                              toggle.style.transform = 'rotate(225deg)';
+                                              toggle.style.marginTop = '10px';
+                                          }
+                                      ">
+                  <p style="margin-top: 10px">3 Opportunities available</p>
+                  <div id="churchill-toggle" style="border-top: 1px solid #b6b6b6; border-left: 1px solid #b6b6b6; height: 13px; width: 13px; transform: rotate(225deg); margin-left: 90px; margin-top: 10px"></div>
+              </div>
+              <div id="churchill-dropdown" style="display: none; flex-direction: column; opacity: 1; padding-top: 20px; width: 100%; align-items: flex-start; justify-content: start; overflow: hidden">
+                  <div>
+                      <h5 style="font-family: Poppins; font-size: 1.1em; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                          onclick="window.open('https://www.churchillassetmanagement.com.au/churchillcareers/macro-quant', '__blank').focus()">
+                          Macro Quant</h5>
+                      <p>Program - Melbourne</p>
+                  </div>
+                  <div>
+                    <h5 style="font-family: Poppins; font-size: 1.1em; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                        onclick="window.open('https://www.churchillassetmanagement.com.au/churchillcareers/biotech-research-analyst', '__blank').focus()">
+                        Biotech Research Analyst</h5>
+                    <p>Program - Melbourne</p>
+                  </div>
+                  <div>
+                    <h5 style="font-family: Poppins; font-size: 1.1em; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                        onclick="window.open('https://www.churchillassetmanagement.com.au/churchillcareers/tech-research-analyst', '__blank').focus()">
+                        Tech Research Analyst</h5>
+                    <p>Program - Melbourne</p>
+                  </div>
+                  
+              </div>
+            </div>
+            <div style="display: flex; flex-direction: column; row-gap: 10px; align-items: center; width: 367px; background-color: #FFFFFF; border-radius: 20px; padding: 50px">
+              <h4 style="font-family: Poppins; font-weight: bold">Citadel Securities</h4>
+              <img src="assets/images/sponsors/citadel.png" style="max-height: 33px; max-width: 178px; margin-top: 10px"/>
+
+              <button style="background-color: #FFFFFF; padding: 10px 30px; border-radius: 100px;
+                                  margin-top: 30px"
+                      onmouseover="this.style.backgroundColor='#b6b6b6'; this.style.transition='0.5s ease'; this.style.cursor='pointer'"
+                      onmouseleave="this.style.backgroundColor='#FFFFFF'"
+                      onclick="window.open('https://www.citadelsecurities.com/careers/', '__blank').focus()"
+              >
+                  View Careers
+              </button>
+              <div style="display:flex; flex-direction: row; width: 367px; height: 50px;
+                              padding-left: 33px; border-bottom: 1px #b6b6b6 solid; margin-top: 20px"
+                   onmouseover="this.style.cursor='pointer'"
+                   onclick="
+                                          let elem = document.getElementById('citadel-dropdown');
+                                          let toggle = document.getElementById('citadel-toggle');
+
+                                          if(elem.style.display === 'none'){
+                                              elem.style.display = 'flex';
+                                              this.style.borderBottom = '1px #b6b6b6 solid';
+                                              toggle.style.transform = 'rotate(45deg)';
+                                              toggle.style.marginTop = '15px';
+
+                                              let incr = elem.clientHeight / (1000 / 10);
+                                              elem.style.height = '0px';
+                                              let interval = setInterval(() => {
+                                                  let str = elem.style.height;
+                                                  elem.style.height = `${parseFloat(str.substring(0, str.length - 2)) + incr}px`
+                                                  console.log(elem.style.height);
+                                              }, 10);
+                                              setTimeout(() => {
+                                                  clearInterval(interval);
+                                              }, 1000);
+                                          }else{
+                                              elem.style.display = 'none';
+                                              this.style.borderBottom = '';
+
+                                              toggle.style.transform = 'rotate(225deg)';
+                                              toggle.style.marginTop = '10px';
+                                          }
+                                      ">
+                  <p style="margin-top: 10px">8 Opportunities available</p>
+                  <div id="citadel-toggle" style="border-top: 1px solid #b6b6b6; border-left: 1px solid #b6b6b6; height: 13px; width: 13px; transform: rotate(225deg); margin-left: 90px; margin-top: 10px"></div>
+              </div>
+              <div id="citadel-dropdown" style="display: none; flex-direction: column; opacity: 1; padding-top: 20px; width: 100%; align-items: flex-start; justify-content: start; overflow: hidden">
+                  <div>
+                      <h5 style="font-family: Poppins; font-size: 1.1em; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                          onclick="window.open('https://www.citadelsecurities.com/careers/details/software-engineer-intern-australia/', '__blank').focus()">
+                          Software Engineer Intern</h5>
+                      <p>Program - Sydney</p>
+                  </div>
+                  <div>
+                    <h5 style="font-family: Poppins; font-size: 1.1em; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                        onclick="window.open('https://www.citadelsecurities.com/careers/details/software-engineer-full-time-australia/', '__blank').focus()">
+                        Software Engineer</h5>
+                    <p>Program - Sydney</p>
+                  </div>
+                  <div>
+                    <h5 style="font-family: Poppins; font-size: 1.1em; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                        onclick="window.open('https://www.citadelsecurities.com/careers/details/quantitative-research-intern-australia/', '__blank').focus()">
+                        Quantitative Research Intern</h5>
+                    <p>Program - Sydney</p>
+                  </div>
+                  <div>
+                    <h5 style="font-family: Poppins; font-size: 1.1em; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                        onclick="window.open('https://www.citadelsecurities.com/careers/details/quantitative-research-full-time-australia/', '__blank').focus()">
+                        Quantitative Research</h5>
+                    <p>Program - Sydney</p>
+                  </div>
+                  <div>
+                    <h5 style="font-family: Poppins; font-size: 1.1em; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                        onclick="window.open('https://www.citadelsecurities.com/careers/details/trader-intern-australia/', '__blank').focus()">
+                        Trader Intern</h5>
+                    <p>Program - Sydney</p>
+                  </div>
+                  <div>
+                    <h5 style="font-family: Poppins; font-size: 1.1em; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                        onclick="window.open('https://www.citadelsecurities.com/careers/details/trader-full-time-australia/', '__blank').focus()">
+                        Trader</h5>
+                    <p>Program - Sydney</p>
+                  </div>
+                  <div>
+                    <h5 style="font-family: Poppins; font-size: 1.1em; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                        onclick="window.open('https://www.citadelsecurities.com/careers/details/site-reliability-engineer-intern-australia/', '__blank').focus()">
+                        Site Reliability Engineer Intern</h5>
+                    <p>Program - Sydney</p>
+                  </div>
+                  <div>
+                    <h5 style="font-family: Poppins; font-size: 1.1em; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                        onclick="window.open('https://www.citadelsecurities.com/careers/details/site-reliability-engineer-full-time-australia/', '__blank').focus()">
+                        Site Reliability Engineer</h5>
+                    <p>Program - Sydney</p>
+                  </div>
+              </div>
+            </div>
         </div>
     </main>
 
