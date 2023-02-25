@@ -124,7 +124,8 @@
       </nav>
 
       <header>
-        <h1 class="section-title text-center">OPPORTUNITIES</h1>
+        <h1 class="section-title text-center">Careers Portal</h1>
+          <h5 style="color: white">Stay tuned for current career opportunities from our sponsors!</h5>
       </header>
     </div>
 
@@ -162,7 +163,8 @@
                                             if(elem.style.display === 'none'){
                                                 elem.style.display = 'flex';
                                                 this.style.borderBottom = '1px #b6b6b6 solid';
-                                                toggle.innerText = '\\/'
+                                                toggle.style.transform = 'rotate(225deg)';
+                                                toggle.style.marginTop = '10px';
 
                                                 let incr = elem.clientHeight / (1000 / 10);
                                                 elem.style.height = '0px';
@@ -177,69 +179,70 @@
                                             }else{
                                                 elem.style.display = 'none';
                                                 this.style.borderBottom = '';
-                                                toggle.innerText = '/\\'
+                                                toggle.style.transform = 'rotate(45deg)';
+                                                toggle.style.marginTop = '15px';
                                             }
                                         ">
                     <!-- TODO: Change the number of opportunities available accordingly -->
                     <p style="margin-top: 10px">9 Opportunities available</p>
                     <!-- TODO: Change the id to something different. This id needs to be unique, ideally COMPANYNAME-toggle -->
-                    <p id="imc-toggle" style="margin-top: 10px; margin-left: 100px">/\</p>
+                    <div id="imc-toggle" style="border-top: 1px solid #b6b6b6; border-left: 1px solid #b6b6b6; height: 13px; width: 13px; transform: rotate(45deg); margin-left: 90px; margin-top: 15px"></div>
                 </div>
                 <!-- TODO: Change the id to something different. This id needs to be unique, ideally COMPANYNAME-dropdown -->
                 <div id="imc-dropdown" style="display: none; flex-direction: column; opacity: 1; padding-top: 20px; width: 100%; align-items: flex-start; justify-content: start; overflow: hidden">
                     <!-- Each of these div represent a singular entry for a given opportunity -->
                     <div>
                         <!-- TODO: Change name of opportunity -->
-                        <h5 style="font-family: Poppins; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                        <h5 style="font-family: Poppins; font-size: 1.1em; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
                             onclick="window.open('https://careers.imc.com/ap/en/job/REQ-02772/Ladies-In-Tech', '__blank').focus()">
                             Ladies in Tech</h5>
                         <!-- TODO: Change location of opportunity -->
                         <p>Program - Sydney</p>
                     </div>
                     <div>
-                        <h5 style="font-family: Poppins; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                        <h5 style="font-family: Poppins; font-size: 1.1em; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
                             onclick="window.open('https://careers.imc.com/ap/en/job/REQ-02853/Ladies-In-Trading', '__blank').focus()">
                             Ladies in Trading</h5>
                         <p>Program - Sydney</p>
                     </div>
                     <div>
-                        <h5 style="font-family: Poppins; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                        <h5 style="font-family: Poppins; font-size: 1.1em; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
                             onclick="window.open('https://careers.imc.com/ap/en/job/REQ-02573/Software-Engineer-Intern-2023-2024', '__blank').focus()">
                             Software Engineer Intern 2023/2024</h5>
                         <p>Program - Sydney</p>
                     </div>
                     <div>
-                        <h5 style="font-family: Poppins; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                        <h5 style="font-family: Poppins; font-size: 1.1em; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
                             onclick="window.open('https://careers.imc.com/ap/en/job/REQ-02570/Graduate-Software-Engineer-2023-2024', '__blank').focus()">
                             Graduate Software Engineer 2023/2024</h5>
                         <p>Program - Sydney</p>
                     </div>
                     <div>
-                        <h5 style="font-family: Poppins; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                        <h5 style="font-family: Poppins; font-size: 1.1em; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
                             onclick="window.open('https://careers.imc.com/ap/en/job/REQ-02503/Trader-Intern-2023-2024', '__blank').focus()">
                             Trader Intern 2023/2024</h5>
                         <p>Program - Sydney</p>
                     </div>
                     <div>
-                        <h5 style="font-family: Poppins; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                        <h5 style="font-family: Poppins; font-size: 1.1em; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
                             onclick="window.open('https://careers.imc.com/ap/en/job/REQ-02569/Graduate-Trader-2023-2024', '__blank').focus()">
                             Graduate Trader 2023/2024</h5>
                         <p>Program - Sydney</p>
                     </div>
                     <div>
-                        <h5 style="font-family: Poppins; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                        <h5 style="font-family: Poppins; font-size: 1.1em; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
                             onclick="window.open('https://careers.imc.com/ap/en/job/REQ-02781/Graduate-Quantitative-Researcher-2023-2024', '__blank').focus()">
                             Graduate Quantitative Researcher 2023/2024</h5>
                         <p>Program - Sydney</p>
                     </div>
                     <div>
-                        <h5 style="font-family: Poppins; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                        <h5 style="font-family: Poppins; font-size: 1.1em; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
                             onclick="window.open('https://careers.imc.com/ap/en/job/REQ-02574/Hardware-Engineer-Intern-2023-2024', '__blank').focus()">
                             Hardware Engineer Intern 2023/2024</h5>
                         <p>Program - Sydney</p>
                     </div>
                     <div>
-                        <h5 style="font-family: Poppins; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
+                        <h5 style="font-family: Poppins; font-size: 1.1em; font-weight: 600; text-decoration: underline" onmouseover="this.style.cursor='pointer'"
                             onclick="window.open('https://careers.imc.com/ap/en/job/REQ-02571/Graduate-Hardware-Engineer-2023-2024', '__blank').focus()">
                             Graduate Hardware Engineer 2023/2024</h5>
                         <p>Program - Sydney</p>
