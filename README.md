@@ -9,4 +9,4 @@ Open index.html
 
 ## Deployment
 
-The website is set to deploy on github pages.
+The website is set to deploy on github pages. 
