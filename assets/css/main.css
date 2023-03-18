@@ -78,7 +78,7 @@ html, body{
 
 /* committee-cover */
 #commitee-cover {
-  background-image: url("../../assets/images/committee-2022.png");
+  background-image: url("../../assets/images/committee-2023.JPG");
   background-position: center;
   background-size: 100%;
   background-attachment: scroll;
@@ -268,7 +268,7 @@ html, body{
 }
 
 .event-link {
-  color: black; 
+  color: black;
   text-decoration: underline;
 }
 
@@ -549,7 +549,7 @@ hr{
   .event-page .event-img img, .event-page .event-descr  {
     width:85%;
   }
-  
+
 }
 
 .important-text {
