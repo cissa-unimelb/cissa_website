@@ -155,7 +155,7 @@ html, body{
   font-size: calc(16px + 1.5vw);
   color: white;
 }
-.blinking-cursor {
+/* .blinking-cursor {
   font-size: calc(16px + 1.5vw);
   color: #FFFFFF;
   -webkit-animation: 0.75s blink linear infinite;
@@ -163,9 +163,9 @@ html, body{
   -ms-animation: 0.75s blink linear infinite;
   -o-animation: 0.75s blink linear infinite;
   animation: 0.75s blink linear infinite;
-}
+} */
 
-@keyframes blink {
+/* @keyframes blink {
   0% {opacity: 0;}
   50% {opacity: 1;}
   100% {opacity: 0;}
@@ -193,7 +193,7 @@ html, body{
   0% {opacity: 0;}
   50% {opacity: 1;}
   100% {opacity: 0;}
-}
+} */
 
 .our-services {
   min-height: 100vh;
@@ -601,4 +601,21 @@ hr{
 .no-events{
   font-size: 20px;
 
+}
+
+.button-link {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.button-link:hover {
+  background-color: #0056b3;
+  color: white;
 }

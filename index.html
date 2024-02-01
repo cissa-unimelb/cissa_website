@@ -221,16 +221,17 @@
 
 
     <script>
-      var texts = [
-        "UniMelb's Premier Tech Society", 
-        "Bridging University and Industry",
-        "Membership is FREE"
-      ];
+      $(document).ready(function() {
+        // Changes here: Add the 'button-link' class to your <a> tag
+        $('#tagline').html('<a class="button-link" href="https://fb.me/e/1FDTIzzlL" target="_blank">Click here for our FIRST YEAR CAMP!</a>');
+      });
       var date = new Date();
       if(date.getDate() == 14 && date.getMonth() == 2) {
+        // Assuming 'texts' is defined elsewhere in your script, as it's not included in the snippet you provided.
         texts.unshift("HAPPY 3.14159265359... DAY!");
       }
-      $('#tagline').typewriter({
+      // Comment out or remove the typewriter effect if it's not needed for the static link
+      /* $('#tagline').typewriter({
         text : texts,
         breakline : false,
         loop : true,
@@ -238,7 +239,8 @@
         erase_delay : 10,
         wait : 2000,
         eraselast: true,
-      });
+      }); */
     </script>
+    
   </body>
 </html>
