@@ -619,3 +619,19 @@ hr{
   background-color: #0056b3;
   color: white;
 }
+
+
+.important-text {
+  width: auto;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+  text-align: center;
+  word-break: break-word;
+}
+
+
+
+
+
